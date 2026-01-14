@@ -61,3 +61,8 @@ Thumbs.db
 
 # Vite
 .vite
+
+# lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
