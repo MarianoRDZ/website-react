@@ -1,0 +1,19 @@
+/* Storybook custom styles */
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #121212 !important;
+}
+
+#storybook-root {
+  background-color: #121212 !important;
+}
+
+.sb-show-main {
+  background-color: #121212 !important;
+}
+
+.sb-main-padded {
+  padding: 0 !important;
+  background-color: #121212 !important;
+}
