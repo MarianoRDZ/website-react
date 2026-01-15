@@ -200,13 +200,6 @@ const Contact = () => {
           {status.loading ? 'Sending...' : 'Send Message'}
         </button>
       </form>
-
-      <div className="mt-12 text-center">
-        <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white">
-          {uiText.contact.socialTitle}
-        </h2>
-        <SocialLinks className="justify-center" />
-      </div>
     </div>
   );
 };
