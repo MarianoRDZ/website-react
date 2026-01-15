@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../common';
-import { personalInfo } from '../../constants/data';
+import { personalInfo, uiText } from '../../constants/data';
 import profileImage from '../../assets/profile.png';
 
 const Hero = () => {
@@ -36,7 +36,7 @@ const Hero = () => {
               {personalInfo.title}
             </p>
             <h1 className="mb-4 text-4xl font-bold text-white md:text-5xl">
-              Hi, I'm {personalInfo.name.split(' ')[0]}.
+              {uiText.hero.greeting} {personalInfo.name.split(' ')[0]}.
             </h1>
             <p className="text-base leading-relaxed text-gray-300 md:text-lg">
               {personalInfo.description}
@@ -45,10 +45,10 @@ const Hero = () => {
 
           <div className="flex gap-4">
             <Button variant="primary" size="lg" onClick={() => navigate('/cv')}>
-              Resume
+              {uiText.hero.buttons.resume}
             </Button>
             <Button variant="secondary" size="lg" onClick={() => navigate('/contact')}>
-              Get in touch
+              {uiText.hero.buttons.contact}
             </Button>
           </div>
         </div>
