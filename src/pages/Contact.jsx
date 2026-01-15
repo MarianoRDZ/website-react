@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { SocialLinks } from '../components/common';
 import { uiText } from '../constants/data';
@@ -8,12 +8,20 @@ const Contact = () => {
     name: '',
     email: '',
     message: '',
+    honeypot: '', // Anti-spam field
   });
   const [status, setStatus] = useState({
     loading: false,
     success: false,
     error: null,
   });
+  const formStartTime = useRef(null);
+  const lastSubmitTime = useRef(0);
+
+  useEffect(() => {
+    // Track when user starts interacting with form
+    formStartTime.current = Date.now();
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -25,6 +33,38 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus({ loading: true, success: false, error: null });
+
+    // Anti-spam validations
+    const now = Date.now();
+    const timeSinceStart = now - formStartTime.current;
+    const timeSinceLastSubmit = now - lastSubmitTime.current;
+
+    // 1. Honeypot check - if filled, it's a bot
+    if (formData.honeypot) {
+      console.warn('Bot detected: honeypot filled');
+      setStatus({ loading: false, success: false, error: null });
+      return;
+    }
+
+    // 2. Time check - too fast (less than 3 seconds)
+    if (timeSinceStart < 3000) {
+      setStatus({
+        loading: false,
+        success: false,
+        error: 'Please take your time filling the form.',
+      });
+      return;
+    }
+
+    // 3. Rate limiting - max 1 submission per minute
+    if (timeSinceLastSubmit < 60000 && lastSubmitTime.current !== 0) {
+      setStatus({
+        loading: false,
+        success: false,
+        error: 'Please wait a moment before sending another message.',
+      });
+      return;
+    }
 
     try {
       await emailjs.send(
@@ -38,13 +78,15 @@ const Contact = () => {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
 
+      lastSubmitTime.current = now;
       setStatus({ loading: false, success: true, error: null });
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ name: '', email: '', message: '', honeypot: '' });
+      formStartTime.current = Date.now(); // Reset timer
 
       setTimeout(() => {
         setStatus({ loading: false, success: false, error: null });
       }, 5000);
-    } catch (error) {
+    } catch {
       setStatus({
         loading: false,
         success: false,
@@ -137,6 +179,18 @@ const Contact = () => {
             placeholder="Your message..."
           />
         </div>
+
+        {/* Honeypot field - hidden from users, only bots fill it */}
+        <input
+          type="text"
+          name="honeypot"
+          value={formData.honeypot}
+          onChange={handleChange}
+          autoComplete="off"
+          tabIndex="-1"
+          className="absolute -left-2499.75 h-0 w-0 opacity-0"
+          aria-hidden="true"
+        />
 
         <button
           type="submit"
