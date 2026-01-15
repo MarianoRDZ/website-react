@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { SocialLinks } from '../components/common';
+import { uiText } from '../constants/data';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -24,10 +25,10 @@ const Contact = () => {
   return (
     <div className="mx-auto max-w-7xl px-6 py-8">
       <div className="mb-12 text-center">
-        <h1 className="mb-4 text-4xl font-bold text-gray-900 dark:text-white">Get In Touch</h1>
-        <p className="text-lg text-gray-600 dark:text-gray-400">
-          Have a question or want to work together? Drop me a message!
-        </p>
+        <h1 className="mb-4 text-4xl font-bold text-gray-900 dark:text-white">
+          {uiText.contact.title}
+        </h1>
+        <p className="text-lg text-gray-600 dark:text-gray-400">{uiText.contact.subtitle}</p>
       </div>
 
       <form
@@ -101,7 +102,7 @@ const Contact = () => {
 
       <div className="mt-12 text-center">
         <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white">
-          Other Ways to Connect
+          {uiText.contact.socialTitle}
         </h2>
         <SocialLinks className="justify-center" />
       </div>
