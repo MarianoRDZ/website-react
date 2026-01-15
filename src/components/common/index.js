@@ -8,3 +8,5 @@ export { default as Input } from './Input';
 export { default as Tag } from './Tag';
 export { default as Layout } from './Layout';
 export { default as Navbar } from './Navbar';
+export { default as Footer } from './Footer';
+export { default as SocialLinks } from './SocialLinks';

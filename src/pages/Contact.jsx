@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { SocialLinks } from '../components/common';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -16,25 +17,28 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // TODO: Implement form submission (EmailJS, FormSpree, etc.)
     console.log('Form submitted:', formData);
     alert('Message sent! (Not implemented yet)');
   };
 
   return (
-    <div className="max-w-2xl mx-auto">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-          Get In Touch
-        </h1>
+    <div className="mx-auto max-w-7xl px-6 py-8">
+      <div className="mb-12 text-center">
+        <h1 className="mb-4 text-4xl font-bold text-gray-900 dark:text-white">Get In Touch</h1>
         <p className="text-lg text-gray-600 dark:text-gray-400">
           Have a question or want to work together? Drop me a message!
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg space-y-6">
+      <form
+        onSubmit={handleSubmit}
+        className="space-y-6 rounded-lg bg-white p-8 shadow-lg dark:bg-gray-800"
+      >
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label
+            htmlFor="name"
+            className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
             Name
           </label>
           <input
@@ -44,13 +48,16 @@ const Contact = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
             placeholder="Your name"
           />
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label
+            htmlFor="email"
+            className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
             Email
           </label>
           <input
@@ -60,13 +67,16 @@ const Contact = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
             placeholder="your.email@example.com"
           />
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label
+            htmlFor="message"
+            className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
             Message
           </label>
           <textarea
@@ -76,48 +86,24 @@ const Contact = () => {
             onChange={handleChange}
             required
             rows={6}
-            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white resize-none"
+            className="w-full resize-none rounded-lg border border-gray-300 px-4 py-2 focus:border-transparent focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
             placeholder="Your message..."
           />
         </div>
 
         <button
           type="submit"
-          className="w-full px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+          className="w-full rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700"
         >
           Send Message
         </button>
       </form>
 
-      {/* Contact Info */}
       <div className="mt-12 text-center">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+        <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white">
           Other Ways to Connect
         </h2>
-        <div className="flex justify-center gap-6">
-          <a
-            href="https://github.com/MarianoRDZ"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-          >
-            GitHub
-          </a>
-          <a
-            href="https://linkedin.com/in/MarianoRDZ"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="mailto:rdzc.mariano@gmail.com"
-            className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-          >
-            Email
-          </a>
-        </div>
+        <SocialLinks className="justify-center" />
       </div>
     </div>
   );
