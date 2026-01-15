@@ -10,7 +10,7 @@ const SocialLinks = ({ className = '' }) => {
       external: true,
     },
     {
-      href: personalInfo.linkedin,
+      href: `https://linkedin.com/in/${personalInfo.linkedinUsername}`,
       icon: LinkedInIcon,
       label: 'LinkedIn',
       external: true,
