@@ -30,9 +30,25 @@ const Navbar = () => {
             className="flex items-center gap-2 text-lg font-bold text-white transition-colors hover:text-blue-400"
             onClick={closeMenu}
           >
-            <div className="rounded bg-blue-500 px-2 py-1">
-              <span className="font-bold text-white">Ⓜ</span>
+            <div className="relative h-9 w-9">
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 opacity-20 blur-sm"></div>
+              <div className="relative flex h-full w-full items-center justify-center rounded-lg border border-blue-400/30 bg-gray-900">
+                <svg
+                  className="h-5 w-5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M12 2L2 7l10 5 10-5-10-5z" className="text-blue-400" />
+                  <path d="M2 17l10 5 10-5" className="text-purple-400" />
+                  <path d="M2 12l10 5 10-5" className="text-blue-300" />
+                </svg>
+              </div>
             </div>
+
             <span>MARIANORDZ.DEV.AR</span>
           </Link>
 
