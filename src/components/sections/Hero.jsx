@@ -35,13 +35,13 @@ const Hero = () => {
         <div className="space-y-5">
           <div>
             <p className="mb-3 text-sm font-semibold tracking-wider text-blue-400 uppercase">
-              {personalInfo.title}
+              {t('hero.title')}
             </p>
             <h1 className="mb-4 text-4xl font-bold text-white md:text-5xl">
               {t('hero.greeting')} {personalInfo.name.split(' ')[0]}.
             </h1>
             <p className="text-base leading-relaxed text-gray-300 md:text-lg">
-              {personalInfo.description}
+              {t('hero.description')}
             </p>
           </div>
 

@@ -6,6 +6,8 @@
   },
   "hero": {
     "greeting": "Hi, I'm",
+    "title": "Full-Stack Developer",
+    "description": "Specializing in building performant, scalable, and beautifully intuitive web experiences with a focus on modern React architecture.",
     "viewResume": "Resume",
     "getInTouch": "Get in touch"
   },
@@ -35,18 +37,80 @@
   "cv": {
     "title": "Resume",
     "contact": "Contact",
-    "summary": "Summary",
+    "summary": "Professional Summary",
+    "summaryText": "Full-Stack Developer with 4+ years of experience in technologies such as React & Svelte and experience in Node.js, MongoDB and C#",
     "experience": "Professional Experience",
     "education": "Education",
     "certifications": "Certifications",
     "skills": "Technical Skills",
     "languages": "Languages",
     "present": "Present",
-    "incomplete": "Incomplete"
+    "incomplete": "Incomplete",
+    "languageLevels": {
+      "spanish": "Spanish",
+      "english": "English",
+      "native": "Native",
+      "b2": "B2 (Upper Intermediate)"
+    },
+    "jobs": {
+      "kopius": {
+        "title": "Frontend Developer",
+        "responsibilities": [
+          "Development of various web apps in React, Svelte, Redux, TypeScript and Tailwind related to healthcare, reaching 100% test coverage using Jest/Vitest, reducing production bugs",
+          "Developed a NodeJS app to connect an external API and our internal services, improving reliability and reducing failures",
+          "Led the complete refactor of a 'patient/practitioner' calendar using React, Redux, Tailwind and GraphQL, improving its structure and efficiency"
+        ]
+      },
+      "solvd": {
+        "title": "Frontend Developer",
+        "responsibilities": [
+          "Increased the registration rate by simplifying the onboarding flow and redesigning the registration process using React, Redux, and Tailwind, improving the UX/UI"
+        ]
+      },
+      "endava": {
+        "title": "Full-Stack Developer",
+        "responsibilities": [
+          "Development of an app using React, Redux, NodeJS, and MongoDB/PostgreSQL",
+          "Built and maintained a React Native app with focus on compliance with WCAG 2.0 accessibility standards"
+        ]
+      },
+      "mercadolibre": {
+        "title": "Productivity Engineer",
+        "responsibilities": [
+          "Led the development of internal tools that enhanced the developer experience, including NPM packages, testing kits, and frontends/backends in React and Java",
+          "Improved code quality across the company through workshops, talks, and support on automation and testing for various development teams"
+        ]
+      },
+      "intive": {
+        "title": "QA Automation Engineer",
+        "responsibilities": [
+          "Designed the automation solution architecture using C#, Selenium WebDriver, and the Page Object design pattern",
+          "Performed manual testing of features to ensure functionality and quality",
+          "Created, maintained, and executed test cases for regression testing"
+        ]
+      },
+      "accenture": {
+        "title": "Backend Developer",
+        "responsibilities": [
+          "Development of an internal app in C# to assist company managers in expense tracking and cash flows",
+          "Automation of an internal tool using CodedUI",
+          "Led a POC to swap from CodedUI to Selenium WebDriver"
+        ]
+      }
+    },
+    "educationData": {
+      "degree": "Technical Degree in Programming (Incomplete)",
+      "institution": "Universidad Tecnológica Nacional",
+      "location": "Avellaneda, Buenos Aires"
+    },
+    "certificationsData": [
+      "AWS Certified Developer - Associate (DVA-002)",
+      "Meta Front-End Developer Certificate"
+    ]
   },
   "footer": {
     "rights": "All rights reserved.",
-    "madeWith": "Made with",
-    "by": "by"
+    "builtWith": "Built with React & Tailwind",
+    "viewSource": "View source code"
   }
 }

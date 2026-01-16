@@ -6,6 +6,8 @@
   },
   "hero": {
     "greeting": "Hola, soy",
+    "title": "Desarrollador Full-Stack",
+    "description": "Especializado en construir experiencias web eficientes, escalables y bellamente intuitivas con enfoque en arquitectura moderna de React.",
     "viewResume": "Currículum",
     "getInTouch": "Contáctame"
   },
@@ -35,18 +37,80 @@
   "cv": {
     "title": "Currículum",
     "contact": "Contacto",
-    "summary": "Resumen",
+    "summary": "Resumen Profesional",
+    "summaryText": "Desarrollador Full-Stack con más de 4 años de experiencia en tecnologías como React y Svelte, y experiencia en Node.js, MongoDB y C#",
     "experience": "Experiencia Profesional",
     "education": "Educación",
     "certifications": "Certificaciones",
     "skills": "Habilidades Técnicas",
     "languages": "Idiomas",
     "present": "Presente",
-    "incomplete": "Incompleto"
+    "incomplete": "Incompleto",
+    "languageLevels": {
+      "spanish": "Español",
+      "english": "Inglés",
+      "native": "Nativo",
+      "b2": "B2 (Intermedio Alto)"
+    },
+    "jobs": {
+      "kopius": {
+        "title": "Desarrollador Frontend",
+        "responsibilities": [
+          "Desarrollo de varias aplicaciones web en React, Svelte, Redux, TypeScript y Tailwind relacionadas con el cuidado de la salud, alcanzando 100% de cobertura de tests usando Jest/Vitest, reduciendo bugs en producción",
+          "Desarrollé una aplicación NodeJS para conectar una API externa con nuestros servicios internos, mejorando la confiabilidad y reduciendo fallos",
+          "Lideré la refactorización completa de un calendario de 'paciente/profesional' usando React, Redux, Tailwind y GraphQL, mejorando su estructura y eficiencia"
+        ]
+      },
+      "solvd": {
+        "title": "Desarrollador Frontend",
+        "responsibilities": [
+          "Aumenté la tasa de registro simplificando el flujo de onboarding y rediseñando el proceso de registro usando React, Redux y Tailwind, mejorando la UX/UI"
+        ]
+      },
+      "endava": {
+        "title": "Desarrollador Full-Stack",
+        "responsibilities": [
+          "Desarrollo de una aplicación usando React, Redux, NodeJS y MongoDB/PostgreSQL",
+          "Construí y mantuve una aplicación React Native con enfoque en cumplimiento de estándares de accesibilidad WCAG 2.0"
+        ]
+      },
+      "mercadolibre": {
+        "title": "Ingeniero de Productividad",
+        "responsibilities": [
+          "Lideré el desarrollo de herramientas internas que mejoraron la experiencia del desarrollador, incluyendo paquetes NPM, kits de testing, y frontends/backends en React y Java",
+          "Mejoré la calidad del código en toda la empresa a través de workshops, charlas y soporte en automatización y testing para varios equipos de desarrollo"
+        ]
+      },
+      "intive": {
+        "title": "Ingeniero de Automatización QA",
+        "responsibilities": [
+          "Diseñé la arquitectura de la solución de automatización usando C#, Selenium WebDriver y el patrón de diseño Page Object",
+          "Realicé testing manual de funcionalidades para asegurar funcionalidad y calidad",
+          "Creé, mantuve y ejecuté casos de prueba para testing de regresión"
+        ]
+      },
+      "accenture": {
+        "title": "Desarrollador Backend",
+        "responsibilities": [
+          "Desarrollo de una aplicación interna en C# para asistir a gerentes de la empresa en el seguimiento de gastos y flujos de efectivo",
+          "Automatización de una herramienta interna usando CodedUI",
+          "Lideré un POC para cambiar de CodedUI a Selenium WebDriver"
+        ]
+      }
+    },
+    "educationData": {
+      "degree": "Tecnicatura en Programación (Incompleto)",
+      "institution": "Universidad Tecnológica Nacional",
+      "location": "Avellaneda, Buenos Aires"
+    },
+    "certificationsData": [
+      "AWS Certified Developer - Associate (DVA-002)",
+      "Certificado de Desarrollador Front-End de Meta"
+    ]
   },
   "footer": {
     "rights": "Todos los derechos reservados.",
-    "madeWith": "Hecho con",
-    "by": "por"
+    "builtWith": "Construido con React & Tailwind",
+    "viewSource": "Ver código fuente"
   }
 }

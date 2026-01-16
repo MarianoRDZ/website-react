@@ -1,12 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import {
-  personalInfo,
-  experience,
-  education,
-  certifications,
-  skills,
-  languages,
-} from '../constants/data';
+import { personalInfo, experience, education, skills } from '../constants/data';
 
 const ExperienceItem = ({ title, company, period, responsibilities }) => (
   <div className="rounded-lg bg-white p-6 shadow-md dark:bg-gray-800">
@@ -44,13 +37,15 @@ const SkillCard = ({ title, skills }) => (
 const CV = () => {
   const { t } = useTranslation();
 
+  const jobKeys = ['kopius', 'solvd', 'endava', 'mercadolibre', 'intive', 'accenture'];
+
   return (
     <div className="mx-auto max-w-7xl space-y-12 px-6 py-8">
       <header className="mb-12 text-center">
         <h1 className="mb-2 text-4xl font-bold text-gray-900 dark:text-white">
           {personalInfo.name}
         </h1>
-        <p className="text-xl text-gray-600 dark:text-gray-400">{personalInfo.title}</p>
+        <p className="text-xl text-gray-600 dark:text-gray-400">{t('hero.title')}</p>
         <div className="mt-4 flex flex-wrap justify-center gap-2 text-sm text-gray-600 md:gap-4 dark:text-gray-400">
           <span>{personalInfo.location}</span>
           <span className="hidden md:inline">•</span>
@@ -79,7 +74,7 @@ const CV = () => {
           {t('cv.summary')}
         </h2>
         <div className="rounded-lg bg-white p-6 shadow-md dark:bg-gray-800">
-          <p className="text-gray-700 dark:text-gray-300">{personalInfo.summary}</p>
+          <p className="text-gray-700 dark:text-gray-300">{t('cv.summaryText')}</p>
         </div>
       </section>
 
@@ -88,8 +83,16 @@ const CV = () => {
           {t('cv.experience')}
         </h2>
         <div className="space-y-6">
-          {experience.map((exp) => (
-            <ExperienceItem key={exp.id} {...exp} />
+          {experience.map((exp, index) => (
+            <ExperienceItem
+              key={exp.id}
+              title={t(`cv.jobs.${jobKeys[index]}.title`)}
+              company={exp.company}
+              period={exp.period}
+              responsibilities={t(`cv.jobs.${jobKeys[index]}.responsibilities`, {
+                returnObjects: true,
+              })}
+            />
           ))}
         </div>
       </section>
@@ -104,10 +107,10 @@ const CV = () => {
               <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                    {edu.degree}
+                    {t('cv.educationData.degree')}
                   </h3>
                   <p className="text-blue-600 dark:text-blue-400">
-                    {edu.institution} | {edu.location}
+                    {t('cv.educationData.institution')} | {t('cv.educationData.location')}
                   </p>
                 </div>
                 <p className="text-gray-600 dark:text-gray-400">{edu.period}</p>
@@ -119,7 +122,9 @@ const CV = () => {
               {t('cv.certifications')}
             </h3>
             <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-              {certifications.map((cert, index) => (
+              {t('cv.certificationsData', {
+                returnObjects: true,
+              }).map((cert, index) => (
                 <li key={index}>• {cert}</li>
               ))}
             </ul>
@@ -144,12 +149,18 @@ const CV = () => {
         </h2>
         <div className="rounded-lg bg-white p-6 shadow-md dark:bg-gray-800">
           <div className="grid gap-4 md:grid-cols-2">
-            {languages.map((lang) => (
-              <div key={lang.name}>
-                <h3 className="font-semibold text-gray-900 dark:text-white">{lang.name}</h3>
-                <p className="text-gray-700 dark:text-gray-300">{lang.level}</p>
-              </div>
-            ))}
+            <div>
+              <h3 className="font-semibold text-gray-900 dark:text-white">
+                {t('cv.languageLevels.spanish')}
+              </h3>
+              <p className="text-gray-700 dark:text-gray-300">{t('cv.languageLevels.native')}</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 dark:text-white">
+                {t('cv.languageLevels.english')}
+              </h3>
+              <p className="text-gray-700 dark:text-gray-300">{t('cv.languageLevels.b2')}</p>
+            </div>
           </div>
         </div>
       </section>
