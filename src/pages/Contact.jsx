@@ -97,17 +97,17 @@ const Contact = () => {
   };
 
   return (
-    <div className="mx-auto max-w-7xl px-6 py-8">
-      <div className="mb-12 text-center">
-        <h1 className="mb-4 text-4xl font-bold text-gray-900 dark:text-white">
+    <div className="mx-auto max-w-7xl px-6 py-6">
+      <div className="mb-8 text-center">
+        <h1 className="mb-3 text-3xl font-bold text-gray-900 dark:text-white">
           {t('contact.title')}
         </h1>
-        <p className="text-lg text-gray-600 dark:text-gray-400">{t('contact.subtitle')}</p>
+        <p className="text-base text-gray-600 dark:text-gray-400">{t('contact.subtitle')}</p>
       </div>
 
       <form
         onSubmit={handleSubmit}
-        className="space-y-6 rounded-lg bg-white p-8 shadow-lg dark:bg-gray-800"
+        className="space-y-5 rounded-lg bg-white p-6 shadow-lg dark:bg-gray-800"
       >
         {status.success && (
           <div className="rounded-lg bg-green-50 p-4 text-green-800 dark:bg-green-900/20 dark:text-green-400">
