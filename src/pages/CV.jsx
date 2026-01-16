@@ -6,17 +6,17 @@ import { CVHeader, CVSection, ExperienceItem, SkillCard, ChevronIcon } from '../
 const CV = () => {
   const { t } = useTranslation();
 
+  console.log('CV component rendering...');
+
   return (
     <div className="mx-auto max-w-7xl space-y-12 px-6 py-4">
       <CVHeader />
 
-      <section className="py-4">
-        <CVSection title={t('cv.summary')}>
-          <Card>
-            <p className="text-gray-700 dark:text-gray-300">{t('cv.summaryText')}</p>
-          </Card>
-        </CVSection>
-      </section>
+      <CVSection title={t('cv.summary')}>
+        <Card>
+          <p className="text-gray-700 dark:text-gray-300">{t('cv.summaryText')}</p>
+        </Card>
+      </CVSection>
 
       <CVSection title={t('cv.experience')}>
         <div className="space-y-6">
