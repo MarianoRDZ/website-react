@@ -6,8 +6,6 @@ import { CVHeader, CVSection, ExperienceItem, SkillCard, ChevronIcon } from '../
 const CV = () => {
   const { t } = useTranslation();
 
-  console.log('CV component rendering...');
-
   return (
     <div className="mx-auto max-w-7xl space-y-12 px-6 py-4">
       <CVHeader />
@@ -23,10 +21,10 @@ const CV = () => {
           {experience.map((exp) => (
             <ExperienceItem
               key={exp.id}
-              title={t(`cv.jobs.${exp.id}.title`)}
+              title={t(`cv.jobs.${exp.slug}.title`)}
               company={exp.company}
               period={exp.period}
-              responsibilities={t(`cv.jobs.${exp.id}.responsibilities`, { returnObjects: true })}
+              responsibilities={t(`cv.jobs.${exp.slug}.responsibilities`, { returnObjects: true })}
             />
           ))}
         </div>

@@ -18,6 +18,7 @@ export const personalInfo = {
 export const experience = [
   {
     id: 1,
+    slug: 'kopius',
     title: 'Frontend Developer',
     company: 'KOPIUS',
     period: 'Dec 2022 - Present',
@@ -29,6 +30,7 @@ export const experience = [
   },
   {
     id: 2,
+    slug: 'solvd',
     title: 'Frontend Developer',
     company: 'SOLVD',
     period: 'Oct 2021 - Dec 2022',
@@ -38,6 +40,7 @@ export const experience = [
   },
   {
     id: 3,
+    slug: 'endava',
     title: 'Full-Stack Developer',
     company: 'ENDAVA',
     period: 'Feb 2020 - Oct 2021',
@@ -48,6 +51,7 @@ export const experience = [
   },
   {
     id: 4,
+    slug: 'mercadolibre',
     title: 'Productivity Engineer',
     company: 'MERCADOLIBRE',
     period: 'Aug 2017 - Feb 2020',
@@ -58,6 +62,7 @@ export const experience = [
   },
   {
     id: 5,
+    slug: 'intive',
     title: 'QA Automation Engineer',
     company: 'INTIVE',
     period: 'Mar 2016 - Aug 2017',
@@ -69,6 +74,7 @@ export const experience = [
   },
   {
     id: 6,
+    slug: 'accenture',
     title: 'Backend Developer',
     company: 'ACCENTURE',
     period: 'Sep 2014 - Mar 2016',
