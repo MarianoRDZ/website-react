@@ -6,12 +6,16 @@ import Home from './pages/Home';
 import CV from './pages/CV';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import { portfolioConfig } from '../portfolio.config';
 
 function App() {
   useDocumentTitle();
 
+  // Use basePath from config
+  const basename = portfolioConfig.siteConfig.basePath;
+
   return (
-    <BrowserRouter basename="/website-react">
+    <BrowserRouter basename={basename}>
       <ScrollToTop />
       <Layout>
         <Routes>

@@ -1,10 +1,13 @@
 import { useTranslation } from 'react-i18next';
-import { personalInfo } from '../../constants/data';
+import { personalInfo, siteConfig } from '../../constants/data';
 import { Button } from '../common';
 import ContactInfo from './ContactInfo';
 
 const CVHeader = () => {
   const { t } = useTranslation();
+
+  // Build PDF path using basePath from config and resumeFileName
+  const pdfPath = `${siteConfig.basePath}${siteConfig.basePath.endsWith('/') ? '' : '/'}${personalInfo.resumeFileName}`;
 
   return (
     <header className="mb-12 text-center">
@@ -16,8 +19,8 @@ const CVHeader = () => {
       <div className="mt-6 flex justify-center">
         <Button
           as="a"
-          href="/website-react/CV-Mariano-Rodriguez.pdf"
-          download="CV-Mariano-Rodriguez.pdf"
+          href={pdfPath}
+          download={personalInfo.resumeFileName}
           variant="primary"
           size="md"
         >
