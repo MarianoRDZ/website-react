@@ -45,6 +45,7 @@
   },
   "cv": {
     "title": "Currículum",
+    "downloadPDF": "Descargar PDF",
     "contact": "Contacto",
     "summary": "Resumen Profesional",
     "summaryText": "Desarrollador Full-Stack con más de 4 años de experiencia en tecnologías como React y Svelte, y experiencia en Node.js, MongoDB y C#",
