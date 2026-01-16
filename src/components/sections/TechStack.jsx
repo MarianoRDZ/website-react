@@ -1,7 +1,14 @@
 import { useTranslation } from 'react-i18next';
-import { techStack } from '../../constants/data';
-import { getTechIcon } from '../common/icons';
+import TechStackGrid from './TechStackGrid';
 
+/**
+ * TechStack Component
+ * Main tech stack section orchestrator.
+ * Displays section title and TechStackGrid with responsive layout.
+ *
+ * @example
+ * <TechStack />
+ */
 const TechStack = () => {
   const { t } = useTranslation();
 
@@ -11,19 +18,7 @@ const TechStack = () => {
         <h3 className="mb-6 text-center text-sm font-semibold tracking-wider text-gray-400 uppercase">
           {t('techStack.title')}
         </h3>
-        <div className="grid grid-cols-3 gap-8 md:flex md:flex-wrap md:items-center md:justify-center md:gap-12">
-          {techStack.map((tech) => {
-            const Icon = getTechIcon(tech);
-            return (
-              <div key={tech} className="group flex cursor-pointer flex-col items-center gap-3">
-                <div className="text-gray-400 transition-colors group-hover:text-blue-400">
-                  {Icon && <Icon />}
-                </div>
-                <span className="text-sm text-gray-300">{tech}</span>
-              </div>
-            );
-          })}
-        </div>
+        <TechStackGrid />
       </div>
     </section>
   );
