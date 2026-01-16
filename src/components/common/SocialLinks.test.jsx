@@ -80,10 +80,7 @@ describe('SocialLinks Component', () => {
       render(<SocialLinks />);
       const linkedinLink = screen.getByText('LinkedIn').closest('a');
 
-      expect(linkedinLink).toHaveAttribute(
-        'href',
-        'https://linkedin.com/in/testuser'
-      );
+      expect(linkedinLink).toHaveAttribute('href', 'https://linkedin.com/in/testuser');
     });
 
     it('Email link has correct mailto href', () => {
