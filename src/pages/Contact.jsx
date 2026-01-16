@@ -97,7 +97,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="mx-auto max-w-7xl px-6 py-6">
+    <div className="mx-auto max-w-7xl px-6 py-8">
       <div className="mb-8 text-center">
         <h1 className="mb-3 text-3xl font-bold text-gray-900 dark:text-white">
           {t('contact.title')}
