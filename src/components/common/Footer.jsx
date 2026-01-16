@@ -7,13 +7,13 @@ const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="border-t border-gray-800 bg-gray-900/80 py-6">
+    <footer className="border-t border-gray-800 bg-gray-900/80 py-3">
       <div className="container mx-auto max-w-7xl px-6">
-        <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
+        <div className="flex flex-col items-center justify-between gap-3 md:flex-row">
           <SocialLinks />
 
-          <div className="flex flex-col items-center gap-2 text-sm text-gray-400 md:items-end">
-            <div>
+          <div className="flex flex-col items-center gap-1 text-gray-400 md:items-end">
+            <div className="text-xs">
               © {currentYear} MARIANO. {t('footer.builtWith').toUpperCase()}.
             </div>
             <a

@@ -24,15 +24,15 @@ const SocialLinks = ({ className = '' }) => {
   ];
 
   return (
-    <div className={`flex items-center gap-6 ${className}`}>
+    <div className={`flex items-center gap-3 ${className}`}>
       {links.map(({ href, icon: Icon, label, external }) => (
         <a
           key={label}
           href={href}
           {...(external && { target: '_blank', rel: 'noopener noreferrer' })}
-          className="flex items-center gap-2 text-sm text-gray-400 transition-colors hover:text-blue-400"
+          className="flex items-center gap-2 text-xs text-gray-400 transition-colors hover:text-blue-400"
         >
-          <Icon />
+          <Icon className="h-4 w-4" />
           <span>{label}</span>
         </a>
       ))}
