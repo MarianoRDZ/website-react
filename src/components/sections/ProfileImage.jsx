@@ -40,7 +40,9 @@ const ProfileImage = ({ size = 'lg', alt = 'Profile', showOverlay = true }) => {
             )}
           </div>
         ) : (
-          <div className={`flex items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 ${sizeClasses[size]}`}>
+          <div
+            className={`flex items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 ${sizeClasses[size]}`}
+          >
             <span className="text-5xl font-bold text-white md:text-6xl">M</span>
           </div>
         )}
