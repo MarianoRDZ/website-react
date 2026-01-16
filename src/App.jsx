@@ -1,23 +1,25 @@
+import { Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/common/Layout';
-import Home from './pages/Home';
-import CV from './pages/CV';
-import Contact from './pages/Contact';
-import NotFound from './pages/NotFound';
+import PageLoader from './components/common/PageLoader';
+import ScrollToTop from './components/common/ScrollToTop';
 import { useDocumentTitle } from './hooks/useDocumentTitle';
+import { routes } from './routes';
 
 function App() {
   useDocumentTitle();
 
   return (
     <BrowserRouter basename="/website-react">
+      <ScrollToTop />
       <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/cv" element={<CV />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
+            {routes.map(({ path, element: Component }) => (
+              <Route key={path} path={path} element={<Component />} />
+            ))}
+          </Routes>
+        </Suspense>
       </Layout>
     </BrowserRouter>
   );
