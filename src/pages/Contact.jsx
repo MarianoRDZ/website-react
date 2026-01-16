@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { useTranslation } from 'react-i18next';
 import { SocialLinks } from '../components/common';
-import { uiText } from '../constants/data';
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -51,7 +52,7 @@ const Contact = () => {
       setStatus({
         loading: false,
         success: false,
-        error: 'Please take your time filling the form.',
+        error: t('contact.errors.tooFast'),
       });
       return;
     }
@@ -61,7 +62,7 @@ const Contact = () => {
       setStatus({
         loading: false,
         success: false,
-        error: 'Please wait a moment before sending another message.',
+        error: t('contact.errors.rateLimit'),
       });
       return;
     }
@@ -90,7 +91,7 @@ const Contact = () => {
       setStatus({
         loading: false,
         success: false,
-        error: 'Failed to send message. Please try again.',
+        error: t('contact.errors.failed'),
       });
     }
   };
@@ -99,9 +100,9 @@ const Contact = () => {
     <div className="mx-auto max-w-7xl px-6 py-8">
       <div className="mb-12 text-center">
         <h1 className="mb-4 text-4xl font-bold text-gray-900 dark:text-white">
-          {uiText.contact.title}
+          {t('contact.title')}
         </h1>
-        <p className="text-lg text-gray-600 dark:text-gray-400">{uiText.contact.subtitle}</p>
+        <p className="text-lg text-gray-600 dark:text-gray-400">{t('contact.subtitle')}</p>
       </div>
 
       <form
@@ -110,7 +111,7 @@ const Contact = () => {
       >
         {status.success && (
           <div className="rounded-lg bg-green-50 p-4 text-green-800 dark:bg-green-900/20 dark:text-green-400">
-            ✓ Message sent successfully! I'll get back to you soon.
+            ✓ {t('contact.success')}
           </div>
         )}
 
@@ -125,7 +126,7 @@ const Contact = () => {
             htmlFor="name"
             className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300"
           >
-            Name
+            {t('contact.form.name')}
           </label>
           <input
             type="text"
@@ -136,7 +137,7 @@ const Contact = () => {
             required
             disabled={status.loading}
             className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-transparent focus:ring-2 focus:ring-blue-500 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-            placeholder="Your name"
+            placeholder={t('contact.form.namePlaceholder')}
           />
         </div>
 
@@ -145,7 +146,7 @@ const Contact = () => {
             htmlFor="email"
             className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300"
           >
-            Email
+            {t('contact.form.email')}
           </label>
           <input
             type="email"
@@ -156,7 +157,7 @@ const Contact = () => {
             required
             disabled={status.loading}
             className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-transparent focus:ring-2 focus:ring-blue-500 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-            placeholder="your.email@example.com"
+            placeholder={t('contact.form.emailPlaceholder')}
           />
         </div>
 
@@ -165,7 +166,7 @@ const Contact = () => {
             htmlFor="message"
             className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300"
           >
-            Message
+            {t('contact.form.message')}
           </label>
           <textarea
             id="message"
@@ -176,7 +177,7 @@ const Contact = () => {
             rows={6}
             disabled={status.loading}
             className="w-full resize-none rounded-lg border border-gray-300 px-4 py-2 focus:border-transparent focus:ring-2 focus:ring-blue-500 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
-            placeholder="Your message..."
+            placeholder={t('contact.form.messagePlaceholder')}
           />
         </div>
 
@@ -197,7 +198,7 @@ const Contact = () => {
           disabled={status.loading}
           className="w-full rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
         >
-          {status.loading ? 'Sending...' : 'Send Message'}
+          {status.loading ? t('contact.form.sending') : t('contact.form.send')}
         </button>
       </form>
     </div>

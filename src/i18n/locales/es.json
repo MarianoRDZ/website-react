@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "resume": "Currículum",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "viewResume": "Currículum",
+    "getInTouch": "Contáctame"
+  },
+  "techStack": {
+    "title": "Tecnologías Principales"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¿Tenés alguna pregunta o querés trabajar juntos? ¡Dejame un mensaje!",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Email",
+      "emailPlaceholder": "tu.email@ejemplo.com",
+      "message": "Mensaje",
+      "messagePlaceholder": "Tu mensaje...",
+      "send": "Enviar Mensaje",
+      "sending": "Enviando..."
+    },
+    "success": "¡Mensaje enviado con éxito! Te responderé pronto.",
+    "errors": {
+      "failed": "Error al enviar el mensaje. Por favor intentá nuevamente.",
+      "tooFast": "Por favor tomáte tu tiempo para completar el formulario.",
+      "rateLimit": "Por favor esperá un momento antes de enviar otro mensaje."
+    }
+  },
+  "cv": {
+    "title": "Currículum",
+    "contact": "Contacto",
+    "summary": "Resumen",
+    "experience": "Experiencia Profesional",
+    "education": "Educación",
+    "certifications": "Certificaciones",
+    "skills": "Habilidades Técnicas",
+    "languages": "Idiomas",
+    "present": "Presente",
+    "incomplete": "Incompleto"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "madeWith": "Hecho con",
+    "by": "por"
+  }
+}

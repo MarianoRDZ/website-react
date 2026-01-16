@@ -125,21 +125,3 @@ export const techStack = [
   'Node.js',
 ];
 
-// UI Text Constants
-export const uiText = {
-  hero: {
-    greeting: "Hi, I'm",
-    buttons: {
-      resume: 'Resume',
-      contact: 'Get in touch',
-    },
-  },
-  techStack: {
-    title: 'Core Tech Stack',
-  },
-  contact: {
-    title: 'Get In Touch',
-    subtitle: 'Have a question or want to work together? Drop me a message!',
-    socialTitle: 'Other Ways to Connect',
-  },
-};

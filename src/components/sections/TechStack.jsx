@@ -1,12 +1,15 @@
-import { techStack, uiText } from '../../constants/data';
+import { useTranslation } from 'react-i18next';
+import { techStack } from '../../constants/data';
 import { getTechIcon } from '../common/icons';
 
 const TechStack = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="py-8">
       <div className="container mx-auto px-6">
         <h3 className="mb-6 text-center text-sm font-semibold tracking-wider text-gray-400 uppercase">
-          {uiText.techStack.title}
+          {t('techStack.title')}
         </h3>
         <div className="grid grid-cols-3 gap-8 md:flex md:flex-wrap md:items-center md:justify-center md:gap-12">
           {techStack.map((tech) => {

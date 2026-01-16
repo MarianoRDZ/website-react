@@ -1,16 +1,19 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from './LanguageSelector';
 
 const Navbar = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   const isActive = (path) => location.pathname === path;
 
   const navLinks = [
-    { path: '/', label: 'Home' },
-    { path: '/cv', label: 'Resume' },
-    { path: '/contact', label: 'Contact' },
+    { path: '/', label: t('nav.home') },
+    { path: '/cv', label: t('nav.resume') },
+    { path: '/contact', label: t('nav.contact') },
   ];
 
   const toggleMenu = () => {
@@ -64,6 +67,7 @@ const Navbar = () => {
                 {label}
               </Link>
             ))}
+            <LanguageSelector />
           </div>
 
           <button
@@ -102,6 +106,9 @@ const Navbar = () => {
               {label}
             </Link>
           ))}
+          <div className="mt-4 flex justify-center py-2">
+            <LanguageSelector />
+          </div>
         </div>
       </div>
     </nav>

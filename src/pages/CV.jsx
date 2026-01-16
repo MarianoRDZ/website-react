@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import {
   personalInfo,
   experience,
@@ -41,6 +42,8 @@ const SkillCard = ({ title, skills }) => (
 );
 
 const CV = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="mx-auto max-w-7xl space-y-12 px-6 py-8">
       <header className="mb-12 text-center">
@@ -73,7 +76,7 @@ const CV = () => {
 
       <section>
         <h2 className="mb-6 border-b-2 border-blue-600 pb-2 text-3xl font-bold text-gray-900 dark:text-white">
-          Professional Summary
+          {t('cv.summary')}
         </h2>
         <div className="rounded-lg bg-white p-6 shadow-md dark:bg-gray-800">
           <p className="text-gray-700 dark:text-gray-300">{personalInfo.summary}</p>
@@ -82,7 +85,7 @@ const CV = () => {
 
       <section>
         <h2 className="mb-6 border-b-2 border-blue-600 pb-2 text-3xl font-bold text-gray-900 dark:text-white">
-          Professional Experience
+          {t('cv.experience')}
         </h2>
         <div className="space-y-6">
           {experience.map((exp) => (
@@ -93,7 +96,7 @@ const CV = () => {
 
       <section>
         <h2 className="mb-6 border-b-2 border-blue-600 pb-2 text-3xl font-bold text-gray-900 dark:text-white">
-          Education & Certifications
+          {t('cv.education')} & {t('cv.certifications')}
         </h2>
         <div className="space-y-4">
           {education.map((edu) => (
@@ -113,7 +116,7 @@ const CV = () => {
           ))}
           <div className="rounded-lg bg-white p-6 shadow-md dark:bg-gray-800">
             <h3 className="mb-3 text-lg font-semibold text-gray-900 dark:text-white">
-              Certifications
+              {t('cv.certifications')}
             </h3>
             <ul className="space-y-2 text-gray-700 dark:text-gray-300">
               {certifications.map((cert, index) => (
@@ -126,7 +129,7 @@ const CV = () => {
 
       <section>
         <h2 className="mb-6 border-b-2 border-blue-600 pb-2 text-3xl font-bold text-gray-900 dark:text-white">
-          Technical Skills
+          {t('cv.skills')}
         </h2>
         <div className="grid gap-6 md:grid-cols-2">
           {Object.entries(skills).map(([category, skillList]) => (
@@ -137,7 +140,7 @@ const CV = () => {
 
       <section>
         <h2 className="mb-6 border-b-2 border-blue-600 pb-2 text-3xl font-bold text-gray-900 dark:text-white">
-          Languages
+          {t('cv.languages')}
         </h2>
         <div className="rounded-lg bg-white p-6 shadow-md dark:bg-gray-800">
           <div className="grid gap-4 md:grid-cols-2">

@@ -1,10 +1,12 @@
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Button } from '../common';
-import { personalInfo, uiText } from '../../constants/data';
+import { personalInfo } from '../../constants/data';
 import profileImage from '../../assets/profile.png';
 
 const Hero = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <section className="flex items-center py-4">
@@ -36,7 +38,7 @@ const Hero = () => {
               {personalInfo.title}
             </p>
             <h1 className="mb-4 text-4xl font-bold text-white md:text-5xl">
-              {uiText.hero.greeting} {personalInfo.name.split(' ')[0]}.
+              {t('hero.greeting')} {personalInfo.name.split(' ')[0]}.
             </h1>
             <p className="text-base leading-relaxed text-gray-300 md:text-lg">
               {personalInfo.description}
@@ -45,10 +47,10 @@ const Hero = () => {
 
           <div className="flex gap-4">
             <Button variant="primary" size="lg" onClick={() => navigate('/cv')}>
-              {uiText.hero.buttons.resume}
+              {t('hero.viewResume')}
             </Button>
             <Button variant="secondary" size="lg" onClick={() => navigate('/contact')}>
-              {uiText.hero.buttons.contact}
+              {t('hero.getInTouch')}
             </Button>
           </div>
         </div>
