@@ -2,22 +2,22 @@ import { forwardRef } from 'react';
 import { inputVariants, inputSizes } from './variants';
 
 /**
- * Componente Textarea
- * Campo de texto multilínea con estilos coherentes al sistema de diseño.
+ * Textarea Component
+ * Multiline text field with design system-consistent styling.
  *
  * @typedef {Object} TextareaProps
- * @property {string} [label] - Texto de etiqueta encima del textarea.
- * @property {string} [error] - Mensaje de error (activa estado de error).
- * @property {string} [helperText] - Texto de ayuda debajo del textarea.
- * @property {number} [rows=4] - Número de filas.
- * @property {'sm'|'md'|'lg'} [size='lg'] - Tamaño del componente (afecta padding/tipografía).
- * @property {boolean} [fullWidth=false] - Ocupa todo el ancho del contenedor.
- * @property {boolean} [resizable=false] - Permite redimensionar manualmente.
- * @property {string} [className=''] - Clases CSS adicionales para el textarea.
- * @property {string} [containerClassName=''] - Clases CSS adicionales para el contenedor.
+ * @property {string} [label] - Label text above the textarea.
+ * @property {string} [error] - Error message (activates error state).
+ * @property {string} [helperText] - Helper text below the textarea.
+ * @property {number} [rows=4] - Number of rows.
+ * @property {'sm'|'md'|'lg'} [size='lg'] - Component size (affects padding/typography).
+ * @property {boolean} [fullWidth=false] - Expands to full container width.
+ * @property {boolean} [resizable=false] - Allows manual resizing.
+ * @property {string} [className=''] - Additional CSS classes for the textarea.
+ * @property {string} [containerClassName=''] - Additional CSS classes for the container.
  *
  * @example
- * <Textarea placeholder="Tu mensaje..." rows={4} fullWidth />
+ * <Textarea placeholder="Your message..." rows={4} fullWidth />
  */
 const Textarea = forwardRef(
   (
