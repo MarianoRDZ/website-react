@@ -122,5 +122,10 @@
     "rights": "Todos los derechos reservados.",
     "builtWith": "Construido con React & Tailwind",
     "viewSource": "Ver código fuente"
+  },
+  "notFound": {
+    "title": "404 - Página No Encontrada",
+    "description": "Lo sentimos, la página que buscás no existe o fue movida.",
+    "backHome": "Volver al Inicio"
   }
 }
