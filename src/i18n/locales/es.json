@@ -17,6 +17,12 @@
   "contact": {
     "title": "Contacto",
     "subtitle": "¿Tenés alguna pregunta o querés trabajar juntos? ¡Dejame un mensaje!",
+    "directContact": "Contacto Directo",
+    "emailLabel": "Email",
+    "locationLabel": "Ubicación",
+    "availabilityLabel": "Disponibilidad",
+    "availabilityText": "Disponible en todo el mundo",
+    "description": "Siempre estoy interesado en escuchar sobre nuevos proyectos y oportunidades. No dudes en comunicarte, ya sea teniendo una pregunta o solo para saludar.",
     "form": {
       "name": "Nombre",
       "namePlaceholder": "Tu nombre",

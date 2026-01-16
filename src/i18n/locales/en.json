@@ -17,6 +17,12 @@
   "contact": {
     "title": "Get In Touch",
     "subtitle": "Have a question or want to work together? Drop me a message!",
+    "directContact": "Direct Contact",
+    "emailLabel": "Email",
+    "locationLabel": "Location",
+    "availabilityLabel": "Availability",
+    "availabilityText": "Available worldwide",
+    "description": "I'm always interested in hearing about new projects and opportunities. Feel free to reach out, whether you have a question or just want to say hello!",
     "form": {
       "name": "Name",
       "namePlaceholder": "Your name",
