@@ -7,15 +7,9 @@
     <title>Redirecting...</title>
     <script>
       // GitHub Pages 404 redirect solution for SPAs
-      // Redirects to index.html with the original path preserved
-      const path = window.location.pathname;
-      const base = '/website-react/';
-      
-      // Remove the base path from the location
-      const newPath = path.startsWith(base) ? path.slice(base.length) : path;
-      
-      // Redirect to index.html with the path as a query parameter
-      window.location.replace(base + '?redirect=' + encodeURIComponent('/' + newPath));
+      // Stores the current path in sessionStorage and redirects to index.html
+      sessionStorage.setItem('redirect', window.location.pathname);
+      window.location.replace('/website-react/');
     </script>
   </head>
   <body>
