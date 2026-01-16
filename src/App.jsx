@@ -3,8 +3,11 @@ import Layout from './components/common/Layout';
 import Home from './pages/Home';
 import CV from './pages/CV';
 import Contact from './pages/Contact';
+import { useDocumentTitle } from './hooks/useDocumentTitle';
 
 function App() {
+  useDocumentTitle();
+
   return (
     <BrowserRouter basename="/website-react">
       <Layout>
