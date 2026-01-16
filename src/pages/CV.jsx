@@ -42,7 +42,7 @@ const CV = () => {
   return (
     <div className="mx-auto max-w-7xl space-y-12 px-6 py-8">
       <header className="mb-12 text-center">
-        <h1 className="mb-2 text-4xl font-bold text-gray-900 dark:text-white">
+        <h1 className="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
           {personalInfo.name}
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-400">{t('hero.title')}</p>
