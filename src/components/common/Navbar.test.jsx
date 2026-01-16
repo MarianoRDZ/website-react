@@ -64,14 +64,14 @@ describe('Navbar Component', () => {
 
     it('renders all navigation links', () => {
       renderNavbar();
-      expect(screen.getByRole('link', { name: /home/i })).toBeInTheDocument();
-      expect(screen.getByRole('link', { name: /resume/i })).toBeInTheDocument();
-      expect(screen.getByRole('link', { name: /contact/i })).toBeInTheDocument();
+      expect(screen.getAllByRole('link', { name: /home/i })).toHaveLength(2);
+      expect(screen.getAllByRole('link', { name: /resume/i })).toHaveLength(2);
+      expect(screen.getAllByRole('link', { name: /contact/i })).toHaveLength(2);
     });
 
     it('renders language selector', () => {
       renderNavbar();
-      expect(screen.getByTestId('language-selector')).toBeInTheDocument();
+      expect(screen.getAllByTestId('language-selector')).toHaveLength(2);
     });
 
     it('renders mobile menu toggle button', () => {
@@ -90,32 +90,42 @@ describe('Navbar Component', () => {
     it('highlights home link when on home page', () => {
       mockLocation = { pathname: '/' };
       renderNavbar();
-      const homeLink = screen.getByRole('link', { name: /home/i });
-      expect(homeLink).toHaveClass('text-blue-400');
+      const homeLinks = screen.getAllByRole('link', { name: /home/i });
+      homeLinks.forEach((link) => {
+        expect(link).toHaveClass('text-blue-400');
+      });
     });
 
     it('highlights resume link when on resume page', () => {
       mockLocation = { pathname: '/cv' };
       renderNavbar();
-      const resumeLink = screen.getByRole('link', { name: /resume/i });
-      expect(resumeLink).toHaveClass('text-blue-400');
+      const resumeLinks = screen.getAllByRole('link', { name: /resume/i });
+      resumeLinks.forEach((link) => {
+        expect(link).toHaveClass('text-blue-400');
+      });
     });
 
     it('highlights contact link when on contact page', () => {
       mockLocation = { pathname: '/contact' };
       renderNavbar();
-      const contactLink = screen.getByRole('link', { name: /contact/i });
-      expect(contactLink).toHaveClass('text-blue-400');
+      const contactLinks = screen.getAllByRole('link', { name: /contact/i });
+      contactLinks.forEach((link) => {
+        expect(link).toHaveClass('text-blue-400');
+      });
     });
 
     it('does not highlight inactive links', () => {
       mockLocation = { pathname: '/' };
       renderNavbar();
-      const resumeLink = screen.getByRole('link', { name: /resume/i });
-      const contactLink = screen.getByRole('link', { name: /contact/i });
+      const resumeLinks = screen.getAllByRole('link', { name: /resume/i });
+      const contactLinks = screen.getAllByRole('link', { name: /contact/i });
 
-      expect(resumeLink).toHaveClass('text-gray-300');
-      expect(contactLink).toHaveClass('text-gray-300');
+      resumeLinks.forEach((link) => {
+        expect(link).toHaveClass('text-gray-300');
+      });
+      contactLinks.forEach((link) => {
+        expect(link).toHaveClass('text-gray-300');
+      });
     });
   });
 
@@ -281,11 +291,10 @@ describe('Navbar Component', () => {
     });
 
     it('desktop links are hidden on mobile', () => {
-      renderNavbar();
-      const allLinks = screen.getAllByRole('link');
-      const desktopLinksContainer = allLinks[0]?.parentElement?.parentElement;
-
-      expect(desktopLinksContainer).toHaveClass('hidden', 'md:flex');
+      const { container } = renderNavbar();
+      const desktopLinksContainer = container.querySelector('.hidden.md\\:flex');
+      expect(desktopLinksContainer).toBeInTheDocument();
+      expect(desktopLinksContainer).toHaveClass('hidden');
     });
   });
 
@@ -298,7 +307,7 @@ describe('Navbar Component', () => {
 
     it('mobile menu has smooth transitions', () => {
       const { container } = renderNavbar();
-      const mobileMenu = container.querySelector('.md\\:hidden > div');
+      const mobileMenu = container.querySelector('.md\\:hidden.absolute');
 
       expect(mobileMenu).toHaveClass('transition-all', 'duration-300');
     });
@@ -328,19 +337,20 @@ describe('Navbar Component', () => {
     it('navigation links have descriptive text', () => {
       renderNavbar();
 
-      expect(screen.getByRole('link', { name: /home/i })).toBeInTheDocument();
-      expect(screen.getByRole('link', { name: /resume/i })).toBeInTheDocument();
-      expect(screen.getByRole('link', { name: /contact/i })).toBeInTheDocument();
+      expect(screen.getAllByRole('link', { name: /home/i })).toHaveLength(2);
+      expect(screen.getAllByRole('link', { name: /resume/i })).toHaveLength(2);
+      expect(screen.getAllByRole('link', { name: /contact/i })).toHaveLength(2);
     });
   });
 
   describe('Navigation Links Structure', () => {
     it('renders correct number of navigation links', () => {
       renderNavbar();
-      // Logo + 3 nav links = 4 unique hrefs, but displayed in both desktop and mobile
+      // Logo + 3 nav links = 4 unique hrefs: '/' (logo), '/' (home), '/cv', '/contact'
+      // But home and logo share same href, so 3 unique paths
       const allLinks = screen.getAllByRole('link');
       const uniquePaths = new Set(allLinks.map((link) => link.getAttribute('href')));
-      expect(uniquePaths.size).toBe(4); // '/', '/cv', '/contact' + logo
+      expect(uniquePaths.size).toBe(3); // '/', '/cv', '/contact'
     });
 
     it('home link has correct path', () => {
