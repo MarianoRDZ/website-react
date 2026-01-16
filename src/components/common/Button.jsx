@@ -15,6 +15,8 @@ import { buttonVariants, buttonSizes } from './variants';
  * @property {boolean} [fullWidth=false] - Whether button should take full width
  * @property {string} [className=''] - Additional CSS classes
  * @property {() => void} [onClick] - Click handler
+ * @property {'button' | 'a'} [as='button'] - Render as button or anchor element
+ * @property {string} [href] - Link URL (when as="a")
  *
  * @example
  * <Button variant="primary" size="lg" onClick={handleClick}>
@@ -35,6 +37,8 @@ const Button = forwardRef(
       fullWidth = false,
       className = '',
       onClick,
+      as = 'button',
+      href,
       ...props
     },
     ref
@@ -56,6 +60,27 @@ const Button = forwardRef(
       .filter(Boolean)
       .join(' ');
 
+    const content = loading ? (
+      <>
+        <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-solid border-current border-r-transparent" />
+        <span>Loading...</span>
+      </>
+    ) : (
+      <>
+        {leftIcon && <span className="inline-flex shrink-0">{leftIcon}</span>}
+        {children}
+        {rightIcon && <span className="inline-flex shrink-0">{rightIcon}</span>}
+      </>
+    );
+
+    if (as === 'a') {
+      return (
+        <a ref={ref} href={href} className={baseClasses} {...props}>
+          {content}
+        </a>
+      );
+    }
+
     return (
       <button
         ref={ref}
@@ -65,18 +90,7 @@ const Button = forwardRef(
         onClick={onClick}
         {...props}
       >
-        {loading ? (
-          <>
-            <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-solid border-current border-r-transparent" />
-            <span>Loading...</span>
-          </>
-        ) : (
-          <>
-            {leftIcon && <span className="inline-flex shrink-0">{leftIcon}</span>}
-            {children}
-            {rightIcon && <span className="inline-flex shrink-0">{rightIcon}</span>}
-          </>
-        )}
+        {content}
       </button>
     );
   }
