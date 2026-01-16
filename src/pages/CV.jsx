@@ -40,7 +40,7 @@ const CV = () => {
   const jobKeys = ['kopius', 'solvd', 'endava', 'mercadolibre', 'intive', 'accenture'];
 
   return (
-    <div className="mx-auto max-w-7xl space-y-12 px-6 py-8">
+    <div className="mx-auto max-w-7xl space-y-12 px-6 py-4">
       <header className="mb-12 text-center">
         <h1 className="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
           {personalInfo.name}
@@ -69,7 +69,7 @@ const CV = () => {
         </div>
       </header>
 
-      <section>
+      <section className="py-4">
         <h2 className="mb-6 border-b-2 border-blue-600 pb-2 text-3xl font-bold text-gray-900 dark:text-white">
           {t('cv.summary')}
         </h2>
