@@ -1,8 +1,9 @@
 import { useTranslation } from 'react-i18next';
 import { personalInfo, experience, education, skills } from '../constants/data';
+import { Card } from '../components/common';
 
 const ExperienceItem = ({ title, company, period, responsibilities }) => (
-  <div className="rounded-lg bg-white p-6 shadow-md dark:bg-gray-800">
+  <Card>
     <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
       <div>
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{title}</h3>
@@ -15,11 +16,11 @@ const ExperienceItem = ({ title, company, period, responsibilities }) => (
         <li key={index}>{item}</li>
       ))}
     </ul>
-  </div>
+  </Card>
 );
 
 const SkillCard = ({ title, skills }) => (
-  <div className="rounded-lg bg-white p-6 shadow-md dark:bg-gray-800">
+  <Card>
     <h3 className="mb-3 text-lg font-semibold text-gray-900 dark:text-white">{title}</h3>
     <div className="flex flex-wrap gap-2">
       {skills.map((skill) => (
@@ -31,7 +32,7 @@ const SkillCard = ({ title, skills }) => (
         </span>
       ))}
     </div>
-  </div>
+  </Card>
 );
 
 const CV = () => {
@@ -73,9 +74,9 @@ const CV = () => {
         <h2 className="mb-6 border-b-2 border-blue-600 pb-2 text-3xl font-bold text-gray-900 dark:text-white">
           {t('cv.summary')}
         </h2>
-        <div className="rounded-lg bg-white p-6 shadow-md dark:bg-gray-800">
+        <Card>
           <p className="text-gray-700 dark:text-gray-300">{t('cv.summaryText')}</p>
-        </div>
+        </Card>
       </section>
 
       <section>
@@ -103,7 +104,7 @@ const CV = () => {
         </h2>
         <div className="space-y-4">
           {education.map((edu) => (
-            <div key={edu.id} className="rounded-lg bg-white p-6 shadow-md dark:bg-gray-800">
+            <Card key={edu.id}>
               <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
@@ -115,9 +116,9 @@ const CV = () => {
                 </div>
                 <p className="text-gray-600 dark:text-gray-400">{edu.period}</p>
               </div>
-            </div>
+            </Card>
           ))}
-          <div className="rounded-lg bg-white p-6 shadow-md dark:bg-gray-800">
+          <Card>
             <h3 className="mb-3 text-lg font-semibold text-gray-900 dark:text-white">
               {t('cv.certifications')}
             </h3>
@@ -128,7 +129,7 @@ const CV = () => {
                 <li key={index}>• {cert}</li>
               ))}
             </ul>
-          </div>
+          </Card>
         </div>
       </section>
 
@@ -147,7 +148,7 @@ const CV = () => {
         <h2 className="mb-6 border-b-2 border-blue-600 pb-2 text-3xl font-bold text-gray-900 dark:text-white">
           {t('cv.languages')}
         </h2>
-        <div className="rounded-lg bg-white p-6 shadow-md dark:bg-gray-800">
+        <Card>
           <div className="grid gap-4 md:grid-cols-2">
             <div>
               <h3 className="font-semibold text-gray-900 dark:text-white">
@@ -162,7 +163,7 @@ const CV = () => {
               <p className="text-gray-700 dark:text-gray-300">{t('cv.languageLevels.b2')}</p>
             </div>
           </div>
-        </div>
+        </Card>
       </section>
     </div>
   );

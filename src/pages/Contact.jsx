@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { useTranslation } from 'react-i18next';
-import { SocialLinks } from '../components/common';
+import { SocialLinks, Input, Textarea, Card } from '../components/common';
 import { personalInfo } from '../constants/data';
 
 const Contact = () => {
@@ -205,10 +205,8 @@ const Contact = () => {
         </div>
 
         {/* Right column - Contact Form */}
-        <form
-          onSubmit={handleSubmit}
-          className="h-fit space-y-5 rounded-lg bg-white p-6 shadow-md dark:bg-gray-800"
-        >
+        <form onSubmit={handleSubmit} className="h-fit">
+          <Card variant="surface" className="space-y-5">
           {status.success && (
             <div className="rounded-lg bg-green-50 p-4 text-green-800 dark:bg-green-900/20 dark:text-green-400">
               ✓ {t('contact.success')}
@@ -229,15 +227,16 @@ const Contact = () => {
               >
                 {t('contact.form.name')}
               </label>
-              <input
-                type="text"
+              <Input
                 id="name"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
                 required
                 disabled={status.loading}
-                className="border-background-tertiary text-text-primary placeholder-text-secondary focus:border-accent focus:ring-accent/20 w-full rounded-lg border bg-gray-900 px-4 py-3 focus:ring-2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                fullWidth
+                size="lg"
+                className="bg-gray-900 border-background-tertiary text-text-primary placeholder-text-secondary"
                 placeholder={t('contact.form.namePlaceholder')}
               />
             </div>
@@ -249,7 +248,7 @@ const Contact = () => {
               >
                 {t('contact.form.email')}
               </label>
-              <input
+              <Input
                 type="email"
                 id="email"
                 name="email"
@@ -257,7 +256,9 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 disabled={status.loading}
-                className="border-background-tertiary text-text-primary placeholder-text-secondary focus:border-accent focus:ring-accent/20 w-full rounded-lg border bg-gray-900 px-4 py-3 focus:ring-2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                fullWidth
+                size="lg"
+                className="bg-gray-900 border-background-tertiary text-text-primary placeholder-text-secondary"
                 placeholder={t('contact.form.emailPlaceholder')}
               />
             </div>
@@ -269,7 +270,7 @@ const Contact = () => {
               >
                 {t('contact.form.message')}
               </label>
-              <textarea
+              <Textarea
                 id="message"
                 name="message"
                 value={formData.message}
@@ -277,7 +278,9 @@ const Contact = () => {
                 required
                 rows={4}
                 disabled={status.loading}
-                className="border-background-tertiary text-text-primary placeholder-text-secondary focus:border-accent focus:ring-accent/20 w-full resize-none rounded-lg border bg-gray-900 px-4 py-3 focus:ring-2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                fullWidth
+                size="lg"
+                className="bg-gray-900 border-background-tertiary text-text-primary placeholder-text-secondary"
                 placeholder={t('contact.form.messagePlaceholder')}
               />
             </div>
@@ -307,6 +310,7 @@ const Contact = () => {
               )}
             </button>
           </div>
+          </Card>
         </form>
       </div>
     </div>
