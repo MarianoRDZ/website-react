@@ -6,7 +6,7 @@ import Contact from './pages/Contact';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/website-react">
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
