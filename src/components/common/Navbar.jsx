@@ -53,7 +53,7 @@ const Navbar = () => {
             </div>
 
             <span>
-              MARIANORDZ<span className="text-blue-400">.DEV.AR</span>
+              MARIANORDZ<span className="text-blue-400">.COM.AR</span>
             </span>
           </Link>
 
