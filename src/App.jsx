@@ -12,15 +12,15 @@ function App() {
   return (
     <BrowserRouter basename="/website-react">
       <ScrollToTop />
-      <Layout>
-        <Suspense fallback={<PageLoader />}>
+      <Suspense fallback={<PageLoader />}>
+        <Layout>
           <Routes>
             {routes.map(({ path, element: Component }) => (
               <Route key={path} path={path} element={<Component />} />
             ))}
           </Routes>
-        </Suspense>
-      </Layout>
+        </Layout>
+      </Suspense>
     </BrowserRouter>
   );
 }
