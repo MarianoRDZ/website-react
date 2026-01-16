@@ -207,109 +207,109 @@ const Contact = () => {
         {/* Right column - Contact Form */}
         <form onSubmit={handleSubmit} className="h-fit">
           <Card variant="surface" className="space-y-5">
-          {status.success && (
-            <div className="rounded-lg bg-green-50 p-4 text-green-800 dark:bg-green-900/20 dark:text-green-400">
-              ✓ {t('contact.success')}
-            </div>
-          )}
+            {status.success && (
+              <div className="rounded-lg bg-green-50 p-4 text-green-800 dark:bg-green-900/20 dark:text-green-400">
+                ✓ {t('contact.success')}
+              </div>
+            )}
 
-          {status.error && (
-            <div className="rounded-lg bg-red-50 p-4 text-red-800 dark:bg-red-900/20 dark:text-red-400">
-              ✗ {status.error}
-            </div>
-          )}
+            {status.error && (
+              <div className="rounded-lg bg-red-50 p-4 text-red-800 dark:bg-red-900/20 dark:text-red-400">
+                ✗ {status.error}
+              </div>
+            )}
 
-          <div className="space-y-5">
-            <div>
-              <label
-                htmlFor="name"
-                className="mb-2 block text-xs font-semibold tracking-wider text-gray-600 uppercase dark:text-gray-400"
-              >
-                {t('contact.form.name')}
-              </label>
-              <Input
-                id="name"
-                name="name"
-                value={formData.name}
+            <div className="space-y-5">
+              <div>
+                <label
+                  htmlFor="name"
+                  className="mb-2 block text-xs font-semibold tracking-wider text-gray-600 uppercase dark:text-gray-400"
+                >
+                  {t('contact.form.name')}
+                </label>
+                <Input
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  disabled={status.loading}
+                  fullWidth
+                  size="lg"
+                  className="border-background-tertiary text-text-primary placeholder-text-secondary bg-gray-900"
+                  placeholder={t('contact.form.namePlaceholder')}
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="email"
+                  className="mb-2 block text-xs font-semibold tracking-wider text-gray-600 uppercase dark:text-gray-400"
+                >
+                  {t('contact.form.email')}
+                </label>
+                <Input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  disabled={status.loading}
+                  fullWidth
+                  size="lg"
+                  className="border-background-tertiary text-text-primary placeholder-text-secondary bg-gray-900"
+                  placeholder={t('contact.form.emailPlaceholder')}
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="message"
+                  className="mb-2 block text-xs font-semibold tracking-wider text-gray-600 uppercase dark:text-gray-400"
+                >
+                  {t('contact.form.message')}
+                </label>
+                <Textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows={4}
+                  disabled={status.loading}
+                  fullWidth
+                  size="lg"
+                  className="border-background-tertiary text-text-primary placeholder-text-secondary bg-gray-900"
+                  placeholder={t('contact.form.messagePlaceholder')}
+                />
+              </div>
+
+              {/* Honeypot field - hidden from users, only bots fill it */}
+              <input
+                type="text"
+                name="honeypot"
+                value={formData.honeypot}
                 onChange={handleChange}
-                required
-                disabled={status.loading}
-                fullWidth
-                size="lg"
-                className="bg-gray-900 border-background-tertiary text-text-primary placeholder-text-secondary"
-                placeholder={t('contact.form.namePlaceholder')}
+                autoComplete="off"
+                tabIndex="-1"
+                className="absolute -left-2499.75 h-0 w-0 opacity-0"
+                aria-hidden="true"
               />
-            </div>
 
-            <div>
-              <label
-                htmlFor="email"
-                className="mb-2 block text-xs font-semibold tracking-wider text-gray-600 uppercase dark:text-gray-400"
+              <button
+                type="submit"
+                disabled={status.loading}
+                className="flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-all hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
               >
-                {t('contact.form.email')}
-              </label>
-              <Input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                disabled={status.loading}
-                fullWidth
-                size="lg"
-                className="bg-gray-900 border-background-tertiary text-text-primary placeholder-text-secondary"
-                placeholder={t('contact.form.emailPlaceholder')}
-              />
+                {status.loading ? t('contact.form.sending') : t('contact.form.send')}
+                {!status.loading && (
+                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" stroke="none">
+                    <path d="M16.6915026,12.4744748 L3.50612381,13.2599618 C3.19218622,13.2599618 3.03521743,13.4170592 3.03521743,13.5741566 L1.15159189,20.0151496 C0.8376543,20.8006365 0.99,21.89 1.77946707,22.52 C2.41,22.99 3.50612381,23.1 4.13399899,22.8429026 L21.714504,14.0454487 C22.6563168,13.5741566 23.1272231,12.6315722 22.9702544,11.6889879 L4.13399899,1.16346273 C3.34915502,0.9 2.40734225,1.00636533 1.77946707,1.4776575 C0.994623095,2.10604706 0.837654326,3.0486314 1.15159189,3.99021575 L3.03521743,10.4311088 C3.03521743,10.5882061 3.19218622,10.7453035 3.50612381,10.7453035 L16.6915026,11.5307905 C16.6915026,11.5307905 17.1624089,11.5307905 17.1624089,12.0020827 C17.1624089,12.4744748 16.6915026,12.4744748 16.6915026,12.4744748 Z" />
+                  </svg>
+                )}
+              </button>
             </div>
-
-            <div>
-              <label
-                htmlFor="message"
-                className="mb-2 block text-xs font-semibold tracking-wider text-gray-600 uppercase dark:text-gray-400"
-              >
-                {t('contact.form.message')}
-              </label>
-              <Textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                rows={4}
-                disabled={status.loading}
-                fullWidth
-                size="lg"
-                className="bg-gray-900 border-background-tertiary text-text-primary placeholder-text-secondary"
-                placeholder={t('contact.form.messagePlaceholder')}
-              />
-            </div>
-
-            {/* Honeypot field - hidden from users, only bots fill it */}
-            <input
-              type="text"
-              name="honeypot"
-              value={formData.honeypot}
-              onChange={handleChange}
-              autoComplete="off"
-              tabIndex="-1"
-              className="absolute -left-2499.75 h-0 w-0 opacity-0"
-              aria-hidden="true"
-            />
-
-            <button
-              type="submit"
-              disabled={status.loading}
-              className="flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-all hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
-            >
-              {status.loading ? t('contact.form.sending') : t('contact.form.send')}
-              {!status.loading && (
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" stroke="none">
-                  <path d="M16.6915026,12.4744748 L3.50612381,13.2599618 C3.19218622,13.2599618 3.03521743,13.4170592 3.03521743,13.5741566 L1.15159189,20.0151496 C0.8376543,20.8006365 0.99,21.89 1.77946707,22.52 C2.41,22.99 3.50612381,23.1 4.13399899,22.8429026 L21.714504,14.0454487 C22.6563168,13.5741566 23.1272231,12.6315722 22.9702544,11.6889879 L4.13399899,1.16346273 C3.34915502,0.9 2.40734225,1.00636533 1.77946707,1.4776575 C0.994623095,2.10604706 0.837654326,3.0486314 1.15159189,3.99021575 L3.03521743,10.4311088 C3.03521743,10.5882061 3.19218622,10.7453035 3.50612381,10.7453035 L16.6915026,11.5307905 C16.6915026,11.5307905 17.1624089,11.5307905 17.1624089,12.0020827 C17.1624089,12.4744748 16.6915026,12.4744748 16.6915026,12.4744748 Z" />
-                </svg>
-              )}
-            </button>
-          </div>
           </Card>
         </form>
       </div>
