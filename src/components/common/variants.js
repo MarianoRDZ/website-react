@@ -5,10 +5,10 @@
 
 export const buttonVariants = {
   primary: {
-    base: 'bg-accent text-background font-semibold transition-all duration-200',
-    hover: 'hover:bg-accent-hover hover:shadow-button',
-    active: 'active:bg-accent-active active:scale-[0.98]',
-    disabled: 'disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-accent',
+    base: 'bg-blue-600 text-white font-semibold transition-all duration-200',
+    hover: 'hover:bg-blue-700 hover:shadow-button',
+    active: 'active:bg-blue-800 active:scale-[0.98]',
+    disabled: 'disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-blue-600',
   },
   secondary: {
     base: 'bg-background-surface text-text-primary border border-text-secondary font-semibold transition-all duration-200',

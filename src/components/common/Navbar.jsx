@@ -52,7 +52,9 @@ const Navbar = () => {
               </div>
             </div>
 
-            <span>MARIANORDZ.DEV.AR</span>
+            <span>
+              MARIANORDZ<span className="text-blue-400">.DEV.AR</span>
+            </span>
           </Link>
 
           <div className="hidden items-center gap-8 md:flex">
