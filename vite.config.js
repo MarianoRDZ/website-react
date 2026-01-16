@@ -1,10 +1,12 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { portfolioConfig } from './portfolio.config';
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/website-react/',
+  // Use basePath from portfolio config, fallback to environment variable or default
+  base: '/',
   test: {
     globals: true,
     environment: 'jsdom',
