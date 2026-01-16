@@ -11,9 +11,19 @@ const ExperienceItem = ({ title, company, period, responsibilities }) => (
       </div>
       <p className="text-gray-600 dark:text-gray-400">{period}</p>
     </div>
-    <ul className="list-inside list-disc space-y-2 text-gray-700 dark:text-gray-300">
+    <ul className="space-y-2">
       {responsibilities.map((item, index) => (
-        <li key={index}>{item}</li>
+        <li key={index} className="flex gap-2 text-gray-700 dark:text-gray-300">
+          <svg
+            className="mt-1 h-4 w-4 shrink-0 text-blue-600 dark:text-blue-400"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+          <span>{item}</span>
+        </li>
       ))}
     </ul>
   </Card>
@@ -122,11 +132,26 @@ const CV = () => {
             <h3 className="mb-3 text-lg font-semibold text-gray-900 dark:text-white">
               {t('cv.certifications')}
             </h3>
-            <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+            <ul className="space-y-2">
               {t('cv.certificationsData', {
                 returnObjects: true,
               }).map((cert, index) => (
-                <li key={index}>• {cert}</li>
+                <li key={index} className="flex gap-2 text-gray-700 dark:text-gray-300">
+                  <svg
+                    className="mt-1 h-4 w-4 shrink-0 text-blue-600 dark:text-blue-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                  <span>{cert}</span>
+                </li>
               ))}
             </ul>
           </Card>
