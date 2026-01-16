@@ -1,18 +1,137 @@
-# Personal Portfolio
+# Personal Portfolio Template
 
-A modern, responsive personal portfolio website built with React, Vite, and Tailwind CSS.
+A modern, fully customizable personal portfolio website built with React, Vite, and Tailwind CSS. **Designed to be easily customizable** - just edit one configuration file and you're ready to go!
 
-## Features
+## ✨ Features
 
-- Built with Vite for lightning-fast development
-- React 19 with React Router for navigation
-- Tailwind CSS with custom design system
-- Dark theme optimized
-- Fully responsive (mobile to 1080p)
-- Clean architecture with design tokens
-- ESLint + Prettier configured
+- 🎨 Modern, responsive design (mobile to desktop)
+- 🌙 Dark theme optimized
+- ⚡ Built with Vite for lightning-fast development
+- 🧩 Component-based architecture
+- 📧 Working contact form (EmailJS)
+- 🎯 100% test coverage on core components
+- 🌍 i18n ready (English/Spanish)
+- 📱 Fully responsive
+- ♿ Accessibility focused
+- 🚀 Easy deployment to GitHub Pages
 
-## Project Structure
+## 🚀 Quick Start (For Your Own Portfolio)
+
+### 1. Fork/Clone This Repository
+
+```bash
+git clone https://github.com/yourusername/portfolio-template.git my-portfolio
+cd my-portfolio
+npm install
+```
+
+### 2. Personalize Your Portfolio
+
+**This is the ONLY file you need to edit:**
+
+Open `portfolio.config.js` and update all sections with your information:
+
+```javascript
+export const portfolioConfig = {
+  siteConfig: {
+    basePath: '/my-portfolio', // Your repo name or '/' for custom domain
+    title: 'Your Name | Your Title',
+  },
+
+  personalInfo: {
+    name: 'Your Name',
+    title: 'Your Professional Title',
+    email: 'your.email@example.com',
+    // ... update all fields
+  },
+
+  experience: [
+    // Add your work experience
+  ],
+
+  skills: {
+    // Add your skills by category
+  },
+  // ... and more
+};
+```
+
+### 3. Set Up Contact Form (Optional)
+
+If you want the contact form to work:
+
+1. Create a free account at [EmailJS](https://www.emailjs.com/)
+2. Set up an email service and template
+3. Copy `.env.example` to `.env`
+4. Add your EmailJS credentials:
+
+```env
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+### 4. Add Your Resume/CV PDF
+
+Place your PDF file in the `public/` folder and update the filename in `portfolio.config.js`:
+
+```javascript
+personalInfo: {
+  resumeFileName: 'Your-Resume.pdf',
+}
+```
+
+### 5. Update Translations (Optional)
+
+If you want to customize text in multiple languages:
+
+- Edit `src/i18n/locales/en.json` for English
+- Edit `src/i18n/locales/es.json` for Spanish
+
+### 6. Run Locally
+
+```bash
+npm run dev
+```
+
+Visit `http://localhost:5173` to see your portfolio!
+
+## 📦 Deployment
+
+### GitHub Pages
+
+1. Update `portfolio.config.js`:
+
+```javascript
+siteConfig: {
+  basePath: '/your-repo-name',  // Must match your repository name
+}
+```
+
+2. Add EmailJS secrets to repository:
+   - Go to Settings → Secrets → Actions
+   - Add: `EMAILJS_SERVICE_ID`, `EMAILJS_TEMPLATE_ID`, `EMAILJS_PUBLIC_KEY`
+
+3. Push to main branch - GitHub Actions will automatically deploy
+
+4. Enable GitHub Pages:
+   - Settings → Pages → Source: gh-pages branch
+
+### Custom Domain (Vercel/Netlify)
+
+1. Update `portfolio.config.js`:
+
+```javascript
+siteConfig: {
+  basePath: '/',  // Root path for custom domain
+}
+```
+
+2. Add environment variables in your hosting platform dashboard
+
+3. Deploy via Git integration
+
+## 📁 Project Structure
 
 ```
 src/
