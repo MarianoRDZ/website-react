@@ -107,7 +107,7 @@ const Contact = () => {
 
       <form
         onSubmit={handleSubmit}
-        className="space-y-5 rounded-lg bg-white p-6 shadow-lg dark:bg-gray-800"
+        className="bg-background-surface space-y-5 rounded-lg p-6 shadow-lg"
       >
         {status.success && (
           <div className="rounded-lg bg-green-50 p-4 text-green-800 dark:bg-green-900/20 dark:text-green-400">
@@ -124,7 +124,7 @@ const Contact = () => {
         <div>
           <label
             htmlFor="name"
-            className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300"
+            className="text-text-secondary mb-2 block text-xs font-semibold tracking-wider uppercase"
           >
             {t('contact.form.name')}
           </label>
@@ -136,7 +136,7 @@ const Contact = () => {
             onChange={handleChange}
             required
             disabled={status.loading}
-            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-transparent focus:ring-2 focus:ring-blue-500 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+            className="border-background-tertiary bg-background-surface text-text-primary w-full rounded-lg border px-4 py-3 placeholder-blue-400/60 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
             placeholder={t('contact.form.namePlaceholder')}
           />
         </div>
@@ -144,7 +144,7 @@ const Contact = () => {
         <div>
           <label
             htmlFor="email"
-            className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300"
+            className="text-text-secondary mb-2 block text-xs font-semibold tracking-wider uppercase"
           >
             {t('contact.form.email')}
           </label>
@@ -156,7 +156,7 @@ const Contact = () => {
             onChange={handleChange}
             required
             disabled={status.loading}
-            className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-transparent focus:ring-2 focus:ring-blue-500 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+            className="border-background-tertiary bg-background-surface text-text-primary w-full rounded-lg border px-4 py-3 placeholder-blue-400/60 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
             placeholder={t('contact.form.emailPlaceholder')}
           />
         </div>
@@ -164,7 +164,7 @@ const Contact = () => {
         <div>
           <label
             htmlFor="message"
-            className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300"
+            className="text-text-secondary mb-2 block text-xs font-semibold tracking-wider uppercase"
           >
             {t('contact.form.message')}
           </label>
@@ -176,7 +176,7 @@ const Contact = () => {
             required
             rows={6}
             disabled={status.loading}
-            className="w-full resize-none rounded-lg border border-gray-300 px-4 py-2 focus:border-transparent focus:ring-2 focus:ring-blue-500 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+            className="border-background-tertiary bg-background-surface text-text-primary w-full resize-none rounded-lg border px-4 py-3 placeholder-blue-400/60 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
             placeholder={t('contact.form.messagePlaceholder')}
           />
         </div>
@@ -196,9 +196,19 @@ const Contact = () => {
         <button
           type="submit"
           disabled={status.loading}
-          className="w-full rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
+          className="flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-all hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
         >
           {status.loading ? t('contact.form.sending') : t('contact.form.send')}
+          {!status.loading && (
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2.5}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          )}
         </button>
       </form>
     </div>
