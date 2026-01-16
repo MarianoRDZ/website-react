@@ -19,14 +19,14 @@ export const portfolioConfig = {
     // Used for router basename and deployment paths
     // If deploying to username.github.io/repo-name, set this to '/repo-name'
     // If deploying to custom domain or username.github.io, set to '/'
-    basePath: '/website-react',
+    basePath: '/',
 
     // Your site title (appears in browser tab)
-    title: 'Mariano Rodriguez | Full-stack Developer',
+    title: 'Mariano Rodriguez | Full-stack Developer | marianordz.com.ar',
 
     // Site description for SEO
     description:
-      'Full-Stack Developer portfolio showcasing projects and experience in React, Node.js, and modern web technologies.',
+      'Full-Stack Developer portfolio - marianordz.com.ar. Showcasing projects and experience in React, Node.js, and modern web technologies.',
   },
 
   // ============================================================================

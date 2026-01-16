@@ -65,7 +65,7 @@ describe('ContactIcons', () => {
       const { container } = render(<LocationIcon />);
       const paths = container.querySelectorAll('path');
       paths.forEach((path) => {
-        expect(path).toHaveAttribute('strokeWidth', '2');
+        expect(path).toHaveAttribute('stroke-width', '2');
       });
     });
   });

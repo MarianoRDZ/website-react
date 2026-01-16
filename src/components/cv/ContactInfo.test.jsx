@@ -4,19 +4,11 @@ import ContactInfo from './ContactInfo';
 
 vi.mock('../../constants/data', () => ({
   personalInfo: {
-    name: 'John Doe',
     email: 'john@example.com',
     phone: '+1234567890',
     location: 'Buenos Aires, Argentina',
-    linkedin: 'https://linkedin.com/in/johndoe',
+    linkedinUsername: 'johndoe',
   },
-}));
-
-vi.mock('react-i18next', () => ({
-  useTranslation: () => ({
-    t: (key) => key,
-    i18n: { language: 'en' },
-  }),
 }));
 
 describe('ContactInfo Component', () => {
@@ -28,42 +20,23 @@ describe('ContactInfo Component', () => {
       expect(screen.getByText('Buenos Aires, Argentina')).toBeInTheDocument();
     });
 
-    it('renders email label', () => {
+    it('renders email as mailto link', () => {
       render(<ContactInfo />);
-      expect(screen.getByText('cv.email')).toBeInTheDocument();
-    });
-
-    it('renders phone label', () => {
-      render(<ContactInfo />);
-      expect(screen.getByText('cv.phone')).toBeInTheDocument();
-    });
-
-    it('renders location label', () => {
-      render(<ContactInfo />);
-      expect(screen.getByText('cv.location')).toBeInTheDocument();
+      const emailLink = screen.getByText('john@example.com');
+      expect(emailLink).toHaveAttribute('href', 'mailto:john@example.com');
     });
 
     it('renders LinkedIn link with correct href', () => {
       render(<ContactInfo />);
-      const linkedinLink = screen.getByRole('link');
+      const linkedinLink = screen.getByText('linkedin.com/in/johndoe');
       expect(linkedinLink).toHaveAttribute('href', 'https://linkedin.com/in/johndoe');
     });
 
-    it('renders LinkedIn link with target _blank', () => {
+    it('LinkedIn link opens in new tab', () => {
       render(<ContactInfo />);
-      const linkedinLink = screen.getByRole('link');
+      const linkedinLink = screen.getByText('linkedin.com/in/johndoe');
       expect(linkedinLink).toHaveAttribute('target', '_blank');
-    });
-
-    it('renders LinkedIn link with rel noopener noreferrer', () => {
-      render(<ContactInfo />);
-      const linkedinLink = screen.getByRole('link');
       expect(linkedinLink).toHaveAttribute('rel', 'noopener noreferrer');
-    });
-
-    it('renders LinkedIn label', () => {
-      render(<ContactInfo />);
-      expect(screen.getByText('LinkedIn')).toBeInTheDocument();
     });
   });
 
@@ -71,36 +44,28 @@ describe('ContactInfo Component', () => {
     it('applies correct wrapper classes', () => {
       const { container } = render(<ContactInfo />);
       const wrapper = container.firstChild;
-      expect(wrapper).toHaveClass('flex', 'flex-wrap', 'gap-4', 'text-sm');
+      expect(wrapper).toHaveClass('flex', 'flex-wrap', 'text-sm');
     });
 
-    it('renders contact items with correct separator', () => {
+    it('renders separator dots', () => {
       const { container } = render(<ContactInfo />);
-      const separators = container.querySelectorAll('.text-gray-400');
+      const spans = Array.from(container.querySelectorAll('span'));
+      const separators = spans.filter((span) => span.textContent === '•');
       expect(separators.length).toBeGreaterThan(0);
     });
   });
 
   describe('Links', () => {
-    it('renders LinkedIn as clickable link', () => {
+    it('email link has hover styles', () => {
       render(<ContactInfo />);
-      const link = screen.getByRole('link');
-      expect(link.tagName).toBe('A');
+      const emailLink = screen.getByText('john@example.com');
+      expect(emailLink).toHaveClass('hover:text-blue-600', 'dark:hover:text-blue-400');
     });
 
     it('LinkedIn link has hover styles', () => {
       render(<ContactInfo />);
-      const link = screen.getByRole('link');
-      expect(link).toHaveClass('text-blue-400', 'hover:text-blue-300', 'transition-colors');
-    });
-  });
-
-  describe('Accessibility', () => {
-    it('LinkedIn link opens in new tab securely', () => {
-      render(<ContactInfo />);
-      const link = screen.getByRole('link');
-      expect(link).toHaveAttribute('target', '_blank');
-      expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+      const linkedinLink = screen.getByText('linkedin.com/in/johndoe');
+      expect(linkedinLink).toHaveClass('hover:text-blue-600', 'dark:hover:text-blue-400');
     });
   });
 
@@ -110,13 +75,7 @@ describe('ContactInfo Component', () => {
       expect(screen.getByText('john@example.com')).toBeInTheDocument();
       expect(screen.getByText('+1234567890')).toBeInTheDocument();
       expect(screen.getByText('Buenos Aires, Argentina')).toBeInTheDocument();
-    });
-
-    it('uses translation keys for labels', () => {
-      render(<ContactInfo />);
-      expect(screen.getByText('cv.email')).toBeInTheDocument();
-      expect(screen.getByText('cv.phone')).toBeInTheDocument();
-      expect(screen.getByText('cv.location')).toBeInTheDocument();
+      expect(screen.getByText('linkedin.com/in/johndoe')).toBeInTheDocument();
     });
   });
 });
