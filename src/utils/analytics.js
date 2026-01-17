@@ -16,7 +16,6 @@ export const initializeAnalytics = (measurementId) => {
         anonymize_ip: true, // Anonymize IP addresses for privacy
       },
     });
-    console.log('Google Analytics initialized successfully');
     return true;
   } catch (error) {
     console.error('Error initializing Google Analytics:', error);
