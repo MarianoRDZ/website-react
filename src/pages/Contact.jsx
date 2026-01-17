@@ -13,7 +13,7 @@ const Contact = () => {
         <p className="text-base text-gray-600 dark:text-gray-400">{t('contact.subtitle')}</p>
       </div>
 
-      <div className="grid gap-8 py-4 lg:grid-cols-2">
+      <div className="grid gap-8 py-4 lg:grid-cols-2 lg:items-start">
         <ContactInfo />
         <ContactForm />
       </div>

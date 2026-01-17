@@ -79,11 +79,11 @@ const ContactForm = () => {
               value={formData.message}
               onChange={handleChange}
               required
-              rows={8}
+              rows={12}
               disabled={status.loading}
               fullWidth
               size="lg"
-              className="border-background-tertiary text-text-primary placeholder-text-secondary bg-gray-900"
+              className="border-background-tertiary text-text-primary placeholder-text-secondary min-h-30 bg-gray-900"
               placeholder={t('contact.form.messagePlaceholder')}
             />
           </div>
