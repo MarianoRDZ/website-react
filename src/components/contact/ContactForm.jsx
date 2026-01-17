@@ -79,7 +79,7 @@ const ContactForm = () => {
               value={formData.message}
               onChange={handleChange}
               required
-              rows={4}
+              rows={8}
               disabled={status.loading}
               fullWidth
               size="lg"
