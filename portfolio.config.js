@@ -27,6 +27,12 @@ export const portfolioConfig = {
     // Site description for SEO
     description:
       'Full-Stack Developer portfolio - marianordz.com.ar. Showcasing projects and experience in React, Node.js, and modern web technologies.',
+
+    // Google Analytics 4 Measurement ID
+    // Get your ID from: https://analytics.google.com/
+    // Format: G-XXXXXXXXXX
+    // Leave empty or undefined to disable analytics
+    googleAnalyticsId: 'G-Q5B90Z4FRW',
   },
 
   // ============================================================================
