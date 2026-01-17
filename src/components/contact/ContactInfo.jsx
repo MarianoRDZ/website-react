@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { personalInfo } from '../../constants/data';
 import ContactInfoItem from './ContactInfoItem';
-import { EmailIcon, LocationIcon, ClockIcon } from './ContactIcons';
+import { EmailIcon, LocationIcon, ClockIcon, PhoneIcon } from './ContactIcons';
 
 const ContactInfo = () => {
   const { t } = useTranslation();
@@ -18,6 +18,14 @@ const ContactInfo = () => {
             icon={EmailIcon}
             label={t('contact.emailLabel')}
             value={personalInfo.email}
+          />
+        </div>
+
+        <div className="mb-8">
+          <ContactInfoItem
+            icon={PhoneIcon}
+            label={t('contact.phoneLabel')}
+            value={personalInfo.phone}
           />
         </div>
 
