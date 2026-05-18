@@ -142,6 +142,32 @@ src/
 └── utils/              # Helper functions
 ```
 
+## Architecture
+
+### Single configuration file
+
+All personal data, site settings, and content live in `portfolio.config.js`. The idea is that forking this repo requires editing exactly one file — not hunting through components to change a name or update an email. Everything else (pages, components, i18n) reads from that config.
+
+### Design tokens + Tailwind
+
+Colors, spacing, typography, and shadows are defined in `src/styles/tokens/` and fed into `tailwind.config.js`. The entire palette lives in one place — changing the accent color or the spacing scale doesn't require touching individual components. The component variants (`src/components/common/variants.js`) follow the same idea: instead of conditional class strings scattered across Button, Input, and Tag, all the variant logic is centralized.
+
+### Contact form without a backend
+
+EmailJS handles email delivery client-side. No server, no API to maintain — reasonable for a portfolio that isn't going to handle sensitive data or high volume. The contact form includes a honeypot field to catch basic bots without adding a CAPTCHA.
+
+### SPA routing on GitHub Pages
+
+GitHub Pages doesn't support SPA routing natively — any direct URL beyond the root returns a 404. The fix is a `404.html` that redirects to the root with the path encoded as a query param, and `main.jsx` decodes and restores the real URL before React Router takes over.
+
+### Analytics
+
+Google Analytics 4 is only initialized if a `googleAnalyticsId` is set in `portfolio.config.js`. No ID configured means no tracking code runs at all. Keeps the template clean for people who don't want analytics.
+
+### Lazy loading
+
+Pages are lazy-loaded via `React.lazy()` in `src/routes/index.jsx`. The CV page has enough content that splitting it out of the main bundle makes a visible difference on first load.
+
 ## Design System
 
 The project uses a centralized design token system located in `src/styles/tokens/`:
