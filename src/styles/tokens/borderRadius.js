@@ -1,5 +1,3 @@
-// border radius del sistema
-
 export const borderRadius = {
   DEFAULT: '8px',
   md: '12px',

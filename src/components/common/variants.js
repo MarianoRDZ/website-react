@@ -1,5 +1,3 @@
-// estilos de variantes y tamaños para Button
-
 export const buttonVariants = {
   primary: {
     base: 'bg-blue-600 text-white font-semibold transition-all duration-200',
@@ -34,7 +32,6 @@ export const buttonSizes = {
   xl: 'px-xl py-md text-h2 h-[48px] rounded-md',
 };
 
-// estilos de variantes y tamaños para Input
 export const inputVariants = {
   default: {
     base: 'bg-background-surface text-text-primary border border-background-tertiary transition-colors duration-200',
@@ -51,7 +48,6 @@ export const inputSizes = {
   lg: 'px-lg py-md text-body h-12 rounded-md',
 };
 
-// estilos de variantes y tamaños para Tag
 export const tagVariants = {
   solid: {
     base: 'bg-accent text-background font-medium',

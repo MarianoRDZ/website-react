@@ -1,5 +1,3 @@
-// tipografía — familias, tamaños y pesos
-
 export const fontFamily = {
   sans: ['Space Grotesk', 'system-ui', 'sans-serif'],
   mono: ['Fira Code', 'monospace'],

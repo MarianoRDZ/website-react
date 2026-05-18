@@ -1,9 +1,5 @@
 import ReactGA from 'react-ga4';
 
-/**
- * Initialize Google Analytics 4
- * @param {string} measurementId - GA4 Measurement ID (G-XXXXXXXXXX)
- */
 export const initializeAnalytics = (measurementId) => {
   if (!measurementId || measurementId.trim() === '') {
     console.warn('Google Analytics: No measurement ID provided. Analytics disabled.');
@@ -13,7 +9,7 @@ export const initializeAnalytics = (measurementId) => {
   try {
     ReactGA.initialize(measurementId, {
       gaOptions: {
-        anonymize_ip: true, // Anonymize IP addresses for privacy
+        anonymize_ip: true,
       },
     });
     return true;
@@ -23,11 +19,6 @@ export const initializeAnalytics = (measurementId) => {
   }
 };
 
-/**
- * Track page view
- * @param {string} path - Page path
- * @param {string} title - Page title
- */
 export const trackPageView = (path, title) => {
   try {
     ReactGA.send({
@@ -40,13 +31,6 @@ export const trackPageView = (path, title) => {
   }
 };
 
-/**
- * Track custom event
- * @param {string} category - Event category
- * @param {string} action - Event action
- * @param {string} label - Event label (optional)
- * @param {number} value - Event value (optional)
- */
 export const trackEvent = (category, action, label = '', value = undefined) => {
   try {
     ReactGA.event({
@@ -60,37 +44,18 @@ export const trackEvent = (category, action, label = '', value = undefined) => {
   }
 };
 
-/**
- * Track button click
- * @param {string} buttonName - Name/ID of the button
- * @param {string} location - Where the button is located (e.g., 'navbar', 'hero')
- */
 export const trackButtonClick = (buttonName, location) => {
   trackEvent('Button', 'click', `${location} - ${buttonName}`);
 };
 
-/**
- * Track link click
- * @param {string} url - The URL being navigated to
- * @param {string} linkText - Text of the link
- */
 export const trackLinkClick = (url, linkText) => {
   trackEvent('Link', 'click', `${linkText} - ${url}`);
 };
 
-/**
- * Track form submission
- * @param {string} formName - Name of the form
- * @param {boolean} success - Whether submission was successful
- */
 export const trackFormSubmission = (formName, success) => {
   trackEvent('Form', success ? 'submit_success' : 'submit_error', formName);
 };
 
-/**
- * Track file download
- * @param {string} fileName - Name of the file
- */
 export const trackDownload = (fileName) => {
   trackEvent('Download', 'click', fileName);
 };

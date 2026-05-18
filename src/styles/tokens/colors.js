@@ -1,5 +1,3 @@
-// paleta de colores — fondo, texto y acento
-
 export const colors = {
   background: {
     DEFAULT: '#121212',

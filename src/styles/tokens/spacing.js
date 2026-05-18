@@ -1,5 +1,3 @@
-// escala de espaciado
-
 export const spacing = {
   xs: '4px',
   sm: '8px',

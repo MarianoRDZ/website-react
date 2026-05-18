@@ -1,5 +1,3 @@
-// punto de entrada único para todos los tokens
-
 export { colors } from './colors.js';
 export { fontFamily, fontSize } from './typography.js';
 export { spacing } from './spacing.js';
