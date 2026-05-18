@@ -4,7 +4,6 @@ import userEvent from '@testing-library/user-event';
 import { BrowserRouter } from 'react-router-dom';
 import Navbar from './Navbar';
 
-// Mock react-router-dom
 const mockNavigate = vi.fn();
 let mockLocation = { pathname: '/' };
 
@@ -17,7 +16,6 @@ vi.mock('react-router-dom', async () => {
   };
 });
 
-// Mock react-i18next
 const mockT = (key) => {
   const translations = {
     'nav.home': 'Home',
@@ -31,7 +29,6 @@ vi.mock('react-i18next', () => ({
   useTranslation: () => ({ t: mockT }),
 }));
 
-// Mock LanguageSelector
 vi.mock('./LanguageSelector', () => ({
   default: () => <div data-testid="language-selector">Language Selector</div>,
 }));
@@ -59,7 +56,7 @@ describe('Navbar Component', () => {
     it('renders logo with text', () => {
       renderNavbar();
       expect(screen.getByText(/MARIANORDZ/i)).toBeInTheDocument();
-      expect(screen.getByText(/\.DEV\.AR/i)).toBeInTheDocument();
+      expect(screen.getByText(/\.COM\.AR/i)).toBeInTheDocument();
     });
 
     it('renders all navigation links', () => {
@@ -154,12 +151,10 @@ describe('Navbar Component', () => {
 
       const toggleButton = screen.getByRole('button', { name: /toggle menu/i });
 
-      // Open
       await user.click(toggleButton);
       let mobileMenu = container.querySelector('.md\\:hidden .flex-col');
       expect(mobileMenu?.parentElement).toHaveClass('opacity-100');
 
-      // Close
       await user.click(toggleButton);
       mobileMenu = container.querySelector('.md\\:hidden .flex-col');
       expect(mobileMenu?.parentElement).toHaveClass('opacity-0', 'max-h-0');
@@ -184,11 +179,9 @@ describe('Navbar Component', () => {
       const user = userEvent.setup();
       const { container } = renderNavbar();
 
-      // Open menu
       const toggleButton = screen.getByRole('button', { name: /toggle menu/i });
       await user.click(toggleButton);
 
-      // Click a link
       const links = screen.getAllByRole('link', { name: /resume/i });
       const mobileLink = links.find((link) => link.closest('.md\\:hidden'));
 
@@ -209,12 +202,10 @@ describe('Navbar Component', () => {
       const toggleButton = screen.getByRole('button', { name: /toggle menu/i });
       const lines = container.querySelectorAll('button span');
 
-      // Before opening
       expect(lines[0]).not.toHaveClass('rotate-45');
       expect(lines[1]).not.toHaveClass('opacity-0');
       expect(lines[2]).not.toHaveClass('-rotate-45');
 
-      // After opening
       await user.click(toggleButton);
 
       expect(lines[0]).toHaveClass('rotate-45');
@@ -229,11 +220,9 @@ describe('Navbar Component', () => {
       const toggleButton = screen.getByRole('button', { name: /toggle menu/i });
       const lines = container.querySelectorAll('button span');
 
-      // Open
       await user.click(toggleButton);
       expect(lines[0]).toHaveClass('rotate-45');
 
-      // Close
       await user.click(toggleButton);
       expect(lines[0]).not.toHaveClass('rotate-45');
       expect(lines[1]).not.toHaveClass('opacity-0');
@@ -258,11 +247,9 @@ describe('Navbar Component', () => {
       const user = userEvent.setup();
       const { container } = renderNavbar();
 
-      // Open menu
       const toggleButton = screen.getByRole('button', { name: /toggle menu/i });
       await user.click(toggleButton);
 
-      // Click logo
       const logoLink = screen.getByRole('link', { name: /MARIANORDZ/i });
       await user.click(logoLink);
 
@@ -346,11 +333,10 @@ describe('Navbar Component', () => {
   describe('Navigation Links Structure', () => {
     it('renders correct number of navigation links', () => {
       renderNavbar();
-      // Logo + 3 nav links = 4 unique hrefs: '/' (logo), '/' (home), '/cv', '/contact'
-      // But home and logo share same href, so 3 unique paths
+      // el logo y home comparten '/', por eso son 3 paths únicos
       const allLinks = screen.getAllByRole('link');
       const uniquePaths = new Set(allLinks.map((link) => link.getAttribute('href')));
-      expect(uniquePaths.size).toBe(3); // '/', '/cv', '/contact'
+      expect(uniquePaths.size).toBe(3);
     });
 
     it('home link has correct path', () => {

@@ -1,7 +1,4 @@
-/**
- * Design Tokens - Main Index
- * Exports all design tokens from a single entry point
- */
+// punto de entrada único para todos los tokens
 
 export { colors } from './colors.js';
 export { fontFamily, fontSize } from './typography.js';

@@ -1,27 +1,7 @@
 import { forwardRef } from 'react';
 import { inputVariants, inputSizes } from './variants';
 
-/**
- * Input Component
- * @typedef {Object} InputProps
- * @property {string} [type='text'] - HTML input type
- * @property {'sm' | 'md' | 'lg'} [size='lg'] - Input size
- * @property {string} [label] - Label text
- * @property {string} [error] - Error message to display
- * @property {string} [helperText] - Helper text to display below input
- * @property {React.ReactNode} [leftIcon] - Icon to display on the left
- * @property {React.ReactNode} [rightIcon] - Icon to display on the right
- * @property {boolean} [fullWidth=false] - Whether input should take full width
- * @property {string} [className=''] - Additional CSS classes for input
- * @property {string} [containerClassName=''] - Additional CSS classes for container
- *
- * @example
- * <Input
- *   placeholder="Enter component name..."
- *   rightIcon={<SearchIcon />}
- *   size="lg"
- * />
- */
+// containerClassName para estilar el wrapper, className para el input en sí
 const Input = forwardRef(
   (
     {

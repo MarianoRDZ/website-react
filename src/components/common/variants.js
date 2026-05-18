@@ -1,7 +1,4 @@
-/**
- * Button Variants Configuration
- * Defines the visual styles for different button variants
- */
+// estilos de variantes y tamaños para Button
 
 export const buttonVariants = {
   primary: {
@@ -37,9 +34,7 @@ export const buttonSizes = {
   xl: 'px-xl py-md text-h2 h-[48px] rounded-md',
 };
 
-/**
- * Input Variants Configuration
- */
+// estilos de variantes y tamaños para Input
 export const inputVariants = {
   default: {
     base: 'bg-background-surface text-text-primary border border-background-tertiary transition-colors duration-200',
@@ -56,9 +51,7 @@ export const inputSizes = {
   lg: 'px-lg py-md text-body h-12 rounded-md',
 };
 
-/**
- * Tag/Badge Variants Configuration
- */
+// estilos de variantes y tamaños para Tag
 export const tagVariants = {
   solid: {
     base: 'bg-accent text-background font-medium',

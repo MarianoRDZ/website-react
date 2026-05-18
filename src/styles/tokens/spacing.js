@@ -1,7 +1,4 @@
-/**
- * Design Tokens - Spacing Scale
- * Consistent spacing values throughout the application
- */
+// escala de espaciado
 
 export const spacing = {
   xs: '4px',

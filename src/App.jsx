@@ -10,7 +10,6 @@ import NotFound from './pages/NotFound';
 import { portfolioConfig } from '../portfolio.config';
 import { initializeAnalytics, trackPageView } from './utils/analytics';
 
-// Component to track page views
 function AnalyticsTracker() {
   const location = useLocation();
 
@@ -25,7 +24,6 @@ function AnalyticsTracker() {
 function App() {
   useDocumentTitle();
 
-  // Initialize Google Analytics
   useEffect(() => {
     const gaId = portfolioConfig.siteConfig.googleAnalyticsId;
     if (gaId) {
@@ -33,7 +31,6 @@ function App() {
     }
   }, []);
 
-  // Use basePath from config
   const basename = portfolioConfig.siteConfig.basePath;
 
   return (

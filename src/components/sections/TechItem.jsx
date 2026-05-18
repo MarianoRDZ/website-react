@@ -1,17 +1,5 @@
 import { getTechIcon } from '../common/icons';
 
-/**
- * TechItem Component
- * Individual technology icon and label with hover effects.
- * Used by TechStackGrid to display tech stack items.
- *
- * @typedef {Object} TechItemProps
- * @property {string} name - Technology name to display.
- *
- * @example
- * <TechItem name="React" />
- * <TechItem name="TypeScript" />
- */
 const TechItem = ({ name }) => {
   const Icon = getTechIcon(name);
 

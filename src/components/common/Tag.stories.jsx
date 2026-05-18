@@ -1,10 +1,6 @@
 import Tag from './Tag';
 
-/**
- * Tag component documentation for Storybook
- *
- * A composable tag/badge component for labels, categories, and status indicators.
- */
+// Tag/Badge stories — variantes, tamaños e interactividad
 export default {
   title: 'UI Primitives/Tag',
   component: Tag,
@@ -62,7 +58,6 @@ A versatile tag component for displaying labels, categories, and status.
   },
 };
 
-// Default story
 export const Outline = {
   args: {
     children: 'REACT NATIVE',
@@ -87,7 +82,6 @@ export const Subtle = {
   },
 };
 
-// Different sizes
 export const Sizes = () => (
   <div className="flex flex-wrap items-center gap-4">
     <Tag size="sm">SMALL</Tag>
@@ -96,7 +90,6 @@ export const Sizes = () => (
   </div>
 );
 
-// All variants
 export const AllVariants = () => (
   <div className="flex flex-wrap gap-3">
     <Tag variant="solid">SOLID</Tag>
@@ -184,7 +177,6 @@ export const ProjectTags = () => (
   </div>
 );
 
-// Interactive example
 export const Interactive = {
   args: {
     children: 'INTERACTIVE TAG',

@@ -3,14 +3,12 @@ import { render, screen } from '@testing-library/react';
 import SocialLinks from './SocialLinks';
 import * as dataConstants from '../../constants/data';
 
-// Mock the icons
 vi.mock('./icons', () => ({
   GitHubIcon: ({ className }) => <svg data-testid="github-icon" className={className} />,
   LinkedInIcon: ({ className }) => <svg data-testid="linkedin-icon" className={className} />,
   EmailIcon: ({ className }) => <svg data-testid="email-icon" className={className} />,
 }));
 
-// Mock personal info data
 vi.mock('../../constants/data', () => ({
   personalInfo: {
     github: 'https://github.com/testuser',
@@ -200,8 +198,6 @@ describe('SocialLinks Component', () => {
       const githubLink = screen.getByText('GitHub').closest('a');
       const linkedinLink = screen.getByText('LinkedIn').closest('a');
 
-      // noopener prevents access to window.opener
-      // noreferrer prevents sending referrer information
       expect(githubLink).toHaveAttribute('rel', 'noopener noreferrer');
       expect(linkedinLink).toHaveAttribute('rel', 'noopener noreferrer');
     });

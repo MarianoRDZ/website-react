@@ -3,12 +3,10 @@ import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import Layout from './Layout';
 
-// Mock Navbar component
 vi.mock('./Navbar', () => ({
   default: () => <nav data-testid="navbar">Navbar</nav>,
 }));
 
-// Mock Footer component
 vi.mock('./Footer', () => ({
   default: () => <footer data-testid="footer">Footer</footer>,
 }));
@@ -169,7 +167,6 @@ describe('Layout Component', () => {
     it('main content starts after navbar padding', () => {
       renderLayout();
       const main = screen.getByRole('main');
-      // pt-16 provides space for fixed navbar
       expect(main).toHaveClass('pt-16');
     });
   });
@@ -205,7 +202,6 @@ describe('Layout Component', () => {
       const { container } = renderLayout();
       const wrapper = container.firstChild;
 
-      // Layout should work on all screens with flex-col
       expect(wrapper).toHaveClass('flex-col');
       expect(wrapper).not.toHaveClass('md:flex-row');
     });
@@ -214,7 +210,6 @@ describe('Layout Component', () => {
       renderLayout();
       const main = screen.getByRole('main');
 
-      // flex-1 ensures main takes remaining space
       expect(main).toHaveClass('flex-1');
     });
   });
@@ -231,7 +226,6 @@ describe('Layout Component', () => {
     it('has proper landmark structure', () => {
       renderLayout();
 
-      // Main landmark should be present
       expect(screen.getByRole('main')).toBeInTheDocument();
     });
 
@@ -253,7 +247,6 @@ describe('Layout Component', () => {
       renderLayout();
       const main = screen.getByRole('main');
 
-      // Main has pt-16 to account for fixed navbar
       expect(main).toHaveClass('pt-16');
     });
 
@@ -261,7 +254,6 @@ describe('Layout Component', () => {
       const { container } = renderLayout();
       const wrapper = container.firstChild;
 
-      // flex-col with main having flex-1 pushes footer to bottom
       expect(wrapper).toHaveClass('flex', 'flex-col', 'min-h-screen');
     });
   });

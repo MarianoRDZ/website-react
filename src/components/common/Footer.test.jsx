@@ -2,7 +2,6 @@ import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import Footer from './Footer';
 
-// Mock react-i18next
 const mockT = (key) => {
   const translations = {
     'footer.builtWith': 'Built with React & Vite',
@@ -15,12 +14,10 @@ vi.mock('react-i18next', () => ({
   useTranslation: () => ({ t: mockT }),
 }));
 
-// Mock SocialLinks
 vi.mock('./SocialLinks', () => ({
   default: () => <div data-testid="social-links">Social Links</div>,
 }));
 
-// Mock personalInfo data
 vi.mock('../../constants/data', () => ({
   personalInfo: {
     repository: 'https://github.com/testuser/repo',
@@ -289,7 +286,6 @@ describe('Footer Component', () => {
       const year1 = new Date().getFullYear();
       expect(screen.getByText(new RegExp(year1.toString()))).toBeInTheDocument();
 
-      // Year should remain current on rerender
       rerender(<Footer />);
       const year2 = new Date().getFullYear();
       expect(screen.getByText(new RegExp(year2.toString()))).toBeInTheDocument();

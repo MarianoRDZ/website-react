@@ -1,18 +1,6 @@
 import { tagVariants, tagSizes } from './variants';
 
-/**
- * Tag Component (Badge/Label)
- * @typedef {Object} TagProps
- * @property {React.ReactNode} children - Tag content (required)
- * @property {'solid' | 'outline' | 'subtle'} [variant='outline'] - Visual style variant
- * @property {'sm' | 'md' | 'lg'} [size='md'] - Tag size
- * @property {() => void} [onClick] - Click handler (makes tag interactive)
- * @property {string} [className=''] - Additional CSS classes
- *
- * @example
- * <Tag variant="outline">REACT NATIVE</Tag>
- * <Tag variant="solid" size="sm" onClick={handleClick}>TypeScript</Tag>
- */
+// sin onClick es <span>, con onClick se convierte en <button>
 const Tag = ({ children, variant = 'outline', size = 'md', onClick, className = '', ...props }) => {
   const variantStyles = tagVariants[variant];
   const sizeStyles = tagSizes[size];

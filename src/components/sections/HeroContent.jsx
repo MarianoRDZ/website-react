@@ -3,14 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { Button } from '../common';
 import { personalInfo } from '../../constants/data';
 
-/**
- * HeroContent Component
- * Displays hero section text, description, and call-to-action buttons.
- * Handles navigation to CV and Contact pages.
- *
- * @example
- * <HeroContent />
- */
 const HeroContent = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();

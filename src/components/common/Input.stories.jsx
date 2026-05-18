@@ -1,10 +1,6 @@
 import Input from './Input';
 
-/**
- * Input component documentation for Storybook
- *
- * A flexible, accessible input field component with label, error states, and icon support.
- */
+// Input stories — label, errores, íconos y estados
 export default {
   title: 'UI Primitives/Input',
   component: Input,
@@ -79,7 +75,6 @@ A versatile input field component for forms and user input.
   },
 };
 
-// Search icon component
 const SearchIcon = () => (
   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path
@@ -91,7 +86,6 @@ const SearchIcon = () => (
   </svg>
 );
 
-// Default story
 export const Default = {
   args: {
     placeholder: 'Enter text...',
@@ -142,7 +136,6 @@ export const SearchField = {
   },
 };
 
-// Different sizes
 export const Sizes = () => (
   <div className="w-full max-w-md space-y-4">
     <Input placeholder="Small input" size="sm" fullWidth />
@@ -155,7 +148,6 @@ Sizes.parameters = {
   layout: 'padded',
 };
 
-// All states
 export const States = () => (
   <div className="w-full max-w-md space-y-4">
     <Input label="Normal" placeholder="Type something..." fullWidth />
@@ -179,7 +171,6 @@ States.parameters = {
   layout: 'padded',
 };
 
-// Form example
 export const FormExample = () => (
   <div className="w-full max-w-md space-y-4">
     <Input label="Full Name" placeholder="John Doe" size="md" fullWidth />
@@ -199,7 +190,6 @@ FormExample.parameters = {
   layout: 'padded',
 };
 
-// Interactive example
 export const Interactive = {
   args: {
     label: 'Interactive Input',

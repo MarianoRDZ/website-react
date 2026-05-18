@@ -1,14 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import TechStackGrid from './TechStackGrid';
 
-/**
- * TechStack Component
- * Main tech stack section orchestrator.
- * Displays section title and TechStackGrid with responsive layout.
- *
- * @example
- * <TechStack />
- */
 const TechStack = () => {
   const { t } = useTranslation();
 

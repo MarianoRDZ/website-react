@@ -1,7 +1,4 @@
-/**
- * Design Tokens - Shadows
- * Box shadow values for depth and elevation
- */
+// sombras para cards, botones y elementos elevados
 
 export const boxShadow = {
   card: '0 8px 24px rgba(0, 0, 0, 0.4)',

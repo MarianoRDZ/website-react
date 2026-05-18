@@ -1,11 +1,6 @@
 import Button from './Button';
 
-/**
- * Button component documentation for Storybook
- *
- * The Button component is a versatile, accessible button following SOLID principles.
- * It supports multiple variants, sizes, loading states, and icons.
- */
+// Button stories — variantes, tamaños, estados y composición con íconos
 export default {
   title: 'UI Primitives/Button',
   component: Button,
@@ -82,7 +77,6 @@ A flexible button component with multiple variants and states.
   },
 };
 
-// Default story
 export const Primary = {
   args: {
     children: 'Get in Touch',
@@ -116,7 +110,6 @@ export const Ghost = {
   },
 };
 
-// Size variations
 export const Sizes = () => (
   <div className="flex flex-wrap items-center gap-4">
     <Button size="sm">Small</Button>
@@ -130,7 +123,6 @@ Sizes.parameters = {
   layout: 'centered',
 };
 
-// All variants
 export const AllVariants = () => (
   <div className="flex flex-wrap gap-4">
     <Button variant="primary">Primary</Button>
@@ -144,7 +136,6 @@ AllVariants.parameters = {
   layout: 'centered',
 };
 
-// With icons
 export const WithIcons = () => (
   <div className="flex flex-col gap-4">
     <Button leftIcon={<span>←</span>}>Back</Button>
@@ -159,7 +150,6 @@ WithIcons.parameters = {
   layout: 'centered',
 };
 
-// States
 export const States = () => (
   <div className="flex flex-col gap-4">
     <Button>Normal</Button>
@@ -172,7 +162,6 @@ States.parameters = {
   layout: 'centered',
 };
 
-// Full width
 export const FullWidth = {
   args: {
     children: 'Full Width Button',
@@ -184,7 +173,6 @@ export const FullWidth = {
   },
 };
 
-// Interactive example
 export const Interactive = {
   args: {
     children: 'Click Me',

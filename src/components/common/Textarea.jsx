@@ -1,24 +1,7 @@
 import { forwardRef } from 'react';
 import { inputVariants, inputSizes } from './variants';
 
-/**
- * Textarea Component
- * Multiline text field with design system-consistent styling.
- *
- * @typedef {Object} TextareaProps
- * @property {string} [label] - Label text above the textarea.
- * @property {string} [error] - Error message (activates error state).
- * @property {string} [helperText] - Helper text below the textarea.
- * @property {number} [rows=4] - Number of rows.
- * @property {'sm'|'md'|'lg'} [size='lg'] - Component size (affects padding/typography).
- * @property {boolean} [fullWidth=false] - Expands to full container width.
- * @property {boolean} [resizable=false] - Allows manual resizing.
- * @property {string} [className=''] - Additional CSS classes for the textarea.
- * @property {string} [containerClassName=''] - Additional CSS classes for the container.
- *
- * @example
- * <Textarea placeholder="Your message..." rows={4} fullWidth />
- */
+// resizable=false por defecto para que no rompa el layout
 const Textarea = forwardRef(
   (
     {

@@ -1,19 +1,6 @@
 import profileImage from '../../assets/profile.png';
 
-/**
- * ProfileImage Component
- * Displays a profile picture with gradient overlays and fallback avatar.
- * Reusable across different sections (Hero, About, Modal, etc).
- *
- * @typedef {Object} ProfileImageProps
- * @property {"sm"|"md"|"lg"} [size="lg"] - Image size variant.
- * @property {string} [alt="Profile"] - Alt text for accessibility.
- * @property {boolean} [showOverlay=true] - Display gradient overlay on image.
- *
- * @example
- * <ProfileImage size="lg" />
- * <ProfileImage size="sm" />
- */
+// si no hay imagen muestra un avatar con la inicial
 const ProfileImage = ({ size = 'lg', alt = 'Profile', showOverlay = true }) => {
   const sizeClasses = {
     sm: 'h-48 w-40 md:h-56 md:w-44',

@@ -1,7 +1,4 @@
-/**
- * Design Tokens - Border Radius
- * Standard border radius values for consistency
- */
+// border radius del sistema
 
 export const borderRadius = {
   DEFAULT: '8px',

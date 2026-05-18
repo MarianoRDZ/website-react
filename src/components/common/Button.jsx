@@ -1,28 +1,7 @@
 import { forwardRef } from 'react';
 import { buttonVariants, buttonSizes } from './variants';
 
-/**
- * Button Component
- * @typedef {Object} ButtonProps
- * @property {React.ReactNode} children - Button content
- * @property {'primary' | 'secondary' | 'outline' | 'ghost'} [variant='primary'] - Visual style variant
- * @property {'sm' | 'md' | 'lg' | 'xl'} [size='lg'] - Button size
- * @property {'button' | 'submit' | 'reset'} [type='button'] - HTML button type
- * @property {boolean} [disabled=false] - Whether the button is disabled
- * @property {boolean} [loading=false] - Whether to show loading state
- * @property {React.ReactNode} [leftIcon] - Icon to display on the left
- * @property {React.ReactNode} [rightIcon] - Icon to display on the right
- * @property {boolean} [fullWidth=false] - Whether button should take full width
- * @property {string} [className=''] - Additional CSS classes
- * @property {() => void} [onClick] - Click handler
- * @property {'button' | 'a'} [as='button'] - Render as button or anchor element
- * @property {string} [href] - Link URL (when as="a")
- *
- * @example
- * <Button variant="primary" size="lg" onClick={handleClick}>
- *   Get in Touch
- * </Button>
- */
+// as="a" + href para renderizarlo como link; loading deshabilita el botón y muestra spinner
 const Button = forwardRef(
   (
     {

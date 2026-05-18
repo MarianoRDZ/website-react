@@ -3,7 +3,6 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import LanguageSelector from './LanguageSelector';
 
-// Mock react-i18next
 const mockChangeLanguage = vi.fn();
 const mockI18n = {
   language: 'en',
@@ -188,21 +187,17 @@ describe('LanguageSelector Component', () => {
       const user = userEvent.setup();
       render(<LanguageSelector />);
 
-      // Tab to first button
       await user.tab();
       const enButton = screen.getByRole('button', { name: /switch to english/i });
       expect(enButton).toHaveFocus();
 
-      // Press Enter
       await user.keyboard('{Enter}');
       expect(mockChangeLanguage).toHaveBeenCalledWith('en');
 
-      // Tab to second button
       await user.tab();
       const esButton = screen.getByRole('button', { name: /cambiar a español/i });
       expect(esButton).toHaveFocus();
 
-      // Press Enter
       await user.keyboard('{Enter}');
       expect(mockChangeLanguage).toHaveBeenCalledWith('es');
     });
@@ -226,7 +221,6 @@ describe('LanguageSelector Component', () => {
       const enButton = screen.getByRole('button', { name: /switch to english/i });
       const esButton = screen.getByRole('button', { name: /cambiar a español/i });
 
-      // HTML buttons without explicit type default to 'button', but it's better to be explicit
       expect(enButton.tagName).toBe('BUTTON');
       expect(esButton.tagName).toBe('BUTTON');
     });
