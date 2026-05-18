@@ -1,21 +1,17 @@
 # Personal Portfolio Template
 
-A modern, fully customizable personal portfolio website built with React, Vite, and Tailwind CSS. **Designed to be easily customizable** - just edit one configuration file and you're ready to go!
+A personal portfolio website built with React, Vite, and Tailwind CSS. Edit one configuration file and you're done.
 
-## ✨ Features
+## Features
 
-- 🎨 Modern, responsive design (mobile to desktop)
-- 🌙 Dark theme optimized
-- ⚡ Built with Vite for lightning-fast development
-- 🧩 Component-based architecture
-- 📧 Working contact form (EmailJS)
-- 🎯 100% test coverage on core components
-- 🌍 i18n ready (English/Spanish)
-- 📱 Fully responsive
-- ♿ Accessibility focused
-- 🚀 Easy deployment to GitHub Pages
+- Responsive design (mobile to desktop)
+- Dark theme
+- Contact form via EmailJS
+- i18n (English/Spanish)
+- Test coverage on core components
+- GitHub Pages deployment with GitHub Actions
 
-## 🚀 Quick Start (For Your Own Portfolio)
+## Quick Start
 
 ### 1. Fork/Clone This Repository
 
@@ -96,7 +92,7 @@ npm run dev
 
 Visit `http://localhost:5173` to see your portfolio!
 
-## 📦 Deployment
+## Deployment
 
 ### GitHub Pages
 
@@ -131,7 +127,7 @@ siteConfig: {
 
 3. Deploy via Git integration
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -174,12 +170,10 @@ The project uses a centralized design token system located in `src/styles/tokens
 ### Usage Example
 
 ```jsx
-// Button with design tokens
 <button className="bg-accent hover:bg-accent-hover text-text-primary px-lg py-sm rounded-md shadow-button">
   Click me
 </button>
 
-// Card component
 <div className="bg-background-surface p-lg rounded-lg shadow-card">
   <h2 className="text-h2 text-text-primary mb-sm">Title</h2>
   <p className="text-body text-text-secondary">Description</p>
@@ -198,13 +192,8 @@ The project uses a centralized design token system located in `src/styles/tokens
 ## Installation
 
 ```bash
-# Clone the repository
 git clone <your-repo-url>
-
-# Install dependencies
 npm install
-
-# Start development server
 npm run dev
 ```
 
@@ -234,12 +223,9 @@ All design tokens are imported from `src/styles/tokens/` into `tailwind.config.j
 
 ### ESLint & Prettier
 
-Pre-configured with sensible defaults:
-
 - Auto-format on save
 - Tailwind class sorting
 - React hooks rules
-- Consistent code style
 
 ## Customization
 
@@ -250,7 +236,7 @@ Pre-configured with sensible defaults:
 
 ## Contributing
 
-This is a personal portfolio project, but feel free to use it as a template for your own portfolio!
+Feel free to fork and adapt it for your own portfolio.
 
 ## License
 
