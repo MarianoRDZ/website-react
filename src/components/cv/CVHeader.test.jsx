@@ -28,7 +28,7 @@ vi.mock('react-i18next', () => ({
   useTranslation: () => ({
     t: (key) => {
       const translations = {
-        'hero.title': 'Full Stack Developer',
+        'hero.title': 'Front-End Developer',
         'cv.downloadPDF': 'Download PDF',
       };
       return translations[key] || key;
@@ -46,7 +46,7 @@ describe('CVHeader Component', () => {
 
     it('renders title from translation', () => {
       render(<CVHeader />);
-      expect(screen.getByText('Full Stack Developer')).toBeInTheDocument();
+      expect(screen.getByText('Front-End Developer')).toBeInTheDocument();
     });
 
     it('renders ContactInfo component', () => {
@@ -88,7 +88,7 @@ describe('CVHeader Component', () => {
 
     it('applies correct title classes', () => {
       render(<CVHeader />);
-      const title = screen.getByText('Full Stack Developer');
+      const title = screen.getByText('Front-End Developer');
       expect(title).toHaveClass('text-xl', 'text-gray-600', 'dark:text-gray-400');
     });
 
@@ -102,7 +102,7 @@ describe('CVHeader Component', () => {
   describe('Translation', () => {
     it('uses translation for title', () => {
       render(<CVHeader />);
-      expect(screen.getByText('Full Stack Developer')).toBeInTheDocument();
+      expect(screen.getByText('Front-End Developer')).toBeInTheDocument();
     });
 
     it('uses translation for download button text', () => {
@@ -140,7 +140,7 @@ describe('CVHeader Component', () => {
 
     it('uses semantic p for title', () => {
       render(<CVHeader />);
-      const title = screen.getByText('Full Stack Developer');
+      const title = screen.getByText('Front-End Developer');
       expect(title.tagName).toBe('P');
     });
 

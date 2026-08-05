@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Mariano Rodriguez | Desarrollador Full-stack"
+    "title": "Mariano Rodriguez | Desarrollador Front-end"
   },
   "nav": {
     "home": "Inicio",
@@ -9,7 +9,7 @@
   },
   "hero": {
     "greeting": "Hola, soy",
-    "title": "Desarrollador Full-Stack",
+    "title": "Desarrollador Front-End",
     "description": "Especializado en construir experiencias web eficientes, escalables y bellamente intuitivas con enfoque en arquitectura moderna de React.",
     "viewResume": "Currículum",
     "getInTouch": "Contáctame"
@@ -49,7 +49,7 @@
     "downloadPDF": "Descargar PDF",
     "contact": "Contacto",
     "summary": "Resumen Profesional",
-    "summaryText": "Desarrollador Full-Stack con más de 4 años de experiencia en tecnologías como React y Svelte, y experiencia en Node.js, MongoDB y C#",
+    "summaryText": "Desarrollador Front-End con más de 4 años de experiencia en tecnologías como React y Svelte, y experiencia en Node.js, MongoDB y C#",
     "experience": "Experiencia Profesional",
     "education": "Educación",
     "certifications": "Certificaciones",
@@ -79,7 +79,7 @@
         ]
       },
       "endava": {
-        "title": "Desarrollador Full-Stack",
+        "title": "Desarrollador Front-End",
         "responsibilities": [
           "Desarrollo de una aplicación usando React, Redux, NodeJS y MongoDB/PostgreSQL",
           "Construí y mantuve una aplicación React Native con enfoque en cumplimiento de estándares de accesibilidad WCAG 2.0"

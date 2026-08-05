@@ -22,11 +22,11 @@ export const portfolioConfig = {
     basePath: '/',
 
     // Your site title (appears in browser tab)
-    title: 'Mariano Rodriguez | Full-stack Developer | marianordz.com.ar',
+    title: 'Mariano Rodriguez | Front-end Developer | marianordz.com.ar',
 
     // Site description for SEO
     description:
-      'Full-Stack Developer portfolio - marianordz.com.ar. Showcasing projects and experience in React, Node.js, and modern web technologies.',
+      'Front-End Developer portfolio - marianordz.com.ar. Showcasing projects and experience in React, Node.js, and modern web technologies.',
 
     // Google Analytics 4 Measurement ID
     // Get your ID from: https://analytics.google.com/
@@ -41,7 +41,7 @@ export const portfolioConfig = {
   personalInfo: {
     // Basic Info
     name: 'Mariano Rodriguez',
-    title: 'Full-Stack Developer',
+    title: 'Front-End Developer',
 
     // Contact Details
     email: 'rdzc.mariano@gmail.com',
@@ -60,7 +60,7 @@ export const portfolioConfig = {
     description:
       'Specializing in building performant, scalable, and beautifully intuitive web experiences with a focus on modern React architecture.',
     summary:
-      'Full-Stack Developer with 4+ years of experience in technologies such as React & Svelte and experience in Node.js, MongoDB and C#',
+      'Front-End Developer with 4+ years of experience in technologies such as React & Svelte and experience in Node.js, MongoDB and C#',
 
     // Resume/CV
     // Place your PDF in /public folder and update the filename here
@@ -99,7 +99,7 @@ export const portfolioConfig = {
       id: 3,
       slug: 'endava',
       company: 'ENDAVA',
-      title: 'Full-Stack Developer',
+      title: 'Front-End Developer',
       period: 'Feb 2020 - Oct 2021',
       description: [
         'Development of an app using React, Redux, NodeJS, and MongoDB/PostgreSQL',

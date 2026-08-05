@@ -12,7 +12,7 @@ vi.mock('./ChevronIcon', () => ({
 
 describe('ExperienceItem Component', () => {
   const mockExperience = {
-    title: 'Senior Full Stack Developer',
+    title: 'Senior Front-End Developer',
     company: 'Kopius',
     period: '2023 - Present',
     responsibilities: ['Led development team', 'Implemented CI/CD', 'Code reviews'],
@@ -21,7 +21,7 @@ describe('ExperienceItem Component', () => {
   describe('Rendering', () => {
     it('renders experience title', () => {
       render(<ExperienceItem {...mockExperience} />);
-      expect(screen.getByText('Senior Full Stack Developer')).toBeInTheDocument();
+      expect(screen.getByText('Senior Front-End Developer')).toBeInTheDocument();
     });
 
     it('renders company name', () => {
@@ -49,7 +49,7 @@ describe('ExperienceItem Component', () => {
 
     it('renders with no responsibilities', () => {
       render(<ExperienceItem {...mockExperience} responsibilities={[]} />);
-      expect(screen.getByText('Senior Full Stack Developer')).toBeInTheDocument();
+      expect(screen.getByText('Senior Front-End Developer')).toBeInTheDocument();
       const chevrons = screen.queryAllByTestId('chevron-icon');
       expect(chevrons.length).toBe(0);
     });
@@ -58,7 +58,7 @@ describe('ExperienceItem Component', () => {
   describe('Styling', () => {
     it('applies correct title classes', () => {
       render(<ExperienceItem {...mockExperience} />);
-      const title = screen.getByText('Senior Full Stack Developer');
+      const title = screen.getByText('Senior Front-End Developer');
       expect(title).toHaveClass('text-xl', 'font-semibold', 'text-gray-900', 'dark:text-white');
     });
 
@@ -138,7 +138,7 @@ describe('ExperienceItem Component', () => {
 
     it('title uses h3 heading', () => {
       render(<ExperienceItem {...mockExperience} />);
-      const title = screen.getByText('Senior Full Stack Developer');
+      const title = screen.getByText('Senior Front-End Developer');
       expect(title.tagName).toBe('H3');
     });
   });
