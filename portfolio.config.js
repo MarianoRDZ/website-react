@@ -22,11 +22,11 @@ export const portfolioConfig = {
     basePath: '/',
 
     // Your site title (appears in browser tab)
-    title: 'Mariano Rodriguez | Front-end Developer | marianordz.com.ar',
+    title: 'Mariano Rodriguez | Senior Front-End Developer | marianordz.com.ar',
 
     // Site description for SEO
     description:
-      'Front-End Developer portfolio - marianordz.com.ar. Showcasing projects and experience in React, Node.js, and modern web technologies.',
+      'Senior Front-End Developer portfolio - marianordz.com.ar. Specializing in React, TypeScript and Svelte with 10+ years in software development.',
 
     // Google Analytics 4 Measurement ID
     // Get your ID from: https://analytics.google.com/
@@ -41,7 +41,7 @@ export const portfolioConfig = {
   personalInfo: {
     // Basic Info
     name: 'Mariano Rodriguez',
-    title: 'Front-End Developer',
+    title: 'Senior Front-End Developer',
 
     // Contact Details
     email: 'rdzc.mariano@gmail.com',
@@ -60,11 +60,11 @@ export const portfolioConfig = {
     description:
       'Specializing in building performant, scalable, and beautifully intuitive web experiences with a focus on modern React architecture.',
     summary:
-      'Front-End Developer with 4+ years of experience in technologies such as React & Svelte and experience in Node.js, MongoDB and C#',
+      'Senior Front-End Developer with 10+ years in software development, specializing in React, TypeScript and Svelte, with full-stack experience in Node.js. Proven track record building healthcare and e-commerce products at scale — from migrating legacy frontends to achieving 100% test coverage in production apps. Strong frontend focus backed by a QA background that translates into high-quality, well-tested code',
 
     // Resume/CV
     // Place your PDF in /public folder and update the filename here
-    resumeFileName: 'CV-Mariano-Rodriguez.pdf',
+    resumeFileName: 'Mariano Rodriguez - Resume.pdf',
   },
 
   // ============================================================================
@@ -80,9 +80,10 @@ export const portfolioConfig = {
       title: 'Frontend Developer',
       period: 'Dec 2022 - Present',
       description: [
-        'Development of various web apps in React, Svelte, Redux, TypeScript and Tailwind related to healthcare, reaching 100% test coverage using Jest/Vitest, reducing production bugs',
-        'Developed a NodeJS app to connect an external API and our internal services, improving reliability and reducing failures',
-        "Led the complete refactor of a 'patient/practitioner' calendar using React, Redux, Tailwind and GraphQL, improving its structure and efficiency",
+        'Built and maintained React/Svelte healthcare web apps with 100% test coverage using Jest/Vitest, eliminating entire categories of production bugs',
+        'Developed a Next.js application acting as a data integration layer between external financial market data services (stocks, real-time pricing) and internal systems, improving reliability and reducing service failures',
+        'Acted as Technical Leader, owning architectural decisions and coordinating frontend development across the team',
+        'Led a full refactor of a patient/practitioner scheduling system using React, Redux, Tailwind and GraphQL, improving maintainability and performance',
       ],
     },
     {
@@ -92,18 +93,19 @@ export const portfolioConfig = {
       title: 'Frontend Developer',
       period: 'Oct 2021 - Dec 2022',
       description: [
-        'Increased the registration rate by simplifying the onboarding flow and redesigning the registration process using React, Redux, and Tailwind, improving the UX/UI',
+        'Redesigned and simplified a multi-step user onboarding flow using React, Redux and Tailwind for a B2C SaaS product, directly increasing registration conversion rate by 13%',
+        'Integrated GraphQL APIs on the frontend using Apollo Client to handle efficient data fetching and avoid over-fetching',
       ],
     },
     {
       id: 3,
       slug: 'endava',
       company: 'ENDAVA',
-      title: 'Front-End Developer',
+      title: 'Full-Stack Developer',
       period: 'Feb 2020 - Oct 2021',
       description: [
-        'Development of an app using React, Redux, NodeJS, and MongoDB/PostgreSQL',
-        'Built and maintained a React Native app with focus on compliance with WCAG 2.0 accessibility standards',
+        'Built a full-stack internal HR application end to end, developing the React/Redux frontend and a Node.js/Express backend with MongoDB and PostgreSQL',
+        'Developed and maintained a client-facing React Native app, ensuring full compliance with WCAG 2.0 accessibility standards',
       ],
     },
     {
@@ -113,8 +115,11 @@ export const portfolioConfig = {
       title: 'Productivity Engineer',
       period: 'Aug 2017 - Feb 2020',
       description: [
-        'Led the development of internal tools that enhanced the developer experience, including NPM packages, testing kits, and frontends/backends in React and Java',
-        'Improved code quality across the company through workshops, talks, and support on automation and testing for various development teams',
+        "Kicked off the migration of Fury — MercadoLibre's largest internal frontend — from Angular 1 to React (16.8/17), adopting the then-new hooks API and modern function components",
+        'Built internal DevEx tooling to speed up frontend teams: NPM boilerplate packages and a CLI to scaffold WebDriverIO setups in a single command',
+        'Developed a dashboard that surfaced per-PR test coverage, reading CI-generated reports by commit hash and displaying an expandable per-file breakdown',
+        'Introduced and evangelized end-to-end testing across frontend teams (Nightwatch, later WebDriverIO), delivering hands-on talks at multiple MercadoLibre offices',
+        'Operated and maintained CI/CD pipelines in Jenkins — debugging build failures via log analysis, enforcing a 90% coverage threshold on GitHub checks, and running a rotating on-call to keep teams unblocked',
       ],
     },
     {
@@ -124,9 +129,8 @@ export const portfolioConfig = {
       title: 'QA Automation Engineer',
       period: 'Mar 2016 - Aug 2017',
       description: [
-        'Designed the automation solution architecture using C#, Selenium WebDriver, and the Page Object design pattern',
-        'Performed manual testing of features to ensure functionality and quality',
-        'Created, maintained, and executed test cases for regression testing',
+        "Built intive's test automation solution from the ground up as the company's first automation engineer, using C#, Selenium and the Page Object Model",
+        "Was the first engineer assigned to Intelligize — which grew into intive's largest project — running automated feature testing and manual regression testing for production releases",
       ],
     },
     {
@@ -136,9 +140,8 @@ export const portfolioConfig = {
       title: 'Backend Developer',
       period: 'Sep 2014 - Mar 2016',
       description: [
-        'Development of an internal app in C# to assist company managers in expense tracking and cash flows',
-        'Automation of an internal tool using CodedUI',
-        'Led a POC to swap from CodedUI to Selenium WebDriver',
+        'Developed an internal C# application to help managers track expenses and cash flow',
+        "Led a proof of concept to migrate the team's UI automation from CodedUI to Selenium, improving maintainability",
       ],
     },
   ],
@@ -159,21 +162,18 @@ export const portfolioConfig = {
   // ============================================================================
   // CERTIFICATIONS
   // ============================================================================
-  certifications: [
-    'AWS Certified Developer - Associate (DVA-002)',
-    'Meta Front-End Developer Certificate',
-  ],
+  certifications: ['Currently pursuing AWS Certified Developer – Associate (DVA-C02)'],
 
   // ============================================================================
   // TECHNICAL SKILLS
   // ============================================================================
   // Organize skills by category. You can add/remove categories as needed.
   skills: {
-    Frontend: ['React', 'Svelte', 'Redux', 'Tailwind', 'TypeScript', 'React Native', 'GraphQL'],
-    Backend: ['Node.js', 'C#', 'Express', 'REST', 'GraphQL'],
+    Frontend: ['JavaScript', 'React', 'TypeScript', 'Svelte', 'Redux', 'Tailwind', 'React Native', 'GraphQL'],
+    Backend: ['Node.js', 'Next.js', 'Express', 'REST'],
     Databases: ['MongoDB', 'PostgreSQL'],
-    Testing: ['Jest', 'Vitest', 'Selenium WebDriver', 'Nightwatch', 'WebDriverIO'],
-    'Dev Tools': ['Git', 'Docker', 'CI/CD', 'AWS', 'Agile/Scrum'],
+    Testing: ['Jest', 'Vitest', 'E2E'],
+    'Dev Tools': ['Git', 'Docker', 'CI/CD', 'Agile/Scrum'],
   },
 
   // ============================================================================
@@ -181,7 +181,7 @@ export const portfolioConfig = {
   // ============================================================================
   languages: [
     { name: 'Spanish', level: 'Native' },
-    { name: 'English', level: 'B2 (Upper Intermediate)' },
+    { name: 'English', level: 'Professional working proficiency' },
   ],
 
   // ============================================================================

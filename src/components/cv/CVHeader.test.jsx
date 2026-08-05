@@ -5,7 +5,7 @@ import CVHeader from './CVHeader';
 vi.mock('../../constants/data', () => ({
   personalInfo: {
     name: 'John Doe',
-    resumeFileName: 'CV-Mariano-Rodriguez.pdf',
+    resumeFileName: 'Mariano Rodriguez - Resume.pdf',
   },
   siteConfig: {
     basePath: '/',
@@ -29,7 +29,7 @@ vi.mock('react-i18next', () => ({
     t: (key) => {
       const translations = {
         'hero.title': 'Front-End Developer',
-        'cv.downloadPDF': 'Download PDF',
+        'cv.downloadPDF': 'Download resume',
       };
       return translations[key] || key;
     },
@@ -56,19 +56,19 @@ describe('CVHeader Component', () => {
 
     it('renders download PDF button', () => {
       render(<CVHeader />);
-      const button = screen.getByRole('link', { name: /Download PDF/ });
+      const button = screen.getByRole('link', { name: /Download resume/ });
       expect(button).toBeInTheDocument();
     });
 
     it('download button has correct href', () => {
       render(<CVHeader />);
-      const button = screen.getByRole('link', { name: /Download PDF/ });
-      expect(button).toHaveAttribute('href', '/CV-Mariano-Rodriguez.pdf');
+      const button = screen.getByRole('link', { name: /Download resume/ });
+      expect(button).toHaveAttribute('href', '/Mariano Rodriguez - Resume.pdf');
     });
 
     it('download button has download attribute', () => {
       render(<CVHeader />);
-      const button = screen.getByRole('link', { name: /Download PDF/ });
+      const button = screen.getByRole('link', { name: /Download resume/ });
       expect(button).toHaveAttribute('download');
     });
   });
@@ -107,7 +107,7 @@ describe('CVHeader Component', () => {
 
     it('uses translation for download button text', () => {
       render(<CVHeader />);
-      expect(screen.getByText('Download PDF')).toBeInTheDocument();
+      expect(screen.getByText('Download resume')).toBeInTheDocument();
     });
   });
 
@@ -155,13 +155,13 @@ describe('CVHeader Component', () => {
     it('PDF link points to correct path', () => {
       render(<CVHeader />);
       const button = screen.getByRole('link');
-      expect(button.getAttribute('href')).toContain('CV-Mariano-Rodriguez.pdf');
+      expect(button.getAttribute('href')).toContain('Mariano Rodriguez - Resume.pdf');
     });
 
     it('PDF link uses basePath', () => {
       render(<CVHeader />);
       const button = screen.getByRole('link');
-      expect(button.getAttribute('href')).toBe('/CV-Mariano-Rodriguez.pdf');
+      expect(button.getAttribute('href')).toBe('/Mariano Rodriguez - Resume.pdf');
     });
   });
 

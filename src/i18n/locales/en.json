@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Mariano Rodriguez | Front-end Developer"
+    "title": "Mariano Rodriguez | Senior Front-End Developer"
   },
   "nav": {
     "home": "Home",
@@ -9,7 +9,7 @@
   },
   "hero": {
     "greeting": "Hi, I'm",
-    "title": "Front-End Developer",
+    "title": "Senior Front-End Developer",
     "description": "Specializing in building performant, scalable, and beautifully intuitive web experiences with a focus on modern React architecture.",
     "viewResume": "Resume",
     "getInTouch": "Get in touch"
@@ -46,10 +46,10 @@
   },
   "cv": {
     "title": "Resume",
-    "downloadPDF": "Download PDF",
+    "downloadPDF": "Download resume",
     "contact": "Contact",
     "summary": "Professional Summary",
-    "summaryText": "Front-End Developer with 4+ years of experience in technologies such as React & Svelte and experience in Node.js, MongoDB and C#",
+    "summaryText": "Senior Front-End Developer with 10+ years in software development, specializing in React, TypeScript and Svelte, with full-stack experience in Node.js. Proven track record building healthcare and e-commerce products at scale — from migrating legacy frontends to achieving 100% test coverage in production apps. Strong frontend focus backed by a QA background that translates into high-quality, well-tested code",
     "experience": "Professional Experience",
     "education": "Education",
     "certifications": "Certifications",
@@ -61,51 +61,54 @@
       "spanish": "Spanish",
       "english": "English",
       "native": "Native",
-      "b2": "B2 (Upper Intermediate)"
+      "b2": "Professional working proficiency"
     },
     "jobs": {
       "kopius": {
         "title": "Frontend Developer",
         "responsibilities": [
-          "Development of various web apps in React, Svelte, Redux, TypeScript and Tailwind related to healthcare, reaching 100% test coverage using Jest/Vitest, reducing production bugs",
-          "Developed a NodeJS app to connect an external API and our internal services, improving reliability and reducing failures",
-          "Led the complete refactor of a 'patient/practitioner' calendar using React, Redux, Tailwind and GraphQL, improving its structure and efficiency"
+          "Built and maintained React/Svelte healthcare web apps with 100% test coverage using Jest/Vitest, eliminating entire categories of production bugs",
+          "Developed a Next.js application acting as a data integration layer between external financial market data services (stocks, real-time pricing) and internal systems, improving reliability and reducing service failures",
+          "Acted as Technical Leader, owning architectural decisions and coordinating frontend development across the team",
+          "Led a full refactor of a patient/practitioner scheduling system using React, Redux, Tailwind and GraphQL, improving maintainability and performance"
         ]
       },
       "solvd": {
         "title": "Frontend Developer",
         "responsibilities": [
-          "Increased the registration rate by simplifying the onboarding flow and redesigning the registration process using React, Redux, and Tailwind, improving the UX/UI"
+          "Redesigned and simplified a multi-step user onboarding flow using React, Redux and Tailwind for a B2C SaaS product, directly increasing registration conversion rate by 13%",
+          "Integrated GraphQL APIs on the frontend using Apollo Client to handle efficient data fetching and avoid over-fetching"
         ]
       },
       "endava": {
-        "title": "Front-End Developer",
+        "title": "Full-Stack Developer",
         "responsibilities": [
-          "Development of an app using React, Redux, NodeJS, and MongoDB/PostgreSQL",
-          "Built and maintained a React Native app with focus on compliance with WCAG 2.0 accessibility standards"
+          "Built a full-stack internal HR application end to end, developing the React/Redux frontend and a Node.js/Express backend with MongoDB and PostgreSQL",
+          "Developed and maintained a client-facing React Native app, ensuring full compliance with WCAG 2.0 accessibility standards"
         ]
       },
       "mercadolibre": {
         "title": "Productivity Engineer",
         "responsibilities": [
-          "Led the development of internal tools that enhanced the developer experience, including NPM packages, testing kits, and frontends/backends in React and Java",
-          "Improved code quality across the company through workshops, talks, and support on automation and testing for various development teams"
+          "Kicked off the migration of Fury — MercadoLibre's largest internal frontend — from Angular 1 to React (16.8/17), adopting the then-new hooks API and modern function components",
+          "Built internal DevEx tooling to speed up frontend teams: NPM boilerplate packages and a CLI to scaffold WebDriverIO setups in a single command",
+          "Developed a dashboard that surfaced per-PR test coverage, reading CI-generated reports by commit hash and displaying an expandable per-file breakdown",
+          "Introduced and evangelized end-to-end testing across frontend teams (Nightwatch, later WebDriverIO), delivering hands-on talks at multiple MercadoLibre offices",
+          "Operated and maintained CI/CD pipelines in Jenkins — debugging build failures via log analysis, enforcing a 90% coverage threshold on GitHub checks, and running a rotating on-call to keep teams unblocked"
         ]
       },
       "intive": {
         "title": "QA Automation Engineer",
         "responsibilities": [
-          "Designed the automation solution architecture using C#, Selenium WebDriver, and the Page Object design pattern",
-          "Performed manual testing of features to ensure functionality and quality",
-          "Created, maintained, and executed test cases for regression testing"
+          "Built intive's test automation solution from the ground up as the company's first automation engineer, using C#, Selenium and the Page Object Model",
+          "Was the first engineer assigned to Intelligize — which grew into intive's largest project — running automated feature testing and manual regression testing for production releases"
         ]
       },
       "accenture": {
         "title": "Backend Developer",
         "responsibilities": [
-          "Development of an internal app in C# to assist company managers in expense tracking and cash flows",
-          "Automation of an internal tool using CodedUI",
-          "Led a POC to swap from CodedUI to Selenium WebDriver"
+          "Developed an internal C# application to help managers track expenses and cash flow",
+          "Led a proof of concept to migrate the team's UI automation from CodedUI to Selenium, improving maintainability"
         ]
       }
     },
@@ -115,8 +118,7 @@
       "location": "Avellaneda, Buenos Aires"
     },
     "certificationsData": [
-      "AWS Certified Developer - Associate (DVA-002)",
-      "Meta Front-End Developer Certificate"
+      "Currently pursuing AWS Certified Developer – Associate (DVA-C02)"
     ]
   },
   "footer": {

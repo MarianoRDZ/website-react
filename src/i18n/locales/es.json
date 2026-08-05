@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Mariano Rodriguez | Desarrollador Front-end"
+    "title": "Mariano Rodriguez | Desarrollador Front-End Senior"
   },
   "nav": {
     "home": "Inicio",
@@ -9,7 +9,7 @@
   },
   "hero": {
     "greeting": "Hola, soy",
-    "title": "Desarrollador Front-End",
+    "title": "Desarrollador Front-End Senior",
     "description": "Especializado en construir experiencias web eficientes, escalables y bellamente intuitivas con enfoque en arquitectura moderna de React.",
     "viewResume": "Currículum",
     "getInTouch": "Contáctame"
@@ -46,10 +46,10 @@
   },
   "cv": {
     "title": "Currículum",
-    "downloadPDF": "Descargar PDF",
+    "downloadPDF": "Descargar CV",
     "contact": "Contacto",
     "summary": "Resumen Profesional",
-    "summaryText": "Desarrollador Front-End con más de 4 años de experiencia en tecnologías como React y Svelte, y experiencia en Node.js, MongoDB y C#",
+    "summaryText": "Desarrollador Front-End Senior con más de 10 años en desarrollo de software, especializado en React, TypeScript y Svelte, con experiencia full-stack en Node.js. Historial comprobado construyendo productos de salud y e-commerce a escala — desde la migración de frontends legacy hasta lograr 100% de cobertura de tests en aplicaciones de producción. Fuerte enfoque frontend respaldado por experiencia en QA que se traduce en código de alta calidad y bien testeado",
     "experience": "Experiencia Profesional",
     "education": "Educación",
     "certifications": "Certificaciones",
@@ -61,51 +61,54 @@
       "spanish": "Español",
       "english": "Inglés",
       "native": "Nativo",
-      "b2": "B2 (Intermedio Alto)"
+      "b2": "Dominio profesional"
     },
     "jobs": {
       "kopius": {
         "title": "Desarrollador Frontend",
         "responsibilities": [
-          "Desarrollo de varias aplicaciones web en React, Svelte, Redux, TypeScript y Tailwind relacionadas con el cuidado de la salud, alcanzando 100% de cobertura de tests usando Jest/Vitest, reduciendo bugs en producción",
-          "Desarrollé una aplicación NodeJS para conectar una API externa con nuestros servicios internos, mejorando la confiabilidad y reduciendo fallos",
-          "Lideré la refactorización completa de un calendario de 'paciente/profesional' usando React, Redux, Tailwind y GraphQL, mejorando su estructura y eficiencia"
+          "Construí y mantuve aplicaciones web de salud en React/Svelte con 100% de cobertura de tests usando Jest/Vitest, eliminando categorías enteras de bugs en producción",
+          "Desarrollé una aplicación Next.js como capa de integración de datos entre servicios externos de mercados financieros (acciones, precios en tiempo real) y sistemas internos, mejorando la confiabilidad y reduciendo fallas del servicio",
+          "Actué como Technical Leader, tomando decisiones de arquitectura y coordinando el desarrollo frontend del equipo",
+          "Lideré la refactorización completa de un sistema de turnos paciente/profesional usando React, Redux, Tailwind y GraphQL, mejorando la mantenibilidad y el rendimiento"
         ]
       },
       "solvd": {
         "title": "Desarrollador Frontend",
         "responsibilities": [
-          "Aumenté la tasa de registro simplificando el flujo de onboarding y rediseñando el proceso de registro usando React, Redux y Tailwind, mejorando la UX/UI"
+          "Rediseñé y simplifiqué un flujo de onboarding multi-paso usando React, Redux y Tailwind para un producto B2C SaaS, aumentando directamente la tasa de conversión de registros en un 13%",
+          "Integré APIs de GraphQL en el frontend usando Apollo Client para manejar la obtención de datos de forma eficiente y evitar el over-fetching"
         ]
       },
       "endava": {
-        "title": "Desarrollador Front-End",
+        "title": "Desarrollador Full-Stack",
         "responsibilities": [
-          "Desarrollo de una aplicación usando React, Redux, NodeJS y MongoDB/PostgreSQL",
-          "Construí y mantuve una aplicación React Native con enfoque en cumplimiento de estándares de accesibilidad WCAG 2.0"
+          "Construí de principio a fin una aplicación interna de RRHH, desarrollando el frontend en React/Redux y un backend en Node.js/Express con MongoDB y PostgreSQL",
+          "Desarrollé y mantuve una aplicación React Native para clientes, asegurando el cumplimiento total de los estándares de accesibilidad WCAG 2.0"
         ]
       },
       "mercadolibre": {
         "title": "Ingeniero de Productividad",
         "responsibilities": [
-          "Lideré el desarrollo de herramientas internas que mejoraron la experiencia del desarrollador, incluyendo paquetes NPM, kits de testing, y frontends/backends en React y Java",
-          "Mejoré la calidad del código en toda la empresa a través de workshops, charlas y soporte en automatización y testing para varios equipos de desarrollo"
+          "Inicié la migración de Fury — el frontend interno más grande de MercadoLibre — de Angular 1 a React (16.8/17), adoptando la nueva API de hooks y componentes funcionales modernos",
+          "Construí herramientas internas de DevEx para acelerar los equipos frontend: paquetes NPM boilerplate y una CLI para generar setups de WebDriverIO en un solo comando",
+          "Desarrollé un dashboard que mostraba la cobertura de tests por PR, leyendo reportes generados por CI según el hash de commit y mostrando un desglose expandible por archivo",
+          "Introduje y evangelicé el testing end-to-end en los equipos frontend (Nightwatch, luego WebDriverIO), dando charlas prácticas en varias oficinas de MercadoLibre",
+          "Operé y mantuve pipelines de CI/CD en Jenkins — depurando fallas de build mediante análisis de logs, aplicando un umbral de 90% de cobertura en los checks de GitHub, y gestionando un sistema de on-call rotativo para mantener los equipos desbloqueados"
         ]
       },
       "intive": {
         "title": "Ingeniero de Automatización QA",
         "responsibilities": [
-          "Diseñé la arquitectura de la solución de automatización usando C#, Selenium WebDriver y el patrón de diseño Page Object",
-          "Realicé testing manual de funcionalidades para asegurar funcionalidad y calidad",
-          "Creé, mantuve y ejecuté casos de prueba para testing de regresión"
+          "Construí la solución de automatización de tests de intive desde cero como el primer ingeniero de automatización de la empresa, usando C#, Selenium y el Page Object Model",
+          "Fui el primer ingeniero asignado a Intelligize — que se convirtió en el proyecto más grande de intive — ejecutando testing automatizado de funcionalidades y testing de regresión manual para releases de producción"
         ]
       },
       "accenture": {
         "title": "Desarrollador Backend",
         "responsibilities": [
-          "Desarrollo de una aplicación interna en C# para asistir a gerentes de la empresa en el seguimiento de gastos y flujos de efectivo",
-          "Automatización de una herramienta interna usando CodedUI",
-          "Lideré un POC para cambiar de CodedUI a Selenium WebDriver"
+          "Desarrollé una aplicación interna en C# para ayudar a gerentes a rastrear gastos y flujos de caja",
+          "Lideré una prueba de concepto para migrar la automatización de UI del equipo de CodedUI a Selenium, mejorando la mantenibilidad"
         ]
       }
     },
@@ -115,8 +118,7 @@
       "location": "Avellaneda, Buenos Aires"
     },
     "certificationsData": [
-      "AWS Certified Developer - Associate (DVA-002)",
-      "Certificado de Desarrollador Front-End de Meta"
+      "En proceso de obtener AWS Certified Developer – Associate (DVA-C02)"
     ]
   },
   "footer": {
