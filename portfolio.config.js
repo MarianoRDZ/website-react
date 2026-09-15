@@ -152,7 +152,7 @@ export const portfolioConfig = {
   education: [
     {
       id: 1,
-      degree: 'Technical Degree in Programming (Incomplete)',
+      degree: 'Technical Degree in Programming',
       institution: 'Universidad Tecnológica Nacional',
       location: 'Avellaneda, Buenos Aires',
       period: '2009 - 2011',
