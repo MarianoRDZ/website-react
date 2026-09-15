@@ -4,7 +4,13 @@ const LanguageSelector = () => {
   const { i18n } = useTranslation();
 
   const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
+    const main = document.querySelector('main');
+    if (!main) return i18n.changeLanguage(lng);
+    main.style.opacity = '0';
+    setTimeout(() => {
+      i18n.changeLanguage(lng);
+      main.style.opacity = '';
+    }, 150);
   };
 
   return (
