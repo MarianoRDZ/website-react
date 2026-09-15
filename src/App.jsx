@@ -4,6 +4,7 @@ import Layout from './components/common/Layout';
 import ScrollToTop from './components/common/ScrollToTop';
 import { useDocumentTitle } from './hooks/useDocumentTitle';
 import PageLoader from './components/common/PageLoader';
+import ErrorBoundary from './components/common/ErrorBoundary';
 import { portfolioConfig } from '../portfolio.config';
 import { initializeAnalytics, trackPageView } from './utils/analytics';
 
@@ -40,14 +41,16 @@ function App() {
       <AnalyticsTracker />
       <ScrollToTop />
       <Layout>
-        <Suspense fallback={<PageLoader />}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/cv" element={<CV />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
+        <ErrorBoundary>
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/cv" element={<CV />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+        </ErrorBoundary>
       </Layout>
     </BrowserRouter>
   );
