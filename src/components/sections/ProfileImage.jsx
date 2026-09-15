@@ -1,4 +1,5 @@
-import profileImage from '../../assets/profile.png';
+import profileImageWebP from '../../assets/profile.webp';
+import profileImagePng from '../../assets/profile.png';
 
 // si no hay imagen muestra un avatar con la inicial
 const ProfileImage = ({ size = 'lg', alt = 'Profile', showOverlay = true }) => {
@@ -11,13 +12,16 @@ const ProfileImage = ({ size = 'lg', alt = 'Profile', showOverlay = true }) => {
   return (
     <div className="flex justify-center">
       <div className="relative">
-        {profileImage ? (
+        {profileImageWebP ? (
           <div className={`relative overflow-hidden rounded-2xl ${sizeClasses[size]}`}>
-            <img
-              src={profileImage}
-              alt={alt}
-              className="h-full w-full object-cover object-top brightness-110"
-            />
+            <picture>
+              <source srcSet={profileImageWebP} type="image/webp" />
+              <img
+                src={profileImagePng}
+                alt={alt}
+                className="h-full w-full object-cover object-top brightness-110"
+              />
+            </picture>
             {showOverlay && (
               <>
                 <div className="absolute right-0 bottom-0 left-0 h-24 bg-gradient-to-t from-gray-900 via-gray-900/20 to-transparent" />
