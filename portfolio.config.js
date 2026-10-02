@@ -44,7 +44,7 @@ export const portfolioConfig = {
     title: 'Senior Front-End Developer',
 
     // Contact Details
-    email: 'rdzc.mariano@gmail.com',
+    email: 'rdzc.mariano@proton.me',
     phone: '+54 9 11 5131 3502',
     location: 'Buenos Aires, Argentina',
 
