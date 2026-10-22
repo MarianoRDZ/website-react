@@ -1,5 +1,6 @@
 import Navbar from './Navbar';
 import Footer from './Footer';
+import ScrollProgressBar from './ScrollProgressBar';
 
 const Layout = ({ children }) => {
   return (
@@ -9,6 +10,7 @@ const Layout = ({ children }) => {
         <div className="absolute -bottom-32 -left-32 h-[500px] w-[500px] rounded-full bg-purple-600/[0.06] blur-[100px]" />
         <div className="bg-noise absolute inset-0 opacity-[0.025]" />
       </div>
+      <ScrollProgressBar />
       <Navbar />
       <main className="relative flex-1 pt-16">{children}</main>
       <Footer />
