@@ -70,80 +70,15 @@ export const portfolioConfig = {
   // ============================================================================
   // PROFESSIONAL EXPERIENCE
   // ============================================================================
-  // Each experience should have: company, title, period, description (array)
-  // The system will automatically handle translations if provided in i18n files
+  // Metadata only (company, period, slug). Titles and responsibilities live in
+  // src/i18n/locales/{en,es}.json under cv.jobs.<slug> — that's the source of truth.
   experience: [
-    {
-      id: 1,
-      slug: 'kopius', // Used for translation keys (optional)
-      company: 'KOPIUS',
-      title: 'Frontend Developer',
-      period: 'Dec 2022 - Present',
-      description: [
-        'Built and maintained React/Svelte healthtech web apps with 100% test coverage using Jest/Vitest, eliminating entire categories of production bugs',
-        'Migrated 2 React apps from CRA to Next.js, enabling SSR (server-side rendering)',
-        'Refactored the patient/practitioner scheduling system (React, Redux, GraphQL, Tailwind), extracting a shared component library that reduced duplication',
-      ],
-    },
-    {
-      id: 2,
-      slug: 'solvd',
-      company: 'SOLVD',
-      title: 'Frontend Developer',
-      period: 'Oct 2021 - Dec 2022',
-      description: [
-        'Redesigned and simplified a multi-step user onboarding flow using React, Redux and Tailwind for a B2C SaaS product, directly increasing registration conversion rate by 13%',
-        'Integrated GraphQL APIs on the frontend using Apollo Client to handle efficient data fetching and avoid over-fetching',
-      ],
-    },
-    {
-      id: 3,
-      slug: 'endava',
-      company: 'ENDAVA',
-      title: 'Full-Stack Developer',
-      period: 'Feb 2020 - Oct 2021',
-      description: [
-        'Built a full-stack internal HR application end to end, developing the React/Redux frontend and a Node.js/Express backend with MongoDB and PostgreSQL',
-        'Developed and maintained a client-facing React Native app, ensuring full compliance with WCAG 2.0 accessibility standards',
-      ],
-    },
-    {
-      id: 4,
-      slug: 'mercadolibre',
-      company: 'MERCADOLIBRE',
-      title: 'Frontend / DevEx Engineer (Productivity Engineer)',
-      period: 'Aug 2017 - Feb 2020',
-      description: [
-        'Deployed and maintained frontend tooling on AWS (S3, EC2, Route 53, ELB) to support build pipelines and application infrastructure',
-        "Kicked off the migration of Fury — MercadoLibre's largest internal frontend, a micro-frontend architecture where independently-deployed apps coexisted — from Angular 1 to React (16.8/17), adopting the then-new hooks API and modern function components",
-        'Built internal DevEx tooling to speed up frontend teams: NPM boilerplate packages and a CLI to scaffold WebDriverIO setups in a single command',
-        'Developed a dashboard that surfaced per-PR test coverage, reading CI-generated reports by commit hash and displaying an expandable per-file breakdown',
-        'Introduced and evangelized end-to-end testing across frontend teams (Nightwatch, later WebDriverIO), delivering hands-on talks at multiple MercadoLibre offices',
-        'Operated and maintained CI/CD pipelines in Jenkins — debugging build failures via log analysis, enforcing a 90% coverage threshold on GitHub checks, and running a rotating on-call to keep teams unblocked',
-      ],
-    },
-    {
-      id: 5,
-      slug: 'intive',
-      company: 'INTIVE',
-      title: 'QA Automation Engineer',
-      period: 'Mar 2016 - Aug 2017',
-      description: [
-        "Built intive's test automation solution from the ground up as the company's first automation engineer, using C#, Selenium and the Page Object Model",
-        "Served as the founding engineer on a project (intive's largest account), owning automated feature testing and manual regression testing across production releases",
-      ],
-    },
-    {
-      id: 6,
-      slug: 'accenture',
-      company: 'ACCENTURE',
-      title: 'Backend Developer',
-      period: 'Sep 2014 - Mar 2016',
-      description: [
-        'Developed an internal C# and SQL application to help managers track expenses and cash flow',
-        "Led a proof of concept to migrate the team's UI automation from CodedUI to Selenium",
-      ],
-    },
+    { id: 1, slug: 'kopius',      company: 'KOPIUS',       period: 'Dec 2022 - Present'    },
+    { id: 2, slug: 'solvd',       company: 'SOLVD',        period: 'Oct 2021 - Dec 2022'   },
+    { id: 3, slug: 'endava',      company: 'ENDAVA',       period: 'Feb 2020 - Oct 2021'   },
+    { id: 4, slug: 'mercadolibre',company: 'MERCADOLIBRE', period: 'Aug 2017 - Feb 2020'   },
+    { id: 5, slug: 'intive',      company: 'INTIVE',       period: 'Mar 2016 - Aug 2017'   },
+    { id: 6, slug: 'accenture',   company: 'ACCENTURE',    period: 'Sep 2014 - Mar 2016'   },
   ],
 
   // ============================================================================
