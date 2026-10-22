@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './LanguageSelector';
@@ -10,11 +10,11 @@ const Navbar = () => {
 
   const isActive = (path) => location.pathname === path;
 
-  const navLinks = [
+  const navLinks = useMemo(() => [
     { path: '/', label: t('nav.home') },
     { path: '/cv', label: t('nav.resume') },
     { path: '/contact', label: t('nav.contact') },
-  ];
+  ], [t]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
