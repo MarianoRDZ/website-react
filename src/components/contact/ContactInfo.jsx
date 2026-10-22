@@ -37,7 +37,7 @@ const ContactInfo = () => {
           />
         </div>
 
-        <div className="border-t border-blue-600 pt-8">
+        <div className="border-t border-accent/30 pt-8">
           <ContactInfoItem
             icon={ClockIcon}
             label={t('contact.availabilityLabel')}

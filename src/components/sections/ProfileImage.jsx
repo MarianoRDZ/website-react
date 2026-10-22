@@ -23,9 +23,9 @@ const ProfileImage = ({ size = 'lg', alt = 'Profile', showOverlay = true }) => {
             </picture>
             {showOverlay && (
               <>
-                <div className="absolute right-0 bottom-0 left-0 h-32 bg-gradient-to-t from-[#0d1117] via-[#0d1117]/30 to-transparent" />
-                <div className="absolute top-0 bottom-0 left-0 w-16 bg-gradient-to-r from-[#0d1117] via-[#0d1117]/20 to-transparent" />
-                <div className="absolute top-0 right-0 bottom-0 w-16 bg-gradient-to-l from-[#0d1117] via-[#0d1117]/20 to-transparent" />
+                <div className="absolute right-0 bottom-0 left-0 h-32 bg-gradient-to-t from-background via-background/30 to-transparent" />
+                <div className="absolute top-0 bottom-0 left-0 w-16 bg-gradient-to-r from-background via-[#0d1117]/20 to-transparent" />
+                <div className="absolute top-0 right-0 bottom-0 w-16 bg-gradient-to-l from-background via-[#0d1117]/20 to-transparent" />
               </>
             )}
           </>
