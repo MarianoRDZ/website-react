@@ -93,7 +93,24 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradient-flow 4s linear infinite;
+  animation: gradient-appear 0.9s ease-out forwards, gradient-flow 4s 0.9s linear infinite;
+}
+
+@keyframes gradient-appear {
+  from {
+    background: linear-gradient(90deg, #ffffff, #ffffff, #ffffff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  to {
+    background: linear-gradient(90deg, #60d9fd, #a78bfa, #60d9fd);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 @keyframes gradient-flow {
