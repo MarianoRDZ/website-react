@@ -10,7 +10,7 @@ const ProfileImage = ({ size = 'lg', alt = 'Profile', showOverlay = true }) => {
 
   return (
     <div className="flex justify-center">
-      <div className={`relative overflow-hidden rounded-2xl ${sizeClasses[size]}`}>
+      <div className={`relative overflow-hidden rounded-2xl ${showOverlay ? 'profile-image-blend' : ''} ${sizeClasses[size]}`}>
         {profileImageWebP ? (
           <>
             <picture>
@@ -21,13 +21,6 @@ const ProfileImage = ({ size = 'lg', alt = 'Profile', showOverlay = true }) => {
                 className="h-full w-full object-cover object-top brightness-110"
               />
             </picture>
-            {showOverlay && (
-              <>
-                <div className="absolute right-0 bottom-0 left-0 h-32 bg-gradient-to-t from-background via-background/30 to-transparent" />
-                <div className="absolute top-0 bottom-0 left-0 w-16 bg-gradient-to-r from-background via-[#0d1117]/20 to-transparent" />
-                <div className="absolute top-0 right-0 bottom-0 w-16 bg-gradient-to-l from-background via-[#0d1117]/20 to-transparent" />
-              </>
-            )}
           </>
         ) : (
           <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600">
