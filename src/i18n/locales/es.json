@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Mariano Rodriguez | Desarrollador Front-End Senior"
+    "title": "Mariano Rodriguez | Desarrollador Full-Stack · Orientado al Frontend"
   },
   "nav": {
     "home": "Inicio",
@@ -9,7 +9,7 @@
   },
   "hero": {
     "greeting": "Hola, soy",
-    "title": "Desarrollador Front-End Senior",
+    "title": "Desarrollador Full-Stack · Orientado al Frontend",
     "description": "Especializado en construir experiencias web eficientes, escalables y bellamente intuitivas con enfoque en arquitectura moderna de React.",
     "viewResume": "Currículum",
     "getInTouch": "Contáctame"

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Mariano Rodriguez | Senior Front-End Developer"
+    "title": "Mariano Rodriguez | Full-Stack Developer · Frontend-Focused"
   },
   "nav": {
     "home": "Home",
@@ -9,7 +9,7 @@
   },
   "hero": {
     "greeting": "Hi, I'm",
-    "title": "Senior Front-End Developer",
+    "title": "Full-Stack Developer · Frontend-Focused",
     "description": "Specializing in building performant, scalable, and beautifully intuitive web experiences with a focus on modern React architecture.",
     "viewResume": "Resume",
     "getInTouch": "Get in touch"

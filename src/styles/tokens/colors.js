@@ -15,5 +15,10 @@ export const colors = {
     DEFAULT: '#60D9FD',
     hover: '#7BE3FF',
     active: '#4CCBEF',
+    secondary: '#a78bfa',
+  },
+
+  print: {
+    link: '#1d4ed8',
   },
 };
