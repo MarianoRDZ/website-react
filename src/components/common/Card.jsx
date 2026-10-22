@@ -1,4 +1,3 @@
-// variant="transparent" para cards sin fondo (útil dentro de otros cards)
 const Card = ({
   children,
   variant = 'surface',
@@ -6,6 +5,7 @@ const Card = ({
   className = '',
   padding = 'p-6',
   rounded = 'rounded-lg',
+  hover = false,
   ...props
 }) => {
   const bgClass =
@@ -15,7 +15,11 @@ const Card = ({
         ? 'bg-gray-900'
         : 'bg-transparent';
 
-  const classes = [rounded, padding, shadow ? 'shadow-md' : '', bgClass, 'h-fit', className]
+  const hoverClass = hover
+    ? 'border border-transparent transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(96,217,253,0.12)] hover:border-[rgba(96,217,253,0.2)]'
+    : '';
+
+  const classes = [rounded, padding, shadow ? 'shadow-md' : '', bgClass, hoverClass, 'h-fit', className]
     .filter(Boolean)
     .join(' ');
 

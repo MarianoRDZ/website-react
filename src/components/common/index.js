@@ -10,3 +10,5 @@ export { default as SocialLinks } from './SocialLinks';
 export { default as LanguageSelector } from './LanguageSelector';
 export { default as PageLoader } from './PageLoader';
 export { default as ScrollToTop } from './ScrollToTop';
+export { default as ScrollReveal } from './ScrollReveal';
+export { default as CustomCursor } from './CustomCursor';

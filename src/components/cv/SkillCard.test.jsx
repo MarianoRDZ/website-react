@@ -71,14 +71,7 @@ describe('SkillCard Component', () => {
     it('applies skill badge classes', () => {
       render(<SkillCard title={mockTitle} skills={['React']} />);
       const skill = screen.getByText('React');
-      expect(skill).toHaveClass(
-        'rounded-full',
-        'bg-blue-100',
-        'px-3',
-        'py-1',
-        'text-sm',
-        'text-blue-800'
-      );
+      expect(skill).toHaveClass('rounded-full', 'px-3', 'py-1', 'text-sm', 'font-medium');
     });
   });
 

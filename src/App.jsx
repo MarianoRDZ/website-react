@@ -24,6 +24,21 @@ function AnalyticsTracker() {
   return null;
 }
 
+function AnimatedRoutes() {
+  const location = useLocation();
+
+  return (
+    <div key={location.pathname} className="animate-page-enter">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cv" element={<CV />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </div>
+  );
+}
+
 function App() {
   useDocumentTitle();
 
@@ -43,12 +58,7 @@ function App() {
       <Layout>
         <ErrorBoundary>
           <Suspense fallback={<PageLoader />}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/cv" element={<CV />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+            <AnimatedRoutes />
           </Suspense>
         </ErrorBoundary>
       </Layout>

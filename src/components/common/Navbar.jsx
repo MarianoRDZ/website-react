@@ -62,8 +62,10 @@ const Navbar = () => {
               <Link
                 key={path}
                 to={path}
-                className={`text-base font-medium transition-colors duration-200 ${
-                  isActive(path) ? 'text-blue-400' : 'text-gray-300 hover:text-white'
+                className={`relative pb-1 text-base font-medium transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-blue-400 after:transition-all after:duration-300 after:content-[''] ${
+                  isActive(path)
+                    ? 'text-blue-400 after:w-full'
+                    : 'text-gray-300 after:w-0 hover:text-white hover:after:w-full'
                 }`}
               >
                 {label}

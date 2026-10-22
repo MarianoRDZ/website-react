@@ -2,7 +2,7 @@ import { Card } from '../common';
 import ChevronIcon from './ChevronIcon';
 
 const ExperienceItem = ({ title, company, period, responsibilities }) => (
-  <Card>
+  <Card hover>
     <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
       <div>
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{title}</h3>

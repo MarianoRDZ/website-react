@@ -49,7 +49,7 @@
     "downloadPDF": "Descargar CV",
     "contact": "Contacto",
     "summary": "Resumen Profesional",
-    "summaryText": "Desarrollador Front-End Senior con más de 10 años en desarrollo de software, especializado en React, TypeScript y Svelte, con experiencia full-stack en Node.js. Historial comprobado construyendo productos de salud y e-commerce a escala — desde la migración de frontends legacy hasta lograr 100% de cobertura de tests en aplicaciones de producción. Fuerte enfoque frontend respaldado por experiencia en QA que se traduce en código de alta calidad y bien testeado",
+    "summaryText": "Desarrollador Frontend con más de 10 años en desarrollo de software, especializado en React y TypeScript, con experiencia full-stack en Svelte y Node.js — productos enviados a producción en salud y e-commerce a escala, desde la migración de frontends legacy hasta lograr 100% de cobertura de tests. Ingeniero con enfoque frontend y background en QA, produciendo código bien testeado y listo para producción en React, TypeScript y Svelte.",
     "experience": "Experiencia Profesional",
     "education": "Educación",
     "certifications": "Certificaciones",
@@ -67,10 +67,9 @@
       "kopius": {
         "title": "Desarrollador Frontend",
         "responsibilities": [
-          "Construí y mantuve aplicaciones web de salud en React/Svelte con 100% de cobertura de tests usando Jest/Vitest, eliminando categorías enteras de bugs en producción",
-          "Desarrollé una aplicación Next.js como capa de integración de datos entre servicios externos de mercados financieros (acciones, precios en tiempo real) y sistemas internos, mejorando la confiabilidad y reduciendo fallas del servicio",
-          "Actué como Technical Leader, tomando decisiones de arquitectura y coordinando el desarrollo frontend del equipo",
-          "Lideré la refactorización completa de un sistema de turnos paciente/profesional usando React, Redux, Tailwind y GraphQL, mejorando la mantenibilidad y el rendimiento"
+          "Construí y mantuve aplicaciones web healthtech en React/Svelte con 100% de cobertura de tests usando Jest/Vitest, eliminando categorías enteras de bugs en producción",
+          "Migré 2 apps React de CRA a Next.js, habilitando SSR (server-side rendering)",
+          "Refactoricé el sistema de turnos paciente/profesional (React, Redux, GraphQL, Tailwind), extrayendo una librería de componentes compartida que redujo la duplicación"
         ]
       },
       "solvd": {
@@ -88,9 +87,10 @@
         ]
       },
       "mercadolibre": {
-        "title": "Ingeniero de Productividad",
+        "title": "Frontend / DevEx Engineer (Productivity Engineer)",
         "responsibilities": [
-          "Inicié la migración de Fury — el frontend interno más grande de MercadoLibre — de Angular 1 a React (16.8/17), adoptando la nueva API de hooks y componentes funcionales modernos",
+          "Desplegué y mantuve herramientas frontend en AWS (S3, EC2, Route 53, ELB) para soportar pipelines de build e infraestructura de aplicaciones",
+          "Inicié la migración de Fury — el frontend interno más grande de MercadoLibre, una arquitectura micro-frontend donde apps desplegadas de forma independiente coexistían — de Angular 1 a React (16.8/17), adoptando la entonces nueva API de hooks y componentes funcionales modernos",
           "Construí herramientas internas de DevEx para acelerar los equipos frontend: paquetes NPM boilerplate y una CLI para generar setups de WebDriverIO en un solo comando",
           "Desarrollé un dashboard que mostraba la cobertura de tests por PR, leyendo reportes generados por CI según el hash de commit y mostrando un desglose expandible por archivo",
           "Introduje y evangelicé el testing end-to-end en los equipos frontend (Nightwatch, luego WebDriverIO), dando charlas prácticas en varias oficinas de MercadoLibre",
@@ -101,25 +101,23 @@
         "title": "Ingeniero de Automatización QA",
         "responsibilities": [
           "Construí la solución de automatización de tests de intive desde cero como el primer ingeniero de automatización de la empresa, usando C#, Selenium y el Page Object Model",
-          "Fui el primer ingeniero asignado a Intelligize — que se convirtió en el proyecto más grande de intive — ejecutando testing automatizado de funcionalidades y testing de regresión manual para releases de producción"
+          "Fui el ingeniero fundador en un proyecto (la cuenta más grande de intive), siendo responsable del testing automatizado de funcionalidades y el testing de regresión manual para releases de producción"
         ]
       },
       "accenture": {
         "title": "Desarrollador Backend",
         "responsibilities": [
-          "Desarrollé una aplicación interna en C# para ayudar a gerentes a rastrear gastos y flujos de caja",
-          "Lideré una prueba de concepto para migrar la automatización de UI del equipo de CodedUI a Selenium, mejorando la mantenibilidad"
+          "Desarrollé una aplicación interna en C# y SQL para ayudar a gerentes a rastrear gastos y flujos de caja",
+          "Lideré una prueba de concepto para migrar la automatización de UI del equipo de CodedUI a Selenium"
         ]
       }
     },
     "educationData": {
-      "degree": "Tecnicatura en Programación",
+      "degree": "Tecnicatura en Programación (Incompleta)",
       "institution": "Universidad Tecnológica Nacional",
       "location": "Avellaneda, Buenos Aires"
     },
-    "certificationsData": [
-      "En proceso de obtener AWS Certified Developer – Associate (DVA-C02)"
-    ]
+    "certificationsData": []
   },
   "footer": {
     "rights": "Todos los derechos reservados.",

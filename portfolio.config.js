@@ -60,11 +60,11 @@ export const portfolioConfig = {
     description:
       'Specializing in building performant, scalable, and beautifully intuitive web experiences with a focus on modern React architecture.',
     summary:
-      'Senior Front-End Developer with 10+ years in software development, specializing in React, TypeScript and Svelte, with full-stack experience in Node.js. Proven track record building healthcare and e-commerce products at scale — from migrating legacy frontends to achieving 100% test coverage in production apps. Strong frontend focus backed by a QA background that translates into high-quality, well-tested code',
+      'Frontend Developer with 10+ years in software development, specializing in React and TypeScript, with full-stack experience in Svelte and Node.js — shipped products in healthcare and e-commerce at scale, from migrating legacy frontends to achieving 100% test coverage in production apps. Frontend-focused engineer with a QA background, producing well-tested, production-ready code across React, TypeScript, and Svelte.',
 
     // Resume/CV
     // Place your PDF in /public folder and update the filename here
-    resumeFileName: 'Mariano Rodriguez - Resume.pdf',
+    resumeFileName: 'MarianoRodriguez_Resume.pdf',
   },
 
   // ============================================================================
@@ -80,10 +80,9 @@ export const portfolioConfig = {
       title: 'Frontend Developer',
       period: 'Dec 2022 - Present',
       description: [
-        'Built and maintained React/Svelte healthcare web apps with 100% test coverage using Jest/Vitest, eliminating entire categories of production bugs',
-        'Developed a Next.js application acting as a data integration layer between external financial market data services (stocks, real-time pricing) and internal systems, improving reliability and reducing service failures',
-        'Acted as Technical Leader, owning architectural decisions and coordinating frontend development across the team',
-        'Led a full refactor of a patient/practitioner scheduling system using React, Redux, Tailwind and GraphQL, improving maintainability and performance',
+        'Built and maintained React/Svelte healthtech web apps with 100% test coverage using Jest/Vitest, eliminating entire categories of production bugs',
+        'Migrated 2 React apps from CRA to Next.js, enabling SSR (server-side rendering)',
+        'Refactored the patient/practitioner scheduling system (React, Redux, GraphQL, Tailwind), extracting a shared component library that reduced duplication',
       ],
     },
     {
@@ -112,10 +111,11 @@ export const portfolioConfig = {
       id: 4,
       slug: 'mercadolibre',
       company: 'MERCADOLIBRE',
-      title: 'Productivity Engineer',
+      title: 'Frontend / DevEx Engineer (Productivity Engineer)',
       period: 'Aug 2017 - Feb 2020',
       description: [
-        "Kicked off the migration of Fury — MercadoLibre's largest internal frontend — from Angular 1 to React (16.8/17), adopting the then-new hooks API and modern function components",
+        'Deployed and maintained frontend tooling on AWS (S3, EC2, Route 53, ELB) to support build pipelines and application infrastructure',
+        "Kicked off the migration of Fury — MercadoLibre's largest internal frontend, a micro-frontend architecture where independently-deployed apps coexisted — from Angular 1 to React (16.8/17), adopting the then-new hooks API and modern function components",
         'Built internal DevEx tooling to speed up frontend teams: NPM boilerplate packages and a CLI to scaffold WebDriverIO setups in a single command',
         'Developed a dashboard that surfaced per-PR test coverage, reading CI-generated reports by commit hash and displaying an expandable per-file breakdown',
         'Introduced and evangelized end-to-end testing across frontend teams (Nightwatch, later WebDriverIO), delivering hands-on talks at multiple MercadoLibre offices',
@@ -130,7 +130,7 @@ export const portfolioConfig = {
       period: 'Mar 2016 - Aug 2017',
       description: [
         "Built intive's test automation solution from the ground up as the company's first automation engineer, using C#, Selenium and the Page Object Model",
-        "Was the first engineer assigned to Intelligize — which grew into intive's largest project — running automated feature testing and manual regression testing for production releases",
+        "Served as the founding engineer on a project (intive's largest account), owning automated feature testing and manual regression testing across production releases",
       ],
     },
     {
@@ -140,8 +140,8 @@ export const portfolioConfig = {
       title: 'Backend Developer',
       period: 'Sep 2014 - Mar 2016',
       description: [
-        'Developed an internal C# application to help managers track expenses and cash flow',
-        "Led a proof of concept to migrate the team's UI automation from CodedUI to Selenium, improving maintainability",
+        'Developed an internal C# and SQL application to help managers track expenses and cash flow',
+        "Led a proof of concept to migrate the team's UI automation from CodedUI to Selenium",
       ],
     },
   ],
@@ -152,7 +152,7 @@ export const portfolioConfig = {
   education: [
     {
       id: 1,
-      degree: 'Technical Degree in Programming',
+      degree: 'Technical Degree in Programming (Incomplete)',
       institution: 'Universidad Tecnológica Nacional',
       location: 'Avellaneda, Buenos Aires',
       period: '2009 - 2011',
@@ -162,18 +162,18 @@ export const portfolioConfig = {
   // ============================================================================
   // CERTIFICATIONS
   // ============================================================================
-  certifications: ['Currently pursuing AWS Certified Developer – Associate (DVA-C02)'],
+  certifications: [],
 
   // ============================================================================
   // TECHNICAL SKILLS
   // ============================================================================
   // Organize skills by category. You can add/remove categories as needed.
   skills: {
-    Frontend: ['JavaScript', 'React', 'TypeScript', 'Svelte', 'Redux', 'Tailwind', 'React Native', 'GraphQL'],
-    Backend: ['Node.js', 'Next.js', 'Express', 'REST'],
+    Frontend: ['JavaScript', 'HTML5', 'CSS3', 'React', 'TypeScript', 'Next.js', 'Svelte', 'Redux Toolkit', 'Tailwind', 'React Native', 'GraphQL', 'Apollo Client'],
+    Backend: ['Node.js', 'Express', 'REST'],
     Databases: ['MongoDB', 'PostgreSQL'],
-    Testing: ['Jest', 'Vitest', 'E2E'],
-    'Dev Tools': ['Git', 'Docker', 'CI/CD', 'Agile/Scrum'],
+    Testing: ['Jest', 'Vitest', 'WebDriverIO', 'Selenium', 'Nightwatch'],
+    'Dev Tools': ['Git', 'Docker', 'Jenkins'],
   },
 
   // ============================================================================
