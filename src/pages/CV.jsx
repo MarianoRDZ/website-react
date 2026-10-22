@@ -63,8 +63,8 @@ const CV = () => {
                   {t('cv.certifications')}
                 </h3>
                 <ul className="space-y-2">
-                  {t('cv.certificationsData', { returnObjects: true }).map((cert, index) => (
-                    <li key={index} className="flex gap-2 text-gray-700 dark:text-gray-300">
+                  {t('cv.certificationsData', { returnObjects: true }).map((cert) => (
+                    <li key={cert} className="flex gap-2 text-gray-700 dark:text-gray-300">
                       <ChevronIcon />
                       <span>{cert}</span>
                     </li>
