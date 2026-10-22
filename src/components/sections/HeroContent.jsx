@@ -17,7 +17,17 @@ const HeroContent = () => {
           {t('hero.title')}
         </p>
         <h1 className="animate-stagger-2 mb-4 text-4xl font-bold text-white md:text-5xl">
-          {displayedText}
+          {isDone ? (
+            <>
+              {t('hero.greeting')}{' '}
+              <span className="text-gradient-animate">
+                {personalInfo.name.split(' ')[0]}
+              </span>
+              .
+            </>
+          ) : (
+            displayedText
+          )}
           <span
             aria-hidden="true"
             className="ml-0.5 inline-block h-[1em] w-0.5 bg-accent align-middle animate-blink-cursor"
