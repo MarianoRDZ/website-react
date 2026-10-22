@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { personalInfo, siteConfig } from '../../constants/data';
 import { Button } from '../common';
-import ContactInfo from './ContactInfo';
+import CVContactBar from './CVContactBar';
 
 const CVHeader = () => {
   const { t } = useTranslation();
@@ -14,7 +14,7 @@ const CVHeader = () => {
       <h1 className="mb-2 text-3xl font-bold text-gray-900 dark:text-white">{personalInfo.name}</h1>
       <p className="text-xl text-gray-600 dark:text-gray-400">{t('hero.title')}</p>
 
-      <ContactInfo />
+      <CVContactBar />
 
       <div className="mt-6 flex justify-center">
         <Button
