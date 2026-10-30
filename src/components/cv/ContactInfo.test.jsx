@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import ContactInfo from './ContactInfo';
+import ContactInfo from './CVContactBar';
 
 vi.mock('../../constants/data', () => ({
   personalInfo: {

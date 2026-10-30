@@ -25,8 +25,8 @@ describe('LanguageSelector', () => {
   it('highlights the active language', () => {
     mockI18n.language = 'es';
     render(<LanguageSelector />);
-    expect(screen.getByRole('button', { name: /cambiar a español/i })).toHaveClass('bg-blue-600');
-    expect(screen.getByRole('button', { name: /switch to english/i })).not.toHaveClass('bg-blue-600');
+    expect(screen.getByRole('button', { name: /cambiar a español/i })).toHaveClass('text-white');
+    expect(screen.getByRole('button', { name: /switch to english/i })).not.toHaveClass('text-white');
   });
 
   it('calls changeLanguage on click', async () => {

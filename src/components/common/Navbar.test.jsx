@@ -56,7 +56,7 @@ describe('Navbar', () => {
     mockLocation = { pathname: '/cv' };
     renderNavbar();
     screen.getAllByRole('link', { name: /resume/i }).forEach((link) => {
-      expect(link).toHaveClass('text-blue-400');
+      expect(link).toHaveClass('text-accent');
     });
   });
 

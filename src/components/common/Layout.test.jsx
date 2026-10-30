@@ -33,10 +33,12 @@ describe('Layout', () => {
   });
 
   it('renders in correct order: navbar → main → footer', () => {
-    const { container } = renderLayout();
-    const children = Array.from(container.firstChild.children);
-    expect(children[0]).toHaveAttribute('data-testid', 'navbar');
-    expect(children[1].tagName).toBe('MAIN');
-    expect(children[2]).toHaveAttribute('data-testid', 'footer');
+    renderLayout();
+    const nav = screen.getByTestId('navbar');
+    const main = screen.getByRole('main');
+    const footer = screen.getByTestId('footer');
+
+    expect(nav.compareDocumentPosition(main) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(main.compareDocumentPosition(footer) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
   });
 });

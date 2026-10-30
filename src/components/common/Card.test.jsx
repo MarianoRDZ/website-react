@@ -13,7 +13,7 @@ describe('Card Component', () => {
       const { container } = render(<Card>Content</Card>);
       const card = container.firstChild;
 
-      expect(card).toHaveClass('bg-white', 'dark:bg-gray-800');
+      expect(card).toHaveClass('bg-background-surface');
       expect(card).toHaveClass('shadow-md');
       expect(card).toHaveClass('p-6');
       expect(card).toHaveClass('rounded-lg');
@@ -39,7 +39,7 @@ describe('Card Component', () => {
       const { container } = render(<Card variant="surface">Content</Card>);
       const card = container.firstChild;
 
-      expect(card).toHaveClass('bg-white', 'dark:bg-gray-800');
+      expect(card).toHaveClass('bg-background-surface');
     });
 
     it('renders transparent variant', () => {
@@ -47,14 +47,14 @@ describe('Card Component', () => {
       const card = container.firstChild;
 
       expect(card).toHaveClass('bg-transparent');
-      expect(card).not.toHaveClass('bg-white');
+      expect(card).not.toHaveClass('bg-background-surface');
     });
 
     it('renders background variant', () => {
       const { container } = render(<Card variant="background">Content</Card>);
       const card = container.firstChild;
 
-      expect(card).toHaveClass('bg-gray-900');
+      expect(card).toHaveClass('bg-background');
     });
   });
 
@@ -162,7 +162,7 @@ describe('Card Component', () => {
       const { container } = render(<Card className="text-center">Content</Card>);
       const card = container.firstChild;
 
-      expect(card).toHaveClass('text-center', 'bg-white', 'shadow-md');
+      expect(card).toHaveClass('text-center', 'bg-background-surface', 'shadow-md');
     });
   });
 
@@ -260,8 +260,8 @@ describe('Card Component', () => {
       const innerCard = screen.getByTestId('inner');
 
       expect(outerCard).toContainElement(innerCard);
-      expect(outerCard).toHaveClass('bg-gray-900');
-      expect(innerCard).toHaveClass('bg-white');
+      expect(outerCard).toHaveClass('bg-background');
+      expect(innerCard).toHaveClass('bg-background-surface');
     });
   });
 
@@ -300,20 +300,21 @@ describe('Card Component', () => {
     });
   });
 
-  describe('Dark Mode Support', () => {
-    it('includes dark mode classes for surface variant', () => {
+  describe('Token-based styling', () => {
+    it('surface variant uses background-surface token', () => {
       const { container } = render(<Card variant="surface">Content</Card>);
-      const card = container.firstChild;
-
-      expect(card).toHaveClass('dark:bg-gray-800');
+      expect(container.firstChild).toHaveClass('bg-background-surface');
     });
 
-    it('does not include dark mode for transparent variant', () => {
-      const { container } = render(<Card variant="transparent">Content</Card>);
-      const card = container.firstChild;
+    it('background variant uses background token', () => {
+      const { container } = render(<Card variant="background">Content</Card>);
+      expect(container.firstChild).toHaveClass('bg-background');
+    });
 
-      expect(card).toHaveClass('bg-transparent');
-      expect(card).not.toHaveClass('dark:bg-gray-800');
+    it('transparent variant uses no background token', () => {
+      const { container } = render(<Card variant="transparent">Content</Card>);
+      expect(container.firstChild).toHaveClass('bg-transparent');
+      expect(container.firstChild).not.toHaveClass('bg-background-surface');
     });
   });
 });

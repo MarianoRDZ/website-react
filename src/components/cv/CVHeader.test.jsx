@@ -12,7 +12,7 @@ vi.mock('../../constants/data', () => ({
   },
 }));
 
-vi.mock('./ContactInfo', () => ({
+vi.mock('./CVContactBar', () => ({
   default: () => <div data-testid="contact-info">Contact Info</div>,
 }));
 
