@@ -1,5 +1,4 @@
-import profileImageWebP from '../../assets/profile.webp';
-import profileImagePng from '../../assets/profile.png';
+import profileImage from '../../assets/profile.webp';
 
 const ProfileImage = ({ size = 'lg', alt = 'Profile', showOverlay = true }) => {
   const sizeClasses = {
@@ -11,17 +10,12 @@ const ProfileImage = ({ size = 'lg', alt = 'Profile', showOverlay = true }) => {
   return (
     <div className="flex justify-center">
       <div className={`relative overflow-hidden rounded-2xl ${showOverlay ? 'profile-image-blend' : ''} ${sizeClasses[size]}`}>
-        {profileImageWebP ? (
-          <>
-            <picture>
-              <source srcSet={profileImageWebP} type="image/webp" />
-              <img
-                src={profileImagePng}
-                alt={alt}
-                className="h-full w-full object-cover object-top brightness-110"
-              />
-            </picture>
-          </>
+        {profileImage ? (
+          <img
+            src={profileImage}
+            alt={alt}
+            className="h-full w-full object-cover object-top brightness-110"
+          />
         ) : (
           <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600">
             <span className="text-5xl font-bold text-white md:text-6xl">M</span>
