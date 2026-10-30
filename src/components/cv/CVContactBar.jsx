@@ -1,6 +1,6 @@
 import { personalInfo } from '../../constants/data';
 
-const ContactInfo = () => (
+const CVContactBar = () => (
   <div className="mt-4 flex flex-wrap justify-center gap-2 text-sm text-gray-600 md:gap-4 dark:text-gray-400">
     <span>{personalInfo.location}</span>
     <span className="hidden md:inline">•</span>
@@ -24,4 +24,4 @@ const ContactInfo = () => (
   </div>
 );
 
-export default ContactInfo;
+export default CVContactBar;

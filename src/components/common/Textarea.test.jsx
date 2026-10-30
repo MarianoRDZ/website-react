@@ -132,7 +132,7 @@ describe('Textarea Component', () => {
       render(<Textarea helperText="Helper" />);
       const helperText = screen.getByText('Helper');
 
-      expect(helperText).toHaveClass('text-gray-400');
+      expect(helperText).toHaveClass('text-text-secondary');
     });
 
     it('renders without helper text when not provided', () => {

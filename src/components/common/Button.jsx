@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import { buttonVariants, buttonSizes } from './variants';
+import { buttonVariants, buttonSizes } from './variants/button';
 
 // as="a" + href para renderizarlo como link; loading deshabilita el botón y muestra spinner
 const Button = forwardRef(

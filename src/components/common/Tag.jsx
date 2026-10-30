@@ -1,4 +1,4 @@
-import { tagVariants, tagSizes } from './variants';
+import { tagVariants, tagSizes } from './variants/tag';
 
 // sin onClick es <span>, con onClick se convierte en <button>
 const Tag = ({ children, variant = 'outline', size = 'md', onClick, className = '', ...props }) => {

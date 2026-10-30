@@ -8,12 +8,12 @@ const Card = ({
   hover = false,
   ...props
 }) => {
-  const bgClass =
-    variant === 'surface'
-      ? 'bg-background-surface'
-      : variant === 'background'
-        ? 'bg-background'
-        : 'bg-transparent';
+  const bgVariants = {
+    surface: 'bg-background-surface',
+    background: 'bg-background',
+    transparent: 'bg-transparent',
+  };
+  const bgClass = bgVariants[variant] ?? 'bg-transparent';
 
   const hoverClass = hover
     ? 'border border-transparent transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(96,217,253,0.12)] hover:border-[rgba(96,217,253,0.2)]'

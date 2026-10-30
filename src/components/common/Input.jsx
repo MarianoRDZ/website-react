@@ -1,7 +1,6 @@
 import { forwardRef } from 'react';
-import { inputVariants, inputSizes } from './variants';
+import { buildInputClasses, buildContainerClasses } from './inputClasses';
 
-// containerClassName para estilar el wrapper, className para el input en sí
 const Input = forwardRef(
   (
     {
@@ -19,27 +18,15 @@ const Input = forwardRef(
     },
     ref
   ) => {
-    const variantStyles = inputVariants.default;
-    const sizeStyles = inputSizes[size];
-
-    const inputClasses = [
-      variantStyles.base,
-      variantStyles.hover,
-      variantStyles.focus,
-      variantStyles.disabled,
-      error && variantStyles.error,
-      sizeStyles,
-      leftIcon && 'pl-10',
-      rightIcon && 'pr-10',
-      fullWidth && 'w-full',
+    const inputClasses = buildInputClasses({
+      size,
+      error,
+      fullWidth,
+      extra: [leftIcon && 'pl-10', rightIcon && 'pr-10'],
       className,
-    ]
-      .filter(Boolean)
-      .join(' ');
+    });
 
-    const containerClasses = ['relative', fullWidth && 'w-full', containerClassName]
-      .filter(Boolean)
-      .join(' ');
+    const containerClasses = buildContainerClasses({ fullWidth, containerClassName });
 
     return (
       <div className={containerClasses}>
