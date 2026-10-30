@@ -7,12 +7,12 @@ const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="border-t border-gray-800 bg-gray-900/80 py-3">
+    <footer className="border-t border-background-tertiary bg-background/80 py-3">
       <div className="container mx-auto max-w-7xl px-6">
         <div className="flex flex-col items-center justify-between gap-3 md:flex-row">
           <SocialLinks />
 
-          <div className="flex flex-col items-center gap-1 text-gray-400 md:items-end">
+          <div className="flex flex-col items-center gap-1 text-text-secondary md:items-end">
             <div className="text-xs">
               © {currentYear} MARIANO. {t('footer.builtWith').toUpperCase()}.
             </div>
@@ -20,7 +20,7 @@ const Footer = () => {
               href={personalInfo.repository}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs transition-colors hover:text-blue-400"
+              className="text-xs transition-colors hover:text-accent"
             >
               {t('footer.viewSource')} →
             </a>

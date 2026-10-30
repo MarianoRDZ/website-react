@@ -25,17 +25,17 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 z-50 w-full bg-gray-900/80 shadow-lg backdrop-blur-md">
+    <nav className="fixed top-0 z-50 w-full bg-background/80 shadow-lg backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex h-16 items-center justify-between">
           <Link
             to="/"
-            className="flex items-center gap-2 text-lg font-bold text-white transition-colors hover:text-blue-400"
+            className="flex items-center gap-2 text-lg font-bold text-white transition-colors hover:text-accent"
             onClick={closeMenu}
           >
             <div className="relative h-9 w-9">
-              <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 opacity-20 blur-sm"></div>
-              <div className="relative flex h-full w-full items-center justify-center rounded-lg border border-blue-400/30 bg-gray-900">
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-accent to-accent-secondary opacity-20 blur-sm"></div>
+              <div className="relative flex h-full w-full items-center justify-center rounded-lg border border-accent/30 bg-background">
                 <svg
                   className="h-5 w-5"
                   viewBox="0 0 24 24"
@@ -45,15 +45,15 @@ const Navbar = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >
-                  <path d="M12 2L2 7l10 5 10-5-10-5z" className="text-blue-400" />
-                  <path d="M2 17l10 5 10-5" className="text-purple-400" />
-                  <path d="M2 12l10 5 10-5" className="text-blue-300" />
+                  <path d="M12 2L2 7l10 5 10-5-10-5z" className="text-accent" />
+                  <path d="M2 17l10 5 10-5" className="text-accent-secondary" />
+                  <path d="M2 12l10 5 10-5" className="text-accent" />
                 </svg>
               </div>
             </div>
 
             <span>
-              MARIANORDZ<span className="text-blue-400">.COM.AR</span>
+              MARIANORDZ<span className="text-accent">.COM.AR</span>
             </span>
           </Link>
 
@@ -62,9 +62,9 @@ const Navbar = () => {
               <Link
                 key={path}
                 to={path}
-                className={`relative pb-1 text-base font-medium transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-blue-400 after:transition-all after:duration-300 after:content-[''] ${
+                className={`relative pb-1 text-base font-medium transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 after:content-[''] ${
                   isActive(path)
-                    ? 'text-blue-400 after:w-full'
+                    ? 'text-accent after:w-full'
                     : 'text-gray-300 after:w-0 hover:text-white hover:after:w-full'
                 }`}
               >
@@ -76,7 +76,7 @@ const Navbar = () => {
 
           <button
             onClick={toggleMenu}
-            className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded text-gray-300 transition-colors hover:text-blue-400 md:hidden"
+            className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded text-text-secondary transition-colors hover:text-accent md:hidden"
             aria-label="Toggle menu"
           >
             <span
@@ -93,7 +93,7 @@ const Navbar = () => {
       </div>
 
       <div
-        className={`absolute top-16 left-0 w-full bg-gray-900/95 backdrop-blur-md transition-all duration-300 md:hidden ${
+        className={`absolute top-16 left-0 w-full bg-background/95 backdrop-blur-md transition-all duration-300 md:hidden ${
           isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 overflow-hidden opacity-0'
         }`}
       >
@@ -103,8 +103,8 @@ const Navbar = () => {
               key={path}
               to={path}
               onClick={closeMenu}
-              className={`border-b border-gray-800 py-4 text-lg font-medium transition-colors duration-200 ${
-                isActive(path) ? 'text-blue-400' : 'text-gray-300 hover:text-white'
+              className={`border-b border-background-tertiary py-4 text-lg font-medium transition-colors duration-200 ${
+                isActive(path) ? 'text-accent' : 'text-gray-300 hover:text-white'
               }`}
             >
               {label}

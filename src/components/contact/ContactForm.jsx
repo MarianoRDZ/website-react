@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Card, Input, Textarea, Button } from '../common';
 import { useContactForm } from '../../hooks/useContactForm';
 import { SendIcon } from './ContactIcons';
+import FormField from './FormField';
 
 const ContactForm = () => {
   const { t } = useTranslation();
@@ -23,13 +24,7 @@ const ContactForm = () => {
         )}
 
         <div className="space-y-5">
-          <div>
-            <label
-              htmlFor="name"
-              className="mb-2 block text-xs font-semibold tracking-wider text-gray-600 uppercase dark:text-gray-400"
-            >
-              {t('contact.form.name')}
-            </label>
+          <FormField id="name" label={t('contact.form.name')}>
             <Input
               id="name"
               name="name"
@@ -39,18 +34,12 @@ const ContactForm = () => {
               disabled={status.loading}
               fullWidth
               size="lg"
-              className="border-background-tertiary text-text-primary placeholder-text-secondary bg-gray-900"
+              className="border-background-tertiary text-text-primary placeholder-text-secondary bg-background"
               placeholder={t('contact.form.namePlaceholder')}
             />
-          </div>
+          </FormField>
 
-          <div>
-            <label
-              htmlFor="email"
-              className="mb-2 block text-xs font-semibold tracking-wider text-gray-600 uppercase dark:text-gray-400"
-            >
-              {t('contact.form.email')}
-            </label>
+          <FormField id="email" label={t('contact.form.email')}>
             <Input
               type="email"
               id="email"
@@ -61,18 +50,12 @@ const ContactForm = () => {
               disabled={status.loading}
               fullWidth
               size="lg"
-              className="border-background-tertiary text-text-primary placeholder-text-secondary bg-gray-900"
+              className="border-background-tertiary text-text-primary placeholder-text-secondary bg-background"
               placeholder={t('contact.form.emailPlaceholder')}
             />
-          </div>
+          </FormField>
 
-          <div>
-            <label
-              htmlFor="message"
-              className="mb-2 block text-xs font-semibold tracking-wider text-gray-600 uppercase dark:text-gray-400"
-            >
-              {t('contact.form.message')}
-            </label>
+          <FormField id="message" label={t('contact.form.message')}>
             <Textarea
               id="message"
               name="message"
@@ -83,10 +66,10 @@ const ContactForm = () => {
               disabled={status.loading}
               fullWidth
               size="lg"
-              className="border-background-tertiary text-text-primary placeholder-text-secondary min-h-30 bg-gray-900"
+              className="border-background-tertiary text-text-primary placeholder-text-secondary min-h-30 bg-background"
               placeholder={t('contact.form.messagePlaceholder')}
             />
-          </div>
+          </FormField>
 
           {/* Honeypot field */}
           <input

@@ -10,9 +10,9 @@ const Card = ({
 }) => {
   const bgClass =
     variant === 'surface'
-      ? 'bg-white dark:bg-gray-800'
+      ? 'bg-background-surface'
       : variant === 'background'
-        ? 'bg-gray-900'
+        ? 'bg-background'
         : 'bg-transparent';
 
   const hoverClass = hover

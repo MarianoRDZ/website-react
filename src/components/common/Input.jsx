@@ -47,7 +47,7 @@ const Input = forwardRef(
 
         <div className="relative">
           {leftIcon && (
-            <div className="pointer-events-none absolute top-1/2 left-3 flex -translate-y-1/2 items-center text-gray-400">
+            <div className="pointer-events-none absolute top-1/2 left-3 flex -translate-y-1/2 items-center text-text-secondary">
               {leftIcon}
             </div>
           )}
@@ -55,14 +55,14 @@ const Input = forwardRef(
           <input ref={ref} type={type} className={inputClasses} {...props} />
 
           {rightIcon && (
-            <div className="pointer-events-none absolute top-1/2 right-3 flex -translate-y-1/2 items-center text-gray-400">
+            <div className="pointer-events-none absolute top-1/2 right-3 flex -translate-y-1/2 items-center text-text-secondary">
               {rightIcon}
             </div>
           )}
         </div>
 
         {(error || helperText) && (
-          <p className={`mt-xs text-sm ${error ? 'text-red-500' : 'text-gray-400'}`}>
+          <p className={`mt-xs text-sm ${error ? 'text-red-500' : 'text-text-secondary'}`}>
             {error || helperText}
           </p>
         )}
