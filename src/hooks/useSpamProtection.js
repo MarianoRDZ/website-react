@@ -1,5 +1,8 @@
 import { useEffect, useRef } from 'react';
 
+const MIN_FILL_TIME_MS = 3000;
+const RATE_LIMIT_MS = 60000;
+
 export const useSpamProtection = () => {
   const formStartTime = useRef(null);
   const lastSubmitTime = useRef(0);
@@ -20,11 +23,11 @@ export const useSpamProtection = () => {
 
     const now = Date.now();
 
-    if (now - formStartTime.current < 3000) {
+    if (now - formStartTime.current < MIN_FILL_TIME_MS) {
       return { blocked: true, error: t('contact.errors.tooFast') };
     }
 
-    if (lastSubmitTime.current !== 0 && now - lastSubmitTime.current < 60000) {
+    if (lastSubmitTime.current !== 0 && now - lastSubmitTime.current < RATE_LIMIT_MS) {
       return { blocked: true, error: t('contact.errors.rateLimit') };
     }
 

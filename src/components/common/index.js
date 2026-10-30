@@ -9,5 +9,7 @@ export { default as Footer } from './Footer';
 export { default as SocialLinks } from './SocialLinks';
 export { default as LanguageSelector } from './LanguageSelector';
 export { default as PageLoader } from './PageLoader';
+export { default as ErrorBoundary } from './ErrorBoundary';
+export { default as ScrollProgressBar } from './ScrollProgressBar';
 export { default as ScrollToTop } from './ScrollToTop';
 export { default as ScrollReveal } from './ScrollReveal';
